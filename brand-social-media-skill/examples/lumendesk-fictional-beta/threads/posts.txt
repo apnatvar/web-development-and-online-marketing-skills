@@ -1,0 +1,4 @@
+Small workflow question: when your team makes a research decision, where does the “why” live six months later?
+
+We kept finding the source in one place, the unanswered question in another, and only the conclusion on the roadmap. That gap became the idea behind our fictional LumenDesk beta—but the useful method is simpler than the product: keep the source, question, conclusion, and owner together.
+

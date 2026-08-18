@@ -1,0 +1,4 @@
+interface:
+  display_name: "Concise Communication"
+  short_description: "Convey the same meaning with fewer words"
+  default_prompt: "Use $concise-communication to rewrite this message clearly with less fluff."

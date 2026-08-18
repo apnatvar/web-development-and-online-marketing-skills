@@ -1,0 +1,10 @@
+Where does the “why” behind a team decision live six months later?
+
+In our fictional example, the source was in a note, the unanswered question was in chat, and the conclusion was in a roadmap. We started keeping four things together: the source, the open question, the conclusion, and an owner.
+
+That record works without a new tool. It also became the idea behind the fictional LumenDesk beta, which organises research around decisions rather than document folders.
+
+Disclosure: we built the fictional example product. For a community group, we would share the method without a product link unless the current group rules explicitly permitted one.
+
+What does your team preserve when a decision may need to be revisited?
+

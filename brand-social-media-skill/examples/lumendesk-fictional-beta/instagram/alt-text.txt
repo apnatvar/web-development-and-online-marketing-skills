@@ -1,0 +1,10 @@
+Slide 1: Three indigo cards labelled source, question, and conclusion drift away from a central decision marker on a cream background. The heading asks, “Where did the decision reasoning go?”
+
+Slide 2: One card labelled source contains a simple document icon and explains that the team should preserve the research or observation behind a choice.
+
+Slide 3: One card labelled open question contains a question-mark icon and explains that the team should record what was still unknown.
+
+Slide 4: Conclusion and owner cards connect to show both the choice and the person responsible for revisiting it.
+
+Slide 5: All four cards form one decision record. Text invites viewers to test the method in their current tools and consider the fictional LumenDesk beta.
+

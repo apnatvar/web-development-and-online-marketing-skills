@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recreate Social Video Trends"
+  short_description: "Research and rebuild reusable social video trends"
+  default_prompt: "Use $recreate-social-video-trends to analyze a reference social video and build an editable Remotion template."

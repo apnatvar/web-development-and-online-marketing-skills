@@ -1,0 +1,6 @@
+The fictional decision record we use in retrospectives
+
+Where did the reasoning behind that decision go?
+
+A four-field research workflow and a fictional beta update
+

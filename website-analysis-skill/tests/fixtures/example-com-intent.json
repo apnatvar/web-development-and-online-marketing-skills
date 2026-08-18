@@ -1,0 +1,12 @@
+{
+  "websitePurpose": "Provide a stable example domain for use in documentation and illustrative examples",
+  "primaryAudience": "Authors, educators, and software developers who need a safe example URL",
+  "primaryVisitorProblem": "They need a domain name they can show in examples without coordinating with a real site owner",
+  "desiredVisitorAction": "Understand that the domain may be used in examples and follow the information link if needed",
+  "primaryProductOrService": "Reserved example domain information",
+  "keyDifferentiator": "The domain is reserved for illustrative use in documents",
+  "geographicOrIndustryFocus": "Global documentation, education, and software examples",
+  "priorityPages": ["/"],
+  "targetKeywords": ["example domain"],
+  "preferredBrandTone": "Plain, concise, and informational"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website Tech & Content Analysis"
+  short_description: "Audit website SEO, performance, and messaging"
+  default_prompt: "Use $website-tech-content-analysis to audit my website and produce a practical repair plan."

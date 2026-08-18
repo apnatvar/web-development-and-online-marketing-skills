@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company Voice"
+  short_description: "Discover and apply editorial voice systems"
+  default_prompt: "Use $company-voice to discover my organisation's editorial voice and create its content strategy memory."

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "campaign-manifest.schema.json",
+  "title": "Campaign manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "campaign_id", "campaign_slug", "campaign_title", "created_at", "updated_at",
+    "skill_version", "campaign_objective", "selected_platforms", "generated_files",
+    "generation_status", "validation_status", "source_links", "unresolved_placeholders",
+    "assumptions", "current_revision", "platform_constraint_verification_dates",
+    "image_generation_status", "stale_outputs"
+  ],
+  "properties": {
+    "campaign_id": {"type": "string", "pattern": "^[0-9a-f-]{36}$"},
+    "campaign_slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "campaign_title": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "skill_version": {"type": "string"},
+    "campaign_objective": {"type": "string"},
+    "selected_platforms": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["linkedin", "facebook", "reddit", "instagram", "x", "threads", "medium", "dm", "email", "newsletter"]}
+    },
+    "generated_files": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "generation_status": {"enum": ["initialised", "partial", "complete", "error", "archived"]},
+    "validation_status": {"enum": ["not_run", "passed", "warnings", "failed"]},
+    "source_links": {"type": "array", "items": {"type": "string", "format": "uri"}},
+    "unresolved_placeholders": {"type": "array", "items": {"type": "string"}},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "current_revision": {"type": "integer", "minimum": 1},
+    "platform_constraint_verification_dates": {
+      "type": "object",
+      "additionalProperties": {"type": ["string", "null"], "format": "date"}
+    },
+    "image_generation_status": {"enum": ["disabled", "briefs_planned", "briefs_ready", "approved", "generated", "partial", "error"]},
+    "stale_outputs": {"type": "array", "items": {"type": "string"}},
+    "file_hashes": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "last_validation_at": {"type": ["string", "null"], "format": "date-time"},
+    "archived_at": {"type": ["string", "null"], "format": "date-time"}
+  }
+}
+

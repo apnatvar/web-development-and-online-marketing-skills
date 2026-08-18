@@ -1,0 +1,18 @@
+# X thread — decision records
+
+## Post 1
+
+A final decision is not the same as a useful decision trail. The source may be in a note, the uncertainty in chat, and the conclusion in a roadmap.
+
+## Post 2
+
+For decisions worth revisiting, keep four fields together: source, open question, conclusion, and owner.
+
+## Post 3
+
+The tradeoff is maintenance. Use the record selectively, define ownership, and archive it when it no longer matters.
+
+## Post 4
+
+That workflow shaped fictional LumenDesk, a beta organised around decisions rather than document folders. No customer result is claimed. Join the fictional beta: https://example.com/lumendesk-beta
+

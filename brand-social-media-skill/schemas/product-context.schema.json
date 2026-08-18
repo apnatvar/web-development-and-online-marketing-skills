@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "product-context.schema.json",
+  "title": "Product context",
+  "type": "object",
+  "required": ["name", "category", "description", "problem", "how_it_works", "maturity"],
+  "properties": {
+    "name": {"type": "string", "minLength": 1},
+    "category": {"type": "string", "minLength": 1},
+    "description": {"type": "string", "minLength": 1},
+    "problem": {"type": "string", "minLength": 1},
+    "how_it_works": {"type": "string", "minLength": 1},
+    "features": {"type": "array", "items": {"type": "string"}},
+    "benefits": {"type": "array", "items": {"type": "string"}},
+    "differentiators": {"type": "array", "items": {"type": "string"}},
+    "maturity": {"enum": ["idea", "prototype", "beta", "available", "mature", "sunset", "unknown"]},
+    "commercial_model": {"type": "string"},
+    "availability": {"type": "array", "items": {"type": "string"}},
+    "restrictions": {"type": "array", "items": {"type": "string"}},
+    "prerequisites": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
+

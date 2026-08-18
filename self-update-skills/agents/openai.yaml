@@ -1,0 +1,4 @@
+interface:
+  display_name: "Self-Update Skills"
+  short_description: "Safely research and improve existing skills"
+  default_prompt: "Use $self-update-skills to audit a skill for new information and propose a safe, evidence-backed update before changing anything."

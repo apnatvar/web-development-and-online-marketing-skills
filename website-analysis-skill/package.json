@@ -1,0 +1,19 @@
+{
+  "name": "website-tech-content-analysis",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic support scripts for the Website Tech & Content Analysis Codex skill",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "audit": "node scripts/audit.mjs",
+    "check:tools": "node scripts/check-tools.mjs",
+    "test": "node --test --experimental-test-isolation=none --test-reporter=spec",
+    "validate": "node scripts/validate-skill.mjs"
+  },
+  "devDependencies": {
+    "lighthouse": "13.4.1"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing & Persuasive Writing"
+  short_description: "Plan and adapt credible persuasive marketing copy"
+  default_prompt: "Use $marketing-writing-skill to diagnose my message and draft channel-ready marketing copy."

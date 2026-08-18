@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schemas/seo-knowledge-metadata.schema.json",
+  "lastUpdated": "2026-07-22",
+  "lastVerified": "2026-07-22",
+  "skillVersion": "1.0.0",
+  "knowledgeVersion": "2026.07.22",
+  "sourceUrls": [
+    "https://developers.google.com/search/docs/essentials",
+    "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+    "https://developers.google.com/search/docs/appearance/title-link",
+    "https://developers.google.com/search/docs/appearance/snippet",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+    "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+    "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag",
+    "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+    "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+    "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+    "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+    "https://developers.google.com/search/docs/specialty/international/localized-versions",
+    "https://developers.google.com/search/docs/appearance/google-images",
+    "https://developers.google.com/search/docs/appearance/page-experience",
+    "https://web.dev/articles/defining-core-web-vitals-thresholds",
+    "https://www.w3.org/WAI/standards-guidelines/wcag/",
+    "https://www.w3.org/WAI/tutorials/page-structure/headings/",
+    "https://schema.org/docs/documents.html",
+    "https://developer.chrome.com/docs/lighthouse",
+    "https://github.com/GoogleChrome/lighthouse/blob/main/docs/variability.md",
+    "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+    "https://www.npmjs.com/package/lighthouse"
+  ],
+  "standards": [
+    {"name": "Lighthouse", "version": "13.4.1", "note": "Exact CLI baseline; record runtime version in every audit."},
+    {"name": "Google Chrome", "version": "150.0.7871.129", "note": "Comparison baseline; record exact runtime and warn on a major-version change."},
+    {"name": "WCAG", "version": "2.2", "note": "W3C Recommendation; automated checks are incomplete."},
+    {"name": "Core Web Vitals", "version": "LCP/INP/CLS reviewed 2026-07-22", "note": "Use field 75th-percentile data for real-user status."},
+    {"name": "schema.org", "version": "live vocabulary reviewed 2026-07-22", "note": "Google feature eligibility follows Google Search documentation."}
+  ],
+  "volatileRecommendations": [
+    "Lighthouse audit inventory, scoring, and current package version",
+    "Chrome version and performance behavior",
+    "Core Web Vitals metric lifecycle and thresholds",
+    "Supported Google structured-data features and required properties",
+    "Robots directives and crawler behavior",
+    "Google Search and generative-search presentation guidance",
+    "Local search feature behavior"
+  ],
+  "lastReview": {
+    "reviewedAt": "2026-07-22T02:20:00Z",
+    "sourcesReviewed": 23,
+    "changedSections": ["initial knowledge base"],
+    "unverifiedRecommendations": ["No authoritative ranking or citation benefit for llms.txt was verified."]
+  }
+}

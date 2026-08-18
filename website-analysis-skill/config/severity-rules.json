@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "principle": "Severity reflects practical harm, not Lighthouse point deductions alone.",
+  "weights": {
+    "severity": {"critical": 100, "high": 70, "medium": 40, "low": 15, "informational": 0},
+    "confidence": {"confirmed": 15, "likely": 8, "possible": 2},
+    "impact": {"user": 12, "search": 12, "conversion": 12},
+    "effortPenalty": {"small": 0, "medium": 6, "large": 14}
+  },
+  "priorityGroups": {
+    "fix first": "Critical/high impact, blocking dependencies, or site-wide confirmed faults",
+    "fix next": "Material confirmed issues and high-confidence quick wins",
+    "improve later": "Lower-impact refinements or larger-effort opportunities",
+    "monitor": "Informational, externally dependent, or unconfirmed observations"
+  }
+}

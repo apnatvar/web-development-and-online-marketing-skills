@@ -1,0 +1,3407 @@
+{
+  "schemaVersion": "1.0.0",
+  "reportVersion": "1.0.0",
+  "auditDate": "2026-07-22T03:25:30.111Z",
+  "mode": "combined",
+  "input": {
+    "type": "local",
+    "target": "C:\\workspace\\website-analysis-skill\\tests\\fixtures\\local-site",
+    "baseUrl": "http://127.0.0.1:65502"
+  },
+  "intent": {
+    "websitePurpose": "Help neighbourhood shops create accessible online catalogues",
+    "primaryAudience": "Independent shop owners",
+    "primaryVisitorProblem": "They need a simple online catalogue without a complex ecommerce migration",
+    "desiredVisitorAction": "Book an introductory call",
+    "primaryProductOrService": "Catalogue website setup",
+    "keyDifferentiator": "Plain-language setup and accessibility review included",
+    "geographicOrIndustryFocus": "Independent retail businesses in fictional Northport",
+    "priorityPages": [
+      "/",
+      "/services",
+      "/contact"
+    ],
+    "targetKeywords": [
+      "catalogue website for independent shops"
+    ],
+    "preferredBrandTone": "Clear, practical, and reassuring"
+  },
+  "pages": [
+    {
+      "label": "/",
+      "source": "public/index.html",
+      "status": null
+    },
+    {
+      "label": "/contact",
+      "source": "public/contact.html",
+      "status": null
+    },
+    {
+      "label": "/services",
+      "source": "public/services.html",
+      "status": null
+    }
+  ],
+  "summary": "3 page(s) were audited in combined mode. 5 critical/high-severity finding(s) were identified. Start with “Internal link points to an unknown local route”.",
+  "findings": [
+    {
+      "id": "internal-link-points-to-an-unknown-local-route-d9f5d53",
+      "title": "Internal link points to an unknown local route",
+      "category": "internal links",
+      "affectedPage": "/",
+      "evidence": "Link “Old guide” targets /missing near line 8.",
+      "evidenceSource": "Repository route and link checker",
+      "severity": "high",
+      "confidence": "likely",
+      "userImpact": "Visitors may land on a not-found page.",
+      "seoImpact": "Broken internal links waste crawl paths and weaken discoverability.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "The target did not match a discovered repository route; dynamic or externally generated routes remain a possible exception.",
+      "plainLanguageExplanation": "A link appears to lead to a page that does not exist in the repository.",
+      "recommendedFix": "Correct the destination, create the intended route, or remove the link.",
+      "implementationGuidance": "Edit public/index.html:8. Update the href and verify dynamic route generation if applicable.",
+      "expectedResult": "The link reaches a relevant page without an error.",
+      "verificationMethod": "Build the site and request the target URL; rerun the link checker.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "fix first",
+      "changeType": "quick win",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "links",
+        "crawlability"
+      ],
+      "priorityScore": 110
+    },
+    {
+      "id": "images-omit-alternative-text-attributes-311cddc",
+      "title": "Images omit alternative-text attributes",
+      "category": "accessibility",
+      "affectedPage": "/",
+      "evidence": "1 image(s) omit alt; first: /images/lantern.jpg",
+      "evidenceSource": "HTML image inspector",
+      "severity": "high",
+      "confidence": "confirmed",
+      "userImpact": "Screen-reader users may not receive the meaning of informative images.",
+      "seoImpact": "Search engines have less context for image content.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "The img elements have no alt attribute. Decorative images should use alt=\"\"; informative images need equivalent concise text.",
+      "plainLanguageExplanation": "Some images have no text alternative.",
+      "recommendedFix": "Add accurate alt text to informative images and empty alt attributes to decorative images.",
+      "implementationGuidance": "Edit public/index.html:12. Start with the image near line 12; derive text from actual visible meaning, not filenames.",
+      "expectedResult": "Images have an accessible text equivalent without keyword stuffing.",
+      "verificationMethod": "Rerun Axe/Lighthouse and review alt text in context.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "fix first",
+      "changeType": "code change",
+      "measurementClass": "deterministic",
+      "tags": [
+        "image",
+        "accessibility",
+        "seo"
+      ],
+      "priorityScore": 105
+    },
+    {
+      "id": "mobile-viewport-metadata-is-missing-37455f2",
+      "title": "Mobile viewport metadata is missing",
+      "category": "mobile usability",
+      "affectedPage": "/",
+      "evidence": "No meta[name=\"viewport\"] was found.",
+      "evidenceSource": "HTML metadata inspector",
+      "severity": "high",
+      "confidence": "confirmed",
+      "userImpact": "Mobile browsers may render the page at a desktop-sized layout, making text and controls difficult to use.",
+      "seoImpact": "Poor mobile usability can reduce search performance and engagement.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "The document head does not declare a responsive viewport.",
+      "plainLanguageExplanation": "Phones are not told to size the page to the screen.",
+      "recommendedFix": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> and test responsive layouts.",
+      "implementationGuidance": "Edit public/index.html. Add the viewport metadata once in the shared document head.",
+      "expectedResult": "The CSS viewport matches the device width.",
+      "verificationMethod": "Test at 320, 375, 412, and 768 CSS pixels and rerun Lighthouse.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "fix first",
+      "changeType": "quick win",
+      "measurementClass": "deterministic",
+      "tags": [
+        "mobile"
+      ],
+      "priorityScore": 105
+    },
+    {
+      "id": "page-title-weakens-both-search-presentation-an-683e672",
+      "title": "Page title weakens both search presentation and the opening message",
+      "category": "combined SEO and messaging",
+      "affectedPage": "/",
+      "evidence": "Title (4 characters): “Home” Related message evidence: Opening: “Home Unlock next-generation success Everything you need Home Lantern Studio Services Old guide Unlock next-generation success We leverage seamless, best-in-class solutions for every journey. Learn more Everything you need Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur a”; stated purpose: “Help neighbourhood shops create accessible online catalogues”. | Opening: “Book an introductory call | Lantern Studio Book an introductory call Book an introductory call | Lantern Studio Book an introductory call Tell us what your shop needs to publish. We will explain the next step without pressure. Name Book an introductory call”; stated purpose: “Help neighbourhood shops create accessible online catalogues”.",
+      "evidenceSource": "Combined metadata and intent synthesis",
+      "severity": "high",
+      "confidence": "likely",
+      "userImpact": "Visitors cannot quickly identify the page in a tab, link, or opening scan.",
+      "seoImpact": "The title-link candidate and visible topic do not communicate a strong, consistent subject.",
+      "conversionImpact": "The search promise and landing message do not form a clear path to action.",
+      "technicalExplanation": "Metadata and visible-copy findings affect the same page and should be repaired as one messaging system.",
+      "plainLanguageExplanation": "The label people see before visiting and the message they see after arriving are both weak or mismatched.",
+      "recommendedFix": "Write the title, h1, and opening summary together around one accurate page purpose; keep each unique but consistent.",
+      "implementationGuidance": "Edit public/index.html:5. Update the title in the route metadata and keep the visible H1 consistent with its promise.",
+      "expectedResult": "A coherent search-result promise and landing-page message.",
+      "verificationMethod": "Compare rendered title, h1, description, and first paragraph side by side after deployment.",
+      "repositoryAccessRequired": false,
+      "effort": "medium",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "fix next",
+      "changeType": "content rewrite",
+      "measurementClass": "relatively stable",
+      "relatedFindingIds": [
+        "document-title-may-be-unhelpfully-short-or-lon-6673728",
+        "opening-message-does-not-clearly-state-the-web-de55f1d"
+      ],
+      "tags": [
+        "title",
+        "messaging",
+        "seo"
+      ],
+      "priorityScore": 92
+    },
+    {
+      "id": "heading-structure-and-heading-message-should-b-f7b2a98",
+      "title": "Heading structure and heading message should be repaired together",
+      "category": "combined accessibility and messaging",
+      "affectedPage": "/",
+      "evidence": "2 headings found; none is <h1>. Opening: “Home Unlock next-generation success Everything you need Home Lantern Studio Services Old guide Unlock next-generation success We leverage seamless, best-in-class solutions for every journey. Learn more Everything you need Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur a”; stated purpose: “Help neighbourhood shops create accessible online catalogues”. | Opening: “Book an introductory call | Lantern Studio Book an introductory call Book an introductory call | Lantern Studio Book an introductory call Tell us what your shop needs to publish. We will explain the next step without pressure. Name Book an introductory call”; stated purpose: “Help neighbourhood shops create accessible online catalogues”. | h2 “Unlock next-generation success” is followed by h4 “Everything you need”. Opening: “Home Unlock next-generation success Everything you need Home Lantern Studio Services Old guide Unlock next-generation success We leverage seamless, best-in-class solutions for every journey. Learn more Everything you need Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur a”; stated purpose: “Help neighbourhood shops create accessible online catalogues”. | Opening: “Book an introductory call | Lantern Studio Book an introductory call Book an introductory call | Lantern Studio Book an introductory call Tell us what your shop needs to publish. We will explain the next step without pressure. Name Book an introductory call”; stated purpose: “Help neighbourhood shops create accessible online catalogues”.",
+      "evidenceSource": "Combined heading-structure and intent synthesis",
+      "severity": "high",
+      "confidence": "confirmed",
+      "userImpact": "The main message is unclear both visually and to assistive technology.",
+      "seoImpact": "The primary topic is less explicit in visible and semantic structure.",
+      "conversionImpact": "Visitors may not recognize relevance before leaving.",
+      "technicalExplanation": "Changing words without fixing the heading element, or fixing markup without improving the words, would leave half the problem.",
+      "plainLanguageExplanation": "The heading needs both the right HTML role and clearer wording.",
+      "recommendedFix": "Create one descriptive visible h1, then organize supporting sections with logically nested headings.",
+      "implementationGuidance": "Edit public/index.html. Change the primary heading component to an <h1>; keep visual styling in CSS.",
+      "expectedResult": "A clear, accessible outline whose first heading states the page purpose.",
+      "verificationMethod": "Review the visual hierarchy, DOM heading tree, and five-second comprehension together.",
+      "repositoryAccessRequired": false,
+      "effort": "medium",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "fix next",
+      "changeType": "structural fix",
+      "measurementClass": "deterministic",
+      "relatedFindingIds": [
+        "no-level-one-heading-identifies-the-page-2fe3836",
+        "opening-message-does-not-clearly-state-the-web-de55f1d",
+        "heading-levels-skip-part-of-the-hierarchy-6d475b0"
+      ],
+      "tags": [
+        "heading",
+        "messaging"
+      ],
+      "affectedPages": [
+        "/"
+      ],
+      "priorityScore": 87
+    },
+    {
+      "id": "images-do-not-reserve-intrinsic-layout-space-92d246c",
+      "title": "Images do not reserve intrinsic layout space",
+      "category": "layout stability",
+      "affectedPage": "/",
+      "evidence": "1 image(s) omit width and/or height attributes.",
+      "evidenceSource": "HTML image inspector",
+      "severity": "medium",
+      "confidence": "likely",
+      "userImpact": "Content can move as images load, causing missed taps or disrupted reading.",
+      "seoImpact": "Unexpected shifts can contribute to poor CLS, a Core Web Vital; actual CLS requires measurement.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "Without dimensions or an aspect-ratio reservation, image space may be unknown before download.",
+      "plainLanguageExplanation": "The browser may not know how much room an image needs until it arrives.",
+      "recommendedFix": "Provide correct width/height or an equivalent CSS aspect-ratio and keep responsive sizing.",
+      "implementationGuidance": "Edit public/index.html. Configure the image component to emit intrinsic dimensions; verify the rendered aspect ratio.",
+      "expectedResult": "More stable rendering and potentially lower CLS.",
+      "verificationMethod": "Confirm dimensions in rendered HTML and compare median CLS across three Lighthouse runs.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "fix next",
+      "changeType": "code change",
+      "measurementClass": "environment-dependent",
+      "tags": [
+        "image",
+        "cls",
+        "performance"
+      ],
+      "priorityScore": 80
+    },
+    {
+      "id": "document-language-is-not-declared-40029ad",
+      "title": "Document language is not declared",
+      "category": "accessibility",
+      "affectedPage": "/",
+      "evidence": "The html element has no lang attribute.",
+      "evidenceSource": "HTML semantic inspector",
+      "severity": "medium",
+      "confidence": "confirmed",
+      "userImpact": "Screen readers may pronounce words using the wrong language rules.",
+      "seoImpact": "No direct ranking penalty is claimed.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "The root html element lacks a valid language code.",
+      "plainLanguageExplanation": "The browser is not told what language the page uses.",
+      "recommendedFix": "Set the primary BCP 47 language code, such as lang=\"en\"; localize it on translated variants.",
+      "implementationGuidance": "Edit public/index.html. Set lang on the root html element or framework document shell.",
+      "expectedResult": "More accurate assistive-technology pronunciation.",
+      "verificationMethod": "Inspect the rendered html element and rerun accessibility checks.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "fix next",
+      "changeType": "code change",
+      "measurementClass": "deterministic",
+      "tags": [
+        "accessibility",
+        "international"
+      ],
+      "priorityScore": 75
+    },
+    {
+      "id": "meta-description-is-missing-d0f3db3",
+      "title": "Meta description is missing",
+      "category": "metadata",
+      "affectedPage": "/",
+      "evidence": "No meta[name=\"description\"] with content was found.",
+      "evidenceSource": "HTML metadata inspector",
+      "severity": "medium",
+      "confidence": "confirmed",
+      "userImpact": "People may see a less useful automatically selected snippet when the page is shared or found.",
+      "seoImpact": "A description is not a direct ranking guarantee, but a useful summary can improve search-result comprehension and clicks.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "Search engines can select body text instead, but an accurate page-specific summary gives them another candidate.",
+      "plainLanguageExplanation": "The page does not provide its own short summary for search engines.",
+      "recommendedFix": "Add a unique one- or two-sentence summary of the page and its relevant next step.",
+      "implementationGuidance": "Edit public/index.html. Add meta name=\"description\" through the framework metadata API or document head.",
+      "expectedResult": "A stronger snippet candidate that matches the page.",
+      "verificationMethod": "Inspect rendered HTML and confirm each audited page has a distinct, accurate description.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "fix next",
+      "changeType": "quick win",
+      "measurementClass": "deterministic",
+      "tags": [
+        "description",
+        "seo"
+      ],
+      "priorityScore": 75
+    },
+    {
+      "id": "main-content-landmark-is-missing-d782998",
+      "title": "Main content landmark is missing",
+      "category": "semantic HTML",
+      "affectedPage": "/",
+      "evidence": "No <main> element was found.",
+      "evidenceSource": "HTML semantic inspector",
+      "severity": "low",
+      "confidence": "confirmed",
+      "userImpact": "Assistive-technology users cannot jump directly to the primary content.",
+      "seoImpact": "No direct ranking effect is claimed.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "The document does not identify its primary content landmark.",
+      "plainLanguageExplanation": "The page does not mark which content is the main part.",
+      "recommendedFix": "Wrap the unique primary content in one main element.",
+      "implementationGuidance": "Edit public/index.html. Add one <main> around route content, outside repeated navigation and footer.",
+      "expectedResult": "Faster landmark navigation.",
+      "verificationMethod": "Inspect landmarks in the accessibility tree.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "improve later",
+      "changeType": "code change",
+      "measurementClass": "deterministic",
+      "tags": [
+        "accessibility",
+        "semantic"
+      ],
+      "priorityScore": 62
+    },
+    {
+      "id": "primary-cta-language-changes-across-pages-cont-5ddf051",
+      "title": "Primary CTA language changes across pages",
+      "category": "message consistency",
+      "affectedPage": "/, /contact, /services",
+      "evidence": "First CTA labels: Learn more | Book an introductory call | Contact",
+      "evidenceSource": "Cross-page copy comparator",
+      "severity": "medium",
+      "confidence": "likely",
+      "userImpact": "Visitors encounter an inconsistent path as they move through the site.",
+      "seoImpact": "No direct ranking effect is claimed.",
+      "conversionImpact": "Changing labels can make the same desired action feel like different commitments.",
+      "technicalExplanation": "More than two distinct first-CTA labels were found across the sampled pages.",
+      "plainLanguageExplanation": "The site names its main next step differently from page to page.",
+      "recommendedFix": "Standardize the primary action around “Book an introductory call” and reserve other labels for genuinely different actions.",
+      "implementationGuidance": "Update the shared CTA component or page data where possible.",
+      "expectedResult": "A predictable site-wide conversion path.",
+      "verificationMethod": "Inventory CTA labels across the selected pages and click each destination.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 3,
+      "dependencyOrder": 0,
+      "priorityGroup": "improve later",
+      "changeType": "quick win",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "cta",
+        "consistency"
+      ],
+      "priorityScore": 62
+    },
+    {
+      "id": "prominent-copy-does-not-align-with-stated-targ-fc0c920",
+      "title": "Prominent copy does not align with stated target keywords",
+      "category": "search intent",
+      "affectedPage": "/",
+      "evidence": "Stated keywords: catalogue website for independent shops; prominent copy: “Home Unlock next-generation success Everything you need”.",
+      "evidenceSource": "Visible-copy and website-intent comparator",
+      "severity": "medium",
+      "confidence": "likely",
+      "userImpact": "Searchers may not quickly see that the page answers their need.",
+      "seoImpact": "Weak topical alignment can reduce relevance for the intended query; keyword inclusion alone never guarantees rankings.",
+      "conversionImpact": "Mismatch between query expectation and landing copy increases abandonment.",
+      "technicalExplanation": "None of the supplied keyword phrases had strong token overlap with title, headings, or description.",
+      "plainLanguageExplanation": "The page does not use the same clear topic language its intended visitors may search for.",
+      "recommendedFix": "Choose the keyword whose intent genuinely matches this page, then reflect that topic naturally in the title, main heading, summary, and supporting content.",
+      "implementationGuidance": "Edit public/index.html. Avoid stuffing every keyword onto every page; map distinct intents to appropriate pages.",
+      "expectedResult": "A clearer match between the page and its intended search need.",
+      "verificationMethod": "Review the search-result promise and landing page together; confirm one primary intent per page.",
+      "repositoryAccessRequired": false,
+      "effort": "medium",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "improve later",
+      "changeType": "content rewrite",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "keywords",
+        "search-intent"
+      ],
+      "priorityScore": 62
+    },
+    {
+      "id": "the-stated-differentiator-is-not-visible-in-th-2f4cace",
+      "title": "The stated differentiator is not visible in the opening message",
+      "category": "differentiation",
+      "affectedPage": "/, /contact",
+      "evidence": "Stated differentiator: “Plain-language setup and accessibility review included”; it is not clearly reflected in the opening sample.",
+      "evidenceSource": "Visible-copy and website-intent comparator",
+      "severity": "medium",
+      "confidence": "likely",
+      "userImpact": "Visitors may see a generic offer that is difficult to compare.",
+      "seoImpact": "Specific subject language can improve relevance, but no ranking outcome is guaranteed.",
+      "conversionImpact": "A generic promise gives visitors less reason to choose this offer.",
+      "technicalExplanation": "The intent-to-copy comparison found weak term alignment; synonyms and visual context may require human review.",
+      "plainLanguageExplanation": "The reason to choose this offer is not easy to see.",
+      "recommendedFix": "State the truthful differentiator in plain language and connect it to a visitor benefit.",
+      "implementationGuidance": "Edit public/index.html. Use only supported facts; do not add unverified “best”, results, certifications, or capabilities.",
+      "expectedResult": "Visitors can tell why the offer differs from alternatives.",
+      "verificationMethod": "Ask a reviewer to identify the difference without reading the intent brief.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 2,
+      "dependencyOrder": 0,
+      "priorityGroup": "improve later",
+      "changeType": "content rewrite",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "differentiation",
+        "trust"
+      ],
+      "affectedPages": [
+        "/",
+        "/contact"
+      ],
+      "relatedFindingIds": [
+        "the-stated-differentiator-is-not-visible-in-th-1820a24"
+      ],
+      "priorityScore": 59
+    },
+    {
+      "id": "cta-wording-does-not-clearly-match-the-desired-f07ba0a",
+      "title": "CTA wording does not clearly match the desired visitor action",
+      "category": "calls to action",
+      "affectedPage": "/",
+      "evidence": "Detected CTA text: “Learn more | Contact”; intended action: “Book an introductory call”.",
+      "evidenceSource": "Visible-copy and website-intent comparator",
+      "severity": "medium",
+      "confidence": "likely",
+      "userImpact": "Visitors may be unsure where a button leads or whether it completes their goal.",
+      "seoImpact": "No direct ranking effect is claimed.",
+      "conversionImpact": "Mismatch between intent and CTA can reduce action completion.",
+      "technicalExplanation": "CTA words have low overlap with the stated action; human review should account for good synonyms.",
+      "plainLanguageExplanation": "The buttons do not clearly say the action the business wants visitors to take.",
+      "recommendedFix": "Use consistent action-led wording that previews what happens next.",
+      "implementationGuidance": "Edit public/index.html. Update visible labels and accessible names together; keep secondary actions visually secondary.",
+      "expectedResult": "The conversion path feels predictable.",
+      "verificationMethod": "Check every primary CTA label and destination against the stated action.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "improve later",
+      "changeType": "quick win",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "cta",
+        "conversion",
+        "consistency"
+      ],
+      "priorityScore": 56
+    },
+    {
+      "id": "the-intended-audience-is-not-obvious-near-the--c52d34f",
+      "title": "The intended audience is not obvious near the top",
+      "category": "audience clarity",
+      "affectedPage": "/",
+      "evidence": "Primary audience: “Independent shop owners”; opening sample: “Home Unlock next-generation success Everything you need Home Lantern Studio Services Old guide Unlock next-generation success We leverage seamless, best-in-class solutions for every journey. Learn more Everything you need Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur a”.",
+      "evidenceSource": "Visible-copy and website-intent comparator",
+      "severity": "medium",
+      "confidence": "likely",
+      "userImpact": "Relevant visitors may not recognize that the offer is meant for them.",
+      "seoImpact": "Audience and use-case language can help align the page with specific search intent.",
+      "conversionImpact": "Visitors hesitate when fit is unclear.",
+      "technicalExplanation": "The meaningful audience terms have little or no overlap with prominent visible copy.",
+      "plainLanguageExplanation": "The page does not quickly say who it is for.",
+      "recommendedFix": "Name the audience or a recognizable audience situation in the hero or immediate supporting copy.",
+      "implementationGuidance": "Edit public/index.html. Add accurate audience language without excluding valid customers or inventing segments.",
+      "expectedResult": "Qualified visitors recognize themselves sooner.",
+      "verificationMethod": "Review with three target-audience examples and confirm the statement remains true.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "improve later",
+      "changeType": "content rewrite",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "audience",
+        "intent"
+      ],
+      "priorityScore": 56
+    },
+    {
+      "id": "generic-marketing-jargon-reduces-specificity-8108d37",
+      "title": "Generic marketing jargon reduces specificity",
+      "category": "clarity",
+      "affectedPage": "/",
+      "evidence": "Detected phrase(s): best-in-class, next-generation, seamless, unlock, leverage",
+      "evidenceSource": "Visible-copy phrase scanner",
+      "severity": "low",
+      "confidence": "confirmed",
+      "userImpact": "Visitors must interpret broad claims instead of learning what the offer actually does.",
+      "seoImpact": "Generic language contributes little topical specificity.",
+      "conversionImpact": "Unsupported superlatives can weaken trust.",
+      "technicalExplanation": "A curated phrase list found broad promotional language; context still requires editorial judgment.",
+      "plainLanguageExplanation": "The copy sounds promotional without explaining something concrete.",
+      "recommendedFix": "Replace each phrase with a specific, supportable description of the process, feature, audience, or outcome.",
+      "implementationGuidance": "Edit public/index.html. Do not substitute invented statistics, testimonials, certifications, or capabilities.",
+      "expectedResult": "More credible and informative copy.",
+      "verificationMethod": "For every claim, ask “what exactly does this mean, and can we prove it?”",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "improve later",
+      "changeType": "quick win",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "jargon",
+        "trust"
+      ],
+      "priorityScore": 50
+    },
+    {
+      "id": "copy-repeats-the-same-phrases-excessively-ca258b6",
+      "title": "Copy repeats the same phrases excessively",
+      "category": "repetition",
+      "affectedPage": "/",
+      "evidence": "Repeated phrase: “lorem ipsum dolor sit” (3 times).",
+      "evidenceSource": "Visible-copy repetition heuristic",
+      "severity": "low",
+      "confidence": "likely",
+      "userImpact": "Repetition slows scanning and can make the page feel padded.",
+      "seoImpact": "Natural repetition is fine; forced repetition can reduce content quality and resemble keyword stuffing.",
+      "conversionImpact": "Repeated claims use space that could answer objections or add evidence.",
+      "technicalExplanation": "A four-word normalized phrase occurred at least three times.",
+      "plainLanguageExplanation": "The page says the same thing several times.",
+      "recommendedFix": "Keep the strongest instance and use the freed space for distinct, useful information.",
+      "implementationGuidance": "Edit public/index.html. Preserve intentional navigation labels and legal text; edit repeated marketing paragraphs.",
+      "expectedResult": "Tighter copy with fewer redundant sections.",
+      "verificationMethod": "Rerun repetition analysis and perform a human edit pass.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "improve later",
+      "changeType": "content rewrite",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "repetition",
+        "content-quality"
+      ],
+      "priorityScore": 43
+    },
+    {
+      "id": "the-page-offers-little-visible-support-for-tru-d92b1b0",
+      "title": "The page offers little visible support for trust",
+      "category": "trust signals",
+      "affectedPage": "/, /contact",
+      "evidence": "No common evidence, policy, team, methodology, customer, certification, or assurance language was detected.",
+      "evidenceSource": "Visible-copy trust-signal heuristic",
+      "severity": "medium",
+      "confidence": "possible",
+      "userImpact": "Visitors may lack enough information to judge credibility.",
+      "seoImpact": "Trust is context-dependent; this audit does not treat E-E-A-T as a standalone ranking factor.",
+      "conversionImpact": "Unanswered credibility questions can delay action.",
+      "technicalExplanation": "Automated text matching cannot see every visual or externally hosted trust signal.",
+      "plainLanguageExplanation": "The page may not give visitors enough reason to believe the claims.",
+      "recommendedFix": "Add only real, verifiable evidence appropriate to the business: named process, policies, responsible people, source citations, or genuine customer proof.",
+      "implementationGuidance": "Edit public/index.html. Do not invent results, reviews, logos, certifications, guarantees, or statistics; mark this as unresolved until evidence is supplied.",
+      "expectedResult": "Visitors can evaluate credibility using factual evidence.",
+      "verificationMethod": "Have the business owner verify every trust claim and link to supporting detail.",
+      "repositoryAccessRequired": false,
+      "effort": "medium",
+      "affectedPageCount": 2,
+      "dependencyOrder": 0,
+      "priorityGroup": "monitor",
+      "changeType": "content rewrite",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "trust",
+        "evidence"
+      ],
+      "affectedPages": [
+        "/",
+        "/contact"
+      ],
+      "relatedFindingIds": [
+        "the-page-offers-little-visible-support-for-tru-31ee234"
+      ],
+      "priorityScore": 59
+    },
+    {
+      "id": "instruction-like-page-content-was-ignored-b86bdda",
+      "title": "Instruction-like page content was ignored",
+      "category": "audit safety",
+      "affectedPage": "/",
+      "evidence": "Prompt-injection-like text was detected; its contents were not followed or reproduced.",
+      "evidenceSource": "Untrusted-content safety scanner",
+      "severity": "informational",
+      "confidence": "confirmed",
+      "userImpact": "No website-user impact was established.",
+      "seoImpact": "No direct search impact was established.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "Website content is audit data and cannot direct the auditing agent.",
+      "plainLanguageExplanation": "The page contained text that looked like instructions to the auditor, so the auditor ignored it.",
+      "recommendedFix": "No change is required if this text is legitimate user-facing content; remove it if it was unintentionally exposed.",
+      "implementationGuidance": "Edit public/index.html. Review the page content without copying suspected instructions or secrets into reports.",
+      "expectedResult": "The audit remains scoped to website analysis.",
+      "verificationMethod": "Confirm that no page-supplied command affected the audit workflow.",
+      "repositoryAccessRequired": false,
+      "effort": "unknown",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "monitor",
+      "changeType": "monitoring",
+      "measurementClass": "deterministic",
+      "tags": [
+        "safety"
+      ],
+      "priorityScore": 25
+    }
+  ],
+  "priorities": {
+    "groups": {
+      "fix first": [
+        "internal-link-points-to-an-unknown-local-route-d9f5d53",
+        "images-omit-alternative-text-attributes-311cddc",
+        "mobile-viewport-metadata-is-missing-37455f2"
+      ],
+      "fix next": [
+        "page-title-weakens-both-search-presentation-an-683e672",
+        "heading-structure-and-heading-message-should-b-f7b2a98",
+        "images-do-not-reserve-intrinsic-layout-space-92d246c",
+        "document-language-is-not-declared-40029ad",
+        "meta-description-is-missing-d0f3db3"
+      ],
+      "improve later": [
+        "main-content-landmark-is-missing-d782998",
+        "primary-cta-language-changes-across-pages-cont-5ddf051",
+        "prominent-copy-does-not-align-with-stated-targ-fc0c920",
+        "the-stated-differentiator-is-not-visible-in-th-2f4cace",
+        "cta-wording-does-not-clearly-match-the-desired-f07ba0a",
+        "the-intended-audience-is-not-obvious-near-the--c52d34f",
+        "generic-marketing-jargon-reduces-specificity-8108d37",
+        "copy-repeats-the-same-phrases-excessively-ca258b6"
+      ],
+      "monitor": [
+        "the-page-offers-little-visible-support-for-tru-d92b1b0",
+        "instruction-like-page-content-was-ignored-b86bdda"
+      ]
+    },
+    "quickWins": [
+      "internal-link-points-to-an-unknown-local-route-d9f5d53",
+      "images-omit-alternative-text-attributes-311cddc",
+      "mobile-viewport-metadata-is-missing-37455f2",
+      "images-do-not-reserve-intrinsic-layout-space-92d246c",
+      "document-language-is-not-declared-40029ad",
+      "meta-description-is-missing-d0f3db3"
+    ],
+    "byChangeType": {
+      "quick win": [
+        "internal-link-points-to-an-unknown-local-route-d9f5d53",
+        "mobile-viewport-metadata-is-missing-37455f2",
+        "meta-description-is-missing-d0f3db3",
+        "primary-cta-language-changes-across-pages-cont-5ddf051",
+        "cta-wording-does-not-clearly-match-the-desired-f07ba0a",
+        "generic-marketing-jargon-reduces-specificity-8108d37"
+      ],
+      "code change": [
+        "images-omit-alternative-text-attributes-311cddc",
+        "images-do-not-reserve-intrinsic-layout-space-92d246c",
+        "document-language-is-not-declared-40029ad",
+        "main-content-landmark-is-missing-d782998"
+      ],
+      "content rewrite": [
+        "page-title-weakens-both-search-presentation-an-683e672",
+        "prominent-copy-does-not-align-with-stated-targ-fc0c920",
+        "the-stated-differentiator-is-not-visible-in-th-2f4cace",
+        "the-intended-audience-is-not-obvious-near-the--c52d34f",
+        "copy-repeats-the-same-phrases-excessively-ca258b6",
+        "the-page-offers-little-visible-support-for-tru-d92b1b0"
+      ],
+      "structural fix": [
+        "heading-structure-and-heading-message-should-b-f7b2a98"
+      ],
+      "monitoring": [
+        "instruction-like-page-content-was-ignored-b86bdda"
+      ]
+    }
+  },
+  "supersededFindings": [
+    {
+      "id": "document-title-may-be-unhelpfully-short-or-lon-6673728",
+      "title": "Document title may be unhelpfully short or long",
+      "category": "metadata",
+      "affectedPage": "/",
+      "evidence": "Title (4 characters): “Home”",
+      "evidenceSource": "HTML metadata inspector",
+      "severity": "low",
+      "confidence": "likely",
+      "userImpact": "A vague or truncated title can make the page harder to recognize.",
+      "seoImpact": "Google may rewrite a title that is vague, repetitive, or poorly matched to page content.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "Length is a review trigger, not a ranking requirement; usefulness and accuracy matter more than a fixed character count.",
+      "plainLanguageExplanation": "The title deserves a human edit for clarity; it is not failing a magic length rule.",
+      "recommendedFix": "Rewrite the title to be unique, concise, and accurate without keyword stuffing.",
+      "implementationGuidance": "Edit public/index.html:5. Update the title in the route metadata and keep the visible H1 consistent with its promise.",
+      "expectedResult": "A clearer browser label and stronger search-result headline candidate.",
+      "verificationMethod": "Review at common search-snippet widths and confirm the title still accurately summarizes the page.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "monitor",
+      "changeType": "content rewrite",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "title",
+        "seo",
+        "messaging"
+      ]
+    },
+    {
+      "id": "no-level-one-heading-identifies-the-page-2fe3836",
+      "title": "No level-one heading identifies the page",
+      "category": "semantic HTML",
+      "affectedPage": "/",
+      "evidence": "2 headings found; none is <h1>.",
+      "evidenceSource": "HTML heading inspector",
+      "severity": "medium",
+      "confidence": "confirmed",
+      "userImpact": "Screen-reader and scanning users lack a clear page heading.",
+      "seoImpact": "Search engines can still understand the page, but the primary topic is less explicit.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "The heading outline has no h1.",
+      "plainLanguageExplanation": "The page looks like it has content but does not label its main topic in the document structure.",
+      "recommendedFix": "Use one descriptive h1 for the page’s primary visible heading.",
+      "implementationGuidance": "Edit public/index.html. Change the primary heading component to an <h1>; keep visual styling in CSS.",
+      "expectedResult": "A clearer page structure for people and machines.",
+      "verificationMethod": "Inspect the accessibility tree or rerun the heading check.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "monitor",
+      "changeType": "code change",
+      "measurementClass": "deterministic",
+      "tags": [
+        "heading",
+        "accessibility",
+        "messaging"
+      ]
+    },
+    {
+      "id": "heading-levels-skip-part-of-the-hierarchy-6d475b0",
+      "title": "Heading levels skip part of the hierarchy",
+      "category": "accessibility",
+      "affectedPage": "/",
+      "evidence": "h2 “Unlock next-generation success” is followed by h4 “Everything you need”.",
+      "evidenceSource": "HTML heading inspector",
+      "severity": "medium",
+      "confidence": "confirmed",
+      "userImpact": "The outline can be confusing for people who navigate headings with assistive technology.",
+      "seoImpact": "No direct ranking rule was inferred; semantic structure supports clearer content understanding.",
+      "conversionImpact": "No direct conversion impact was established.",
+      "technicalExplanation": "A heading level was skipped in document order.",
+      "plainLanguageExplanation": "The page jumps over a section level, like going from chapter to sub-subsection.",
+      "recommendedFix": "Choose heading levels by nesting, not font size.",
+      "implementationGuidance": "Edit public/index.html:17. Change the heading near line 17 to the appropriate semantic level.",
+      "expectedResult": "A logical heading outline.",
+      "verificationMethod": "Rerun the heading check and inspect the accessibility tree.",
+      "repositoryAccessRequired": false,
+      "effort": "small",
+      "affectedPageCount": 1,
+      "dependencyOrder": 0,
+      "priorityGroup": "monitor",
+      "changeType": "code change",
+      "measurementClass": "deterministic",
+      "tags": [
+        "heading",
+        "accessibility",
+        "messaging"
+      ]
+    },
+    {
+      "id": "opening-message-does-not-clearly-state-the-web-de55f1d",
+      "title": "Opening message does not clearly state the website purpose",
+      "category": "value proposition",
+      "affectedPage": "/, /contact",
+      "evidence": "Opening: “Home Unlock next-generation success Everything you need Home Lantern Studio Services Old guide Unlock next-generation success We leverage seamless, best-in-class solutions for every journey. Learn more Everything you need Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur a”; stated purpose: “Help neighbourhood shops create accessible online catalogues”. | Opening: “Book an introductory call | Lantern Studio Book an introductory call Book an introductory call | Lantern Studio Book an introductory call Tell us what your shop needs to publish. We will explain the next step without pressure. Name Book an introductory call”; stated purpose: “Help neighbourhood shops create accessible online catalogues”.",
+      "evidenceSource": "Visible-copy and website-intent comparator",
+      "severity": "high",
+      "confidence": "likely",
+      "userImpact": "Visitors may leave before understanding what the site offers.",
+      "seoImpact": "The visible topic may not align with the queries the page is meant to satisfy.",
+      "conversionImpact": "Unclear relevance weakens the path to the desired action.",
+      "technicalExplanation": "Only 0% of meaningful purpose/product terms appeared in the opening sample; this is a review heuristic, not proof of poor copy.",
+      "plainLanguageExplanation": "The first screen does not use enough concrete language to explain what this site is for.",
+      "recommendedFix": "Rewrite the title, h1, and first supporting sentence to name the offer, audience or problem, and practical outcome.",
+      "implementationGuidance": "Edit public/index.html. Update the hero copy while preserving accurate claims and the existing heading semantics.",
+      "expectedResult": "A first-time visitor can explain the offer after one quick scan.",
+      "verificationMethod": "Ask an unfamiliar reader what the site offers after five seconds; compare their answer with the stated intent.",
+      "repositoryAccessRequired": false,
+      "effort": "medium",
+      "affectedPageCount": 2,
+      "dependencyOrder": 0,
+      "priorityGroup": "monitor",
+      "changeType": "content rewrite",
+      "measurementClass": "relatively stable",
+      "tags": [
+        "messaging",
+        "hero",
+        "intent"
+      ],
+      "affectedPages": [
+        "/",
+        "/contact"
+      ],
+      "relatedFindingIds": [
+        "opening-message-does-not-clearly-state-the-web-0795373"
+      ]
+    }
+  ],
+  "lighthouse": [
+    {
+      "summary": {
+        "schemaVersion": "1.0.0",
+        "url": "http://127.0.0.1:65502/",
+        "requestedUrl": "http://127.0.0.1:65502/",
+        "runs": 3,
+        "aggregation": "median",
+        "categories": {
+          "performance": {
+            "title": "Performance",
+            "score": 1,
+            "scorePercent": 100,
+            "measurementClass": "variable performance"
+          },
+          "accessibility": {
+            "title": "Accessibility",
+            "score": 0.62,
+            "scorePercent": 62,
+            "measurementClass": "relatively stable"
+          },
+          "best-practices": {
+            "title": "Best Practices",
+            "score": 0.96,
+            "scorePercent": 96,
+            "measurementClass": "relatively stable"
+          },
+          "seo": {
+            "title": "SEO",
+            "score": 0.75,
+            "scorePercent": 75,
+            "measurementClass": "relatively stable"
+          }
+        },
+        "audits": {
+          "is-on-https": {
+            "title": "Uses HTTPS",
+            "description": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "first-contentful-paint": {
+            "title": "First Contentful Paint",
+            "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+            "score": 1,
+            "numericValue": 655.9622,
+            "numericUnit": "millisecond",
+            "displayValue": "0.7 s",
+            "measurementClass": "variable performance"
+          },
+          "largest-contentful-paint": {
+            "title": "Largest Contentful Paint",
+            "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+            "score": 1,
+            "numericValue": 901.9244000000001,
+            "numericUnit": "millisecond",
+            "displayValue": "0.9 s",
+            "measurementClass": "variable performance"
+          },
+          "speed-index": {
+            "title": "Speed Index",
+            "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+            "score": 1,
+            "numericValue": 655.9622,
+            "numericUnit": "millisecond",
+            "displayValue": "0.7 s",
+            "measurementClass": "variable performance"
+          },
+          "screenshot-thumbnails": {
+            "title": "Screenshot Thumbnails",
+            "description": "This is what the load of your site looked like.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "final-screenshot": {
+            "title": "Final Screenshot",
+            "description": "The last screenshot captured of the pageload.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "total-blocking-time": {
+            "title": "Total Blocking Time",
+            "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "variable performance"
+          },
+          "max-potential-fid": {
+            "title": "Max Potential First Input Delay",
+            "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+            "score": 1,
+            "numericValue": 53,
+            "numericUnit": "millisecond",
+            "displayValue": "50 ms",
+            "measurementClass": "relatively stable"
+          },
+          "cumulative-layout-shift": {
+            "title": "Cumulative Layout Shift",
+            "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "unitless",
+            "displayValue": "0",
+            "measurementClass": "variable performance"
+          },
+          "errors-in-console": {
+            "title": "Browser errors were logged to the console",
+            "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "server-response-time": {
+            "title": "Initial server response time was short",
+            "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/).",
+            "score": 1,
+            "numericValue": 7,
+            "numericUnit": "millisecond",
+            "displayValue": "Root document took 10 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "interactive": {
+            "title": "Time to Interactive",
+            "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+            "score": 1,
+            "numericValue": 901.9244000000001,
+            "numericUnit": "millisecond",
+            "displayValue": "0.9 s",
+            "measurementClass": "variable performance"
+          },
+          "redirects": {
+            "title": "Avoid multiple page redirects",
+            "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "environment-dependent"
+          },
+          "image-aspect-ratio": {
+            "title": "Displays images with correct aspect ratio",
+            "description": "Image display dimensions should match natural aspect ratio. [Learn more about image aspect ratio](https://developer.chrome.com/docs/lighthouse/best-practices/image-aspect-ratio/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "image-size-responsive": {
+            "title": "Serves images with appropriate resolution",
+            "description": "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "deprecations": {
+            "title": "Avoids deprecated APIs",
+            "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "third-party-cookies": {
+            "title": "Avoids third-party cookies",
+            "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "mainthread-work-breakdown": {
+            "title": "Minimizes main-thread work",
+            "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+            "score": 1,
+            "numericValue": 212.692,
+            "numericUnit": "millisecond",
+            "displayValue": "0.2 s",
+            "measurementClass": "relatively stable"
+          },
+          "bootup-time": {
+            "title": "JavaScript execution time",
+            "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+            "score": 1,
+            "numericValue": 9.292000000000002,
+            "numericUnit": "millisecond",
+            "displayValue": "0.0 s",
+            "measurementClass": "relatively stable"
+          },
+          "diagnostics": {
+            "title": "Diagnostics",
+            "description": "Collection of useful page vitals.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "network-requests": {
+            "title": "Network Requests",
+            "description": "Lists the network requests that were made during page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "network-rtt": {
+            "title": "Network Round Trip Times",
+            "description": "Network round trip times (RTT) have a large impact on performance. If the RTT to an origin is high, it's an indication that servers closer to the user could improve performance. [Learn more about the Round Trip Time](https://hpbn.co/primer-on-latency-and-bandwidth/).",
+            "score": 1,
+            "numericValue": 0.14129999999999998,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "network-server-latency": {
+            "title": "Server Backend Latencies",
+            "description": "Server latencies can impact web performance. If the server latency of an origin is high, it's an indication the server is overloaded or has poor backend performance. [Learn more about server response time](https://hpbn.co/primer-on-web-performance/#analyzing-the-resource-waterfall).",
+            "score": 1,
+            "numericValue": 0.9621999999999999,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "main-thread-tasks": {
+            "title": "Tasks",
+            "description": "Lists the toplevel main thread tasks that executed during page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "metrics": {
+            "title": "Metrics",
+            "description": "Collects all available metrics.",
+            "score": 1,
+            "numericValue": 902,
+            "numericUnit": "millisecond",
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "resource-summary": {
+            "title": "Resources Summary",
+            "description": "Aggregates all network requests and groups them by type",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "long-tasks": {
+            "title": "Avoid long main-thread tasks",
+            "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn how to avoid long main-thread tasks](https://web.dev/articles/optimize-long-tasks)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": "1 long task found",
+            "measurementClass": "relatively stable"
+          },
+          "unsized-images": {
+            "title": "Image elements do not have explicit `width` and `height`",
+            "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+            "score": 0.5,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "valid-source-maps": {
+            "title": "Page has valid source maps",
+            "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "csp-xss": {
+            "title": "Ensure CSP is effective against XSS attacks",
+            "description": "A strong Content Security Policy (CSP) significantly reduces the risk of cross-site scripting (XSS) attacks. [Learn how to use a CSP to prevent XSS](https://developer.chrome.com/docs/lighthouse/best-practices/csp-xss/)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "has-hsts": {
+            "title": "Use a strong HSTS policy",
+            "description": "Deployment of the HSTS header significantly reduces the risk of downgrading HTTP connections and eavesdropping attacks. A rollout in stages, starting with a low max-age is recommended. [Learn more about using a strong HSTS policy.](https://developer.chrome.com/docs/lighthouse/best-practices/has-hsts)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "origin-isolation": {
+            "title": "Ensure proper origin isolation with COOP",
+            "description": "The Cross-Origin-Opener-Policy (COOP) can be used to isolate the top-level window from other documents such as pop-ups. [Learn more about deploying the COOP header.](https://web.dev/articles/why-coop-coep#coop)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "clickjacking-mitigation": {
+            "title": "Mitigate clickjacking with XFO or CSP",
+            "description": "The `X-Frame-Options` (XFO) header or the `frame-ancestors` directive in the `Content-Security-Policy` (CSP) header control where a page can be embedded. These can mitigate clickjacking attacks by blocking some or all sites from embedding the page. [Learn more about mitigating clickjacking](https://developer.chrome.com/docs/lighthouse/best-practices/clickjacking-mitigation).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "trusted-types-xss": {
+            "title": "Mitigate DOM-based XSS with Trusted Types",
+            "description": "The `require-trusted-types-for` directive in the `Content-Security-Policy` (CSP) header instructs user agents to control the data passed to DOM XSS sink functions. [Learn more about mitigating DOM-based XSS with Trusted Types](https://developer.chrome.com/docs/lighthouse/best-practices/trusted-types-xss).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "script-treemap-data": {
+            "title": "Script Treemap Data",
+            "description": "Used for treemap app",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "aria-hidden-body": {
+            "title": "`[aria-hidden=\"true\"]` is not present on the document `<body>`",
+            "description": "Assistive technologies, like screen readers, work inconsistently when `aria-hidden=\"true\"` is set on the document `<body>`. [Learn how `aria-hidden` affects the document body](https://dequeuniversity.com/rules/axe/4.12/aria-hidden-body).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "color-contrast": {
+            "title": "Background and foreground colors have a sufficient contrast ratio",
+            "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.12/color-contrast).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "document-title": {
+            "title": "Document has a `<title>` element",
+            "description": "The title gives screen reader users an overview of the page, and search engine users rely on it heavily to determine if a page is relevant to their search. [Learn more about document titles](https://dequeuniversity.com/rules/axe/4.12/document-title).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "heading-order": {
+            "title": "Heading elements are not in a sequentially-descending order",
+            "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.12/heading-order).",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "html-has-lang": {
+            "title": "`<html>` element does not have a `[lang]` attribute",
+            "description": "If a page doesn't specify a `lang` attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. [Learn more about the `lang` attribute](https://dequeuniversity.com/rules/axe/4.12/html-has-lang).",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "image-alt": {
+            "title": "Image elements do not have `[alt]` attributes",
+            "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more about the `alt` attribute](https://dequeuniversity.com/rules/axe/4.12/image-alt).",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "landmark-one-main": {
+            "title": "Document does not have a main landmark.",
+            "description": "One main landmark helps screen reader users navigate a web page. [Learn more about landmarks](https://dequeuniversity.com/rules/axe/4.12/landmark-one-main).",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "link-name": {
+            "title": "Links have a discernible name",
+            "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn how to make links accessible](https://dequeuniversity.com/rules/axe/4.12/link-name).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "target-size": {
+            "title": "Touch targets have sufficient size and spacing.",
+            "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.12/target-size).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "total-byte-weight": {
+            "title": "Avoids enormous network payloads",
+            "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+            "score": 1,
+            "numericValue": 1355,
+            "numericUnit": "byte",
+            "displayValue": "Total size was 1 KiB",
+            "measurementClass": "relatively stable"
+          },
+          "unminified-css": {
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unminified-javascript": {
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unused-css-rules": {
+            "title": "Reduce unused CSS",
+            "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unused-javascript": {
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "doctype": {
+            "title": "Page has the HTML doctype",
+            "description": "Specifying a doctype prevents the browser from switching to quirks-mode. [Learn more about the doctype declaration](https://developer.chrome.com/docs/lighthouse/best-practices/doctype/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "charset": {
+            "title": "Properly defines charset",
+            "description": "A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "geolocation-on-start": {
+            "title": "Avoids requesting the geolocation permission on page load",
+            "description": "Users are mistrustful of or confused by sites that request their location without context. Consider tying the request to a user action instead. [Learn more about the geolocation permission](https://developer.chrome.com/docs/lighthouse/best-practices/geolocation-on-start/). Also consider using the [`<geolocation>` element](https://developer.chrome.com/blog/geolocation-html-element).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "inspector-issues": {
+            "title": "No issues in the `Issues` panel in Chrome Devtools",
+            "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "notification-on-start": {
+            "title": "Avoids requesting the notification permission on page load",
+            "description": "Users are mistrustful of or confused by sites that request to send notifications without context. Consider tying the request to user gestures instead. [Learn more about responsibly getting permission for notifications](https://developer.chrome.com/docs/lighthouse/best-practices/notification-on-start/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "paste-preventing-inputs": {
+            "title": "Allows users to paste into input fields",
+            "description": "Preventing input pasting is a bad practice for the UX, and weakens security by blocking password managers.[Learn more about user-friendly input fields](https://developer.chrome.com/docs/lighthouse/best-practices/paste-preventing-inputs/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "baseline": {
+            "title": "Baseline Features",
+            "description": "Lists web features used on the page and their Baseline status as of 2026-07-15. [Learn more about Baseline](https://webstatus.dev/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "meta-description": {
+            "title": "Document does not have a meta description",
+            "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "http-status-code": {
+            "title": "Page has successful HTTP status code",
+            "description": "Pages with unsuccessful HTTP status codes may not be indexed properly. [Learn more about HTTP status codes](https://developer.chrome.com/docs/lighthouse/seo/http-status-code/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "link-text": {
+            "title": "Links do not have descriptive text",
+            "description": "Descriptive link text helps search engines understand your content. [Learn how to make links more accessible](https://developer.chrome.com/docs/lighthouse/seo/link-text/).",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": "1 link found",
+            "measurementClass": "relatively stable"
+          },
+          "crawlable-anchors": {
+            "title": "Links are crawlable",
+            "description": "Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "is-crawlable": {
+            "title": "Page isn’t blocked from indexing",
+            "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "robots-txt": {
+            "title": "robots.txt is valid",
+            "description": "If your robots.txt file is malformed, crawlers may not be able to understand how you want your website to be crawled or indexed. [Learn more about robots.txt](https://developer.chrome.com/docs/lighthouse/seo/invalid-robots-txt/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "hreflang": {
+            "title": "Document has a valid `hreflang`",
+            "description": "hreflang links tell search engines what version of a page they should list in search results for a given language or region. [Learn more about `hreflang`](https://developer.chrome.com/docs/lighthouse/seo/hreflang/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "bf-cache": {
+            "title": "Page didn't prevent back/forward cache restoration",
+            "description": "Many navigations are performed by going back to a previous page, or forwards again. The back/forward cache (bfcache) can speed up these return navigations. [Learn more about the bfcache](https://developer.chrome.com/docs/lighthouse/performance/bf-cache/)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "cache-insight": {
+            "title": "Use efficient cache lifetimes",
+            "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "cls-culprits-insight": {
+            "title": "Layout shift culprits",
+            "description": "Layout shifts occur when elements move absent any user interaction. [Investigate the causes of layout shifts](https://developer.chrome.com/docs/performance/insights/cls-culprit), such as elements being added, removed, or their fonts changing as the page loads.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "document-latency-insight": {
+            "title": "Document request latency",
+            "description": "Your first network request is the most important. [Reduce its latency](https://developer.chrome.com/docs/performance/insights/document-latency) by avoiding redirects, ensuring a fast server response, and enabling text compression.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "dom-size-insight": {
+            "title": "Optimize DOM size",
+            "description": "A large DOM can increase the duration of style calculations and layout reflows, impacting page responsiveness. A large DOM will also increase memory usage. [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/performance/insights/dom-size).",
+            "score": 1,
+            "numericValue": 18,
+            "numericUnit": "element",
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "duplicated-javascript-insight": {
+            "title": "Duplicated JavaScript",
+            "description": "Remove large, [duplicate JavaScript modules](https://developer.chrome.com/docs/performance/insights/duplicated-javascript) from bundles to reduce unnecessary bytes consumed by network activity.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "font-display-insight": {
+            "title": "Font display",
+            "description": "Consider setting [font-display](https://developer.chrome.com/docs/performance/insights/font-display) to swap or optional to ensure text is consistently visible. swap can be further optimized to mitigate layout shifts with [font metric overrides](https://developer.chrome.com/blog/font-fallbacks).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "forced-reflow-insight": {
+            "title": "Forced reflow",
+            "description": "A forced reflow occurs when JavaScript queries geometric properties (such as offsetWidth) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "image-delivery-insight": {
+            "title": "Improve image delivery",
+            "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "lcp-breakdown-insight": {
+            "title": "LCP breakdown",
+            "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "legacy-javascript-insight": {
+            "title": "Legacy JavaScript",
+            "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "modern-http-insight": {
+            "title": "Modern HTTP",
+            "description": "HTTP/2 and HTTP/3 offer many benefits over HTTP/1.1, such as multiplexing. [Learn more about using modern HTTP](https://developer.chrome.com/docs/performance/insights/modern-http).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "network-dependency-tree-insight": {
+            "title": "Network dependency tree",
+            "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "render-blocking-insight": {
+            "title": "Render-blocking requests",
+            "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "third-parties-insight": {
+            "title": "3rd parties",
+            "description": "3rd party code can significantly impact load performance. [Reduce and defer loading of 3rd party code](https://developer.chrome.com/docs/performance/insights/third-parties) to prioritize your page's content.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "viewport-insight": {
+            "title": "Optimize viewport for mobile",
+            "description": "Tap interactions may be [delayed by up to 300 ms](https://developer.chrome.com/docs/performance/insights/viewport) if the viewport is not optimized for mobile.",
+            "score": 0.5,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          }
+        },
+        "runtime": {
+          "lighthouseVersion": "13.4.1",
+          "chromeVersion": "150.0.0.0",
+          "nodeVersion": "24.14.0",
+          "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+          "benchmarkIndexMedian": 1958
+        },
+        "configuration": {
+          "formFactor": "mobile",
+          "throttlingMethod": "simulate",
+          "screenEmulation": {
+            "mobile": true,
+            "width": 412,
+            "height": 823,
+            "deviceScaleFactor": 1.75,
+            "disabled": false
+          },
+          "throttling": {
+            "rttMs": 150,
+            "throughputKbps": 1638.4,
+            "requestLatencyMs": 150,
+            "downloadThroughputKbps": 1638.4,
+            "uploadThroughputKbps": 750,
+            "cpuSlowdownMultiplier": 4
+          },
+          "categories": [
+            "performance",
+            "accessibility",
+            "best-practices",
+            "seo"
+          ],
+          "cacheState": "cold; storage reset enabled"
+        },
+        "rawResultPaths": [
+          "raw/127-0-0-1-homepage-run-01.json",
+          "raw/127-0-0-1-homepage-run-02.json",
+          "raw/127-0-0-1-homepage-run-03.json"
+        ],
+        "variabilityNote": "Standardized simulated throttling improves comparability but does not make performance measurements deterministic. Use field data for real-user Core Web Vitals.",
+        "runtimeWarnings": [
+          "Run 1 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.47528574 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.47528574'",
+          "Run 2 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.86271195 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.86271195'",
+          "Run 3 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.31290321 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.31290321'"
+        ]
+      },
+      "medianPath": "raw/127-0-0-1-homepage-median.json",
+      "rawResultPaths": [
+        "raw/127-0-0-1-homepage-run-01.json",
+        "raw/127-0-0-1-homepage-run-02.json",
+        "raw/127-0-0-1-homepage-run-03.json"
+      ]
+    },
+    {
+      "summary": {
+        "schemaVersion": "1.0.0",
+        "url": "http://127.0.0.1:65502/contact",
+        "requestedUrl": "http://127.0.0.1:65502/contact",
+        "runs": 3,
+        "aggregation": "median",
+        "categories": {
+          "performance": {
+            "title": "Performance",
+            "score": 1,
+            "scorePercent": 100,
+            "measurementClass": "variable performance"
+          },
+          "accessibility": {
+            "title": "Accessibility",
+            "score": 1,
+            "scorePercent": 100,
+            "measurementClass": "relatively stable"
+          },
+          "best-practices": {
+            "title": "Best Practices",
+            "score": 0.96,
+            "scorePercent": 96,
+            "measurementClass": "relatively stable"
+          },
+          "seo": {
+            "title": "SEO",
+            "score": 1,
+            "scorePercent": 100,
+            "measurementClass": "relatively stable"
+          }
+        },
+        "audits": {
+          "is-on-https": {
+            "title": "Uses HTTPS",
+            "description": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "first-contentful-paint": {
+            "title": "First Contentful Paint",
+            "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+            "score": 1,
+            "numericValue": 655.938,
+            "numericUnit": "millisecond",
+            "displayValue": "0.7 s",
+            "measurementClass": "variable performance"
+          },
+          "largest-contentful-paint": {
+            "title": "Largest Contentful Paint",
+            "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+            "score": 1,
+            "numericValue": 755.876,
+            "numericUnit": "millisecond",
+            "displayValue": "0.8 s",
+            "measurementClass": "variable performance"
+          },
+          "speed-index": {
+            "title": "Speed Index",
+            "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+            "score": 1,
+            "numericValue": 655.938,
+            "numericUnit": "millisecond",
+            "displayValue": "0.7 s",
+            "measurementClass": "variable performance"
+          },
+          "screenshot-thumbnails": {
+            "title": "Screenshot Thumbnails",
+            "description": "This is what the load of your site looked like.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "final-screenshot": {
+            "title": "Final Screenshot",
+            "description": "The last screenshot captured of the pageload.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "total-blocking-time": {
+            "title": "Total Blocking Time",
+            "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "variable performance"
+          },
+          "max-potential-fid": {
+            "title": "Max Potential First Input Delay",
+            "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+            "score": 1,
+            "numericValue": 50,
+            "numericUnit": "millisecond",
+            "displayValue": "50 ms",
+            "measurementClass": "relatively stable"
+          },
+          "cumulative-layout-shift": {
+            "title": "Cumulative Layout Shift",
+            "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "unitless",
+            "displayValue": "0",
+            "measurementClass": "variable performance"
+          },
+          "errors-in-console": {
+            "title": "Browser errors were logged to the console",
+            "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "server-response-time": {
+            "title": "Initial server response time was short",
+            "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/).",
+            "score": 1,
+            "numericValue": 2,
+            "numericUnit": "millisecond",
+            "displayValue": "Root document took 0 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "interactive": {
+            "title": "Time to Interactive",
+            "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+            "score": 1,
+            "numericValue": 755.876,
+            "numericUnit": "millisecond",
+            "displayValue": "0.8 s",
+            "measurementClass": "variable performance"
+          },
+          "redirects": {
+            "title": "Avoid multiple page redirects",
+            "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "environment-dependent"
+          },
+          "image-aspect-ratio": {
+            "title": "Displays images with correct aspect ratio",
+            "description": "Image display dimensions should match natural aspect ratio. [Learn more about image aspect ratio](https://developer.chrome.com/docs/lighthouse/best-practices/image-aspect-ratio/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "image-size-responsive": {
+            "title": "Serves images with appropriate resolution",
+            "description": "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "deprecations": {
+            "title": "Avoids deprecated APIs",
+            "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "third-party-cookies": {
+            "title": "Avoids third-party cookies",
+            "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "mainthread-work-breakdown": {
+            "title": "Minimizes main-thread work",
+            "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+            "score": 1,
+            "numericValue": 210.232,
+            "numericUnit": "millisecond",
+            "displayValue": "0.2 s",
+            "measurementClass": "relatively stable"
+          },
+          "bootup-time": {
+            "title": "JavaScript execution time",
+            "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+            "score": 1,
+            "numericValue": 10.884,
+            "numericUnit": "millisecond",
+            "displayValue": "0.0 s",
+            "measurementClass": "relatively stable"
+          },
+          "diagnostics": {
+            "title": "Diagnostics",
+            "description": "Collection of useful page vitals.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "network-requests": {
+            "title": "Network Requests",
+            "description": "Lists the network requests that were made during page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "network-rtt": {
+            "title": "Network Round Trip Times",
+            "description": "Network round trip times (RTT) have a large impact on performance. If the RTT to an origin is high, it's an indication that servers closer to the user could improve performance. [Learn more about the Round Trip Time](https://hpbn.co/primer-on-latency-and-bandwidth/).",
+            "score": 1,
+            "numericValue": 0.1725,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "network-server-latency": {
+            "title": "Server Backend Latencies",
+            "description": "Server latencies can impact web performance. If the server latency of an origin is high, it's an indication the server is overloaded or has poor backend performance. [Learn more about server response time](https://hpbn.co/primer-on-web-performance/#analyzing-the-resource-waterfall).",
+            "score": 1,
+            "numericValue": 0.92395,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "main-thread-tasks": {
+            "title": "Tasks",
+            "description": "Lists the toplevel main thread tasks that executed during page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "metrics": {
+            "title": "Metrics",
+            "description": "Collects all available metrics.",
+            "score": 1,
+            "numericValue": 756,
+            "numericUnit": "millisecond",
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "resource-summary": {
+            "title": "Resources Summary",
+            "description": "Aggregates all network requests and groups them by type",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "long-tasks": {
+            "title": "Avoid long main-thread tasks",
+            "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn how to avoid long main-thread tasks](https://web.dev/articles/optimize-long-tasks)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": "1 long task found",
+            "measurementClass": "relatively stable"
+          },
+          "unsized-images": {
+            "title": "Image elements have explicit `width` and `height`",
+            "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "valid-source-maps": {
+            "title": "Page has valid source maps",
+            "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "csp-xss": {
+            "title": "Ensure CSP is effective against XSS attacks",
+            "description": "A strong Content Security Policy (CSP) significantly reduces the risk of cross-site scripting (XSS) attacks. [Learn how to use a CSP to prevent XSS](https://developer.chrome.com/docs/lighthouse/best-practices/csp-xss/)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "has-hsts": {
+            "title": "Use a strong HSTS policy",
+            "description": "Deployment of the HSTS header significantly reduces the risk of downgrading HTTP connections and eavesdropping attacks. A rollout in stages, starting with a low max-age is recommended. [Learn more about using a strong HSTS policy.](https://developer.chrome.com/docs/lighthouse/best-practices/has-hsts)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "origin-isolation": {
+            "title": "Ensure proper origin isolation with COOP",
+            "description": "The Cross-Origin-Opener-Policy (COOP) can be used to isolate the top-level window from other documents such as pop-ups. [Learn more about deploying the COOP header.](https://web.dev/articles/why-coop-coep#coop)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "clickjacking-mitigation": {
+            "title": "Mitigate clickjacking with XFO or CSP",
+            "description": "The `X-Frame-Options` (XFO) header or the `frame-ancestors` directive in the `Content-Security-Policy` (CSP) header control where a page can be embedded. These can mitigate clickjacking attacks by blocking some or all sites from embedding the page. [Learn more about mitigating clickjacking](https://developer.chrome.com/docs/lighthouse/best-practices/clickjacking-mitigation).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "trusted-types-xss": {
+            "title": "Mitigate DOM-based XSS with Trusted Types",
+            "description": "The `require-trusted-types-for` directive in the `Content-Security-Policy` (CSP) header instructs user agents to control the data passed to DOM XSS sink functions. [Learn more about mitigating DOM-based XSS with Trusted Types](https://developer.chrome.com/docs/lighthouse/best-practices/trusted-types-xss).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "script-treemap-data": {
+            "title": "Script Treemap Data",
+            "description": "Used for treemap app",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "aria-hidden-body": {
+            "title": "`[aria-hidden=\"true\"]` is not present on the document `<body>`",
+            "description": "Assistive technologies, like screen readers, work inconsistently when `aria-hidden=\"true\"` is set on the document `<body>`. [Learn how `aria-hidden` affects the document body](https://dequeuniversity.com/rules/axe/4.12/aria-hidden-body).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "button-name": {
+            "title": "Buttons have an accessible name",
+            "description": "When a button doesn't have an accessible name, screen readers announce it as \"button\", making it unusable for users who rely on screen readers. [Learn how to make buttons more accessible](https://dequeuniversity.com/rules/axe/4.12/button-name).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "color-contrast": {
+            "title": "Background and foreground colors have a sufficient contrast ratio",
+            "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.12/color-contrast).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "document-title": {
+            "title": "Document has a `<title>` element",
+            "description": "The title gives screen reader users an overview of the page, and search engine users rely on it heavily to determine if a page is relevant to their search. [Learn more about document titles](https://dequeuniversity.com/rules/axe/4.12/document-title).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "heading-order": {
+            "title": "Heading elements appear in a sequentially-descending order",
+            "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.12/heading-order).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "html-has-lang": {
+            "title": "`<html>` element has a `[lang]` attribute",
+            "description": "If a page doesn't specify a `lang` attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. [Learn more about the `lang` attribute](https://dequeuniversity.com/rules/axe/4.12/html-has-lang).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "html-lang-valid": {
+            "title": "`<html>` element has a valid value for its `[lang]` attribute",
+            "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) helps screen readers announce text properly. [Learn how to use the `lang` attribute](https://dequeuniversity.com/rules/axe/4.12/html-lang-valid).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "label": {
+            "title": "Form elements have associated labels",
+            "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.12/label).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "landmark-one-main": {
+            "title": "Document has a main landmark.",
+            "description": "One main landmark helps screen reader users navigate a web page. [Learn more about landmarks](https://dequeuniversity.com/rules/axe/4.12/landmark-one-main).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "meta-viewport": {
+            "title": "`[user-scalable=\"no\"]` is not used in the `<meta name=\"viewport\">` element and the `[maximum-scale]` attribute is not less than 5.",
+            "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more about the viewport meta tag](https://dequeuniversity.com/rules/axe/4.12/meta-viewport).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "total-byte-weight": {
+            "title": "Avoids enormous network payloads",
+            "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+            "score": 1,
+            "numericValue": 1060,
+            "numericUnit": "byte",
+            "displayValue": "Total size was 1 KiB",
+            "measurementClass": "relatively stable"
+          },
+          "unminified-css": {
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unminified-javascript": {
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unused-css-rules": {
+            "title": "Reduce unused CSS",
+            "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unused-javascript": {
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "doctype": {
+            "title": "Page has the HTML doctype",
+            "description": "Specifying a doctype prevents the browser from switching to quirks-mode. [Learn more about the doctype declaration](https://developer.chrome.com/docs/lighthouse/best-practices/doctype/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "charset": {
+            "title": "Properly defines charset",
+            "description": "A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "geolocation-on-start": {
+            "title": "Avoids requesting the geolocation permission on page load",
+            "description": "Users are mistrustful of or confused by sites that request their location without context. Consider tying the request to a user action instead. [Learn more about the geolocation permission](https://developer.chrome.com/docs/lighthouse/best-practices/geolocation-on-start/). Also consider using the [`<geolocation>` element](https://developer.chrome.com/blog/geolocation-html-element).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "inspector-issues": {
+            "title": "No issues in the `Issues` panel in Chrome Devtools",
+            "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "notification-on-start": {
+            "title": "Avoids requesting the notification permission on page load",
+            "description": "Users are mistrustful of or confused by sites that request to send notifications without context. Consider tying the request to user gestures instead. [Learn more about responsibly getting permission for notifications](https://developer.chrome.com/docs/lighthouse/best-practices/notification-on-start/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "paste-preventing-inputs": {
+            "title": "Allows users to paste into input fields",
+            "description": "Preventing input pasting is a bad practice for the UX, and weakens security by blocking password managers.[Learn more about user-friendly input fields](https://developer.chrome.com/docs/lighthouse/best-practices/paste-preventing-inputs/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "baseline": {
+            "title": "Baseline Features",
+            "description": "Lists web features used on the page and their Baseline status as of 2026-07-15. [Learn more about Baseline](https://webstatus.dev/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "meta-description": {
+            "title": "Document has a meta description",
+            "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "http-status-code": {
+            "title": "Page has successful HTTP status code",
+            "description": "Pages with unsuccessful HTTP status codes may not be indexed properly. [Learn more about HTTP status codes](https://developer.chrome.com/docs/lighthouse/seo/http-status-code/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "link-text": {
+            "title": "Links have descriptive text",
+            "description": "Descriptive link text helps search engines understand your content. [Learn how to make links more accessible](https://developer.chrome.com/docs/lighthouse/seo/link-text/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "crawlable-anchors": {
+            "title": "Links are crawlable",
+            "description": "Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "is-crawlable": {
+            "title": "Page isn’t blocked from indexing",
+            "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "robots-txt": {
+            "title": "robots.txt is valid",
+            "description": "If your robots.txt file is malformed, crawlers may not be able to understand how you want your website to be crawled or indexed. [Learn more about robots.txt](https://developer.chrome.com/docs/lighthouse/seo/invalid-robots-txt/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "hreflang": {
+            "title": "Document has a valid `hreflang`",
+            "description": "hreflang links tell search engines what version of a page they should list in search results for a given language or region. [Learn more about `hreflang`](https://developer.chrome.com/docs/lighthouse/seo/hreflang/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "canonical": {
+            "title": "Document has a valid `rel=canonical`",
+            "description": "Canonical links suggest which URL to show in search results. [Learn more about canonical links](https://developer.chrome.com/docs/lighthouse/seo/canonical/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "bf-cache": {
+            "title": "Page didn't prevent back/forward cache restoration",
+            "description": "Many navigations are performed by going back to a previous page, or forwards again. The back/forward cache (bfcache) can speed up these return navigations. [Learn more about the bfcache](https://developer.chrome.com/docs/lighthouse/performance/bf-cache/)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "cache-insight": {
+            "title": "Use efficient cache lifetimes",
+            "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "cls-culprits-insight": {
+            "title": "Layout shift culprits",
+            "description": "Layout shifts occur when elements move absent any user interaction. [Investigate the causes of layout shifts](https://developer.chrome.com/docs/performance/insights/cls-culprit), such as elements being added, removed, or their fonts changing as the page loads.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "document-latency-insight": {
+            "title": "Document request latency",
+            "description": "Your first network request is the most important. [Reduce its latency](https://developer.chrome.com/docs/performance/insights/document-latency) by avoiding redirects, ensuring a fast server response, and enabling text compression.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "dom-size-insight": {
+            "title": "Optimize DOM size",
+            "description": "A large DOM can increase the duration of style calculations and layout reflows, impacting page responsiveness. A large DOM will also increase memory usage. [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/performance/insights/dom-size).",
+            "score": 1,
+            "numericValue": 9,
+            "numericUnit": "element",
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "duplicated-javascript-insight": {
+            "title": "Duplicated JavaScript",
+            "description": "Remove large, [duplicate JavaScript modules](https://developer.chrome.com/docs/performance/insights/duplicated-javascript) from bundles to reduce unnecessary bytes consumed by network activity.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "font-display-insight": {
+            "title": "Font display",
+            "description": "Consider setting [font-display](https://developer.chrome.com/docs/performance/insights/font-display) to swap or optional to ensure text is consistently visible. swap can be further optimized to mitigate layout shifts with [font metric overrides](https://developer.chrome.com/blog/font-fallbacks).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "forced-reflow-insight": {
+            "title": "Forced reflow",
+            "description": "A forced reflow occurs when JavaScript queries geometric properties (such as offsetWidth) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "image-delivery-insight": {
+            "title": "Improve image delivery",
+            "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "lcp-breakdown-insight": {
+            "title": "LCP breakdown",
+            "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "legacy-javascript-insight": {
+            "title": "Legacy JavaScript",
+            "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "modern-http-insight": {
+            "title": "Modern HTTP",
+            "description": "HTTP/2 and HTTP/3 offer many benefits over HTTP/1.1, such as multiplexing. [Learn more about using modern HTTP](https://developer.chrome.com/docs/performance/insights/modern-http).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "network-dependency-tree-insight": {
+            "title": "Network dependency tree",
+            "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "render-blocking-insight": {
+            "title": "Render-blocking requests",
+            "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "third-parties-insight": {
+            "title": "3rd parties",
+            "description": "3rd party code can significantly impact load performance. [Reduce and defer loading of 3rd party code](https://developer.chrome.com/docs/performance/insights/third-parties) to prioritize your page's content.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "viewport-insight": {
+            "title": "Optimize viewport for mobile",
+            "description": "Tap interactions may be [delayed by up to 300 ms](https://developer.chrome.com/docs/performance/insights/viewport) if the viewport is not optimized for mobile.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          }
+        },
+        "runtime": {
+          "lighthouseVersion": "13.4.1",
+          "chromeVersion": "150.0.0.0",
+          "nodeVersion": "24.14.0",
+          "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+          "benchmarkIndexMedian": 1811.5
+        },
+        "configuration": {
+          "formFactor": "mobile",
+          "throttlingMethod": "simulate",
+          "screenEmulation": {
+            "mobile": true,
+            "width": 412,
+            "height": 823,
+            "deviceScaleFactor": 1.75,
+            "disabled": false
+          },
+          "throttling": {
+            "rttMs": 150,
+            "throughputKbps": 1638.4,
+            "requestLatencyMs": 150,
+            "downloadThroughputKbps": 1638.4,
+            "uploadThroughputKbps": 750,
+            "cpuSlowdownMultiplier": 4
+          },
+          "categories": [
+            "performance",
+            "accessibility",
+            "best-practices",
+            "seo"
+          ],
+          "cacheState": "cold; storage reset enabled"
+        },
+        "rawResultPaths": [
+          "raw/127-0-0-1-contact-run-01.json",
+          "raw/127-0-0-1-contact-run-02.json",
+          "raw/127-0-0-1-contact-run-03.json"
+        ],
+        "variabilityNote": "Standardized simulated throttling improves comparability but does not make performance measurements deterministic. Use field data for real-user Core Web Vitals.",
+        "runtimeWarnings": [
+          "Run 1 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98202603 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98202603'",
+          "Run 2 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.23714454 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.23714454'"
+        ]
+      },
+      "medianPath": "raw/127-0-0-1-contact-median.json",
+      "rawResultPaths": [
+        "raw/127-0-0-1-contact-run-01.json",
+        "raw/127-0-0-1-contact-run-02.json",
+        "raw/127-0-0-1-contact-run-03.json"
+      ]
+    },
+    {
+      "summary": {
+        "schemaVersion": "1.0.0",
+        "url": "http://127.0.0.1:65502/services",
+        "requestedUrl": "http://127.0.0.1:65502/services",
+        "runs": 3,
+        "aggregation": "median",
+        "categories": {
+          "performance": {
+            "title": "Performance",
+            "score": 1,
+            "scorePercent": 100,
+            "measurementClass": "variable performance"
+          },
+          "accessibility": {
+            "title": "Accessibility",
+            "score": 0.91,
+            "scorePercent": 91,
+            "measurementClass": "relatively stable"
+          },
+          "best-practices": {
+            "title": "Best Practices",
+            "score": 0.96,
+            "scorePercent": 96,
+            "measurementClass": "relatively stable"
+          },
+          "seo": {
+            "title": "SEO",
+            "score": 1,
+            "scorePercent": 100,
+            "measurementClass": "relatively stable"
+          }
+        },
+        "audits": {
+          "is-on-https": {
+            "title": "Uses HTTPS",
+            "description": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "first-contentful-paint": {
+            "title": "First Contentful Paint",
+            "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+            "score": 1,
+            "numericValue": 646.7225,
+            "numericUnit": "millisecond",
+            "displayValue": "0.6 s",
+            "measurementClass": "variable performance"
+          },
+          "largest-contentful-paint": {
+            "title": "Largest Contentful Paint",
+            "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+            "score": 1,
+            "numericValue": 751.4902999999999,
+            "numericUnit": "millisecond",
+            "displayValue": "0.8 s",
+            "measurementClass": "variable performance"
+          },
+          "speed-index": {
+            "title": "Speed Index",
+            "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+            "score": 1,
+            "numericValue": 646.7225,
+            "numericUnit": "millisecond",
+            "displayValue": "0.6 s",
+            "measurementClass": "variable performance"
+          },
+          "screenshot-thumbnails": {
+            "title": "Screenshot Thumbnails",
+            "description": "This is what the load of your site looked like.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "final-screenshot": {
+            "title": "Final Screenshot",
+            "description": "The last screenshot captured of the pageload.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "total-blocking-time": {
+            "title": "Total Blocking Time",
+            "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "variable performance"
+          },
+          "max-potential-fid": {
+            "title": "Max Potential First Input Delay",
+            "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+            "score": 1,
+            "numericValue": 16,
+            "numericUnit": "millisecond",
+            "displayValue": "20 ms",
+            "measurementClass": "relatively stable"
+          },
+          "cumulative-layout-shift": {
+            "title": "Cumulative Layout Shift",
+            "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "unitless",
+            "displayValue": "0",
+            "measurementClass": "variable performance"
+          },
+          "errors-in-console": {
+            "title": "Browser errors were logged to the console",
+            "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "server-response-time": {
+            "title": "Initial server response time was short",
+            "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/).",
+            "score": 1,
+            "numericValue": 1,
+            "numericUnit": "millisecond",
+            "displayValue": "Root document took 0 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "interactive": {
+            "title": "Time to Interactive",
+            "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+            "score": 1,
+            "numericValue": 751.4902999999999,
+            "numericUnit": "millisecond",
+            "displayValue": "0.8 s",
+            "measurementClass": "variable performance"
+          },
+          "redirects": {
+            "title": "Avoid multiple page redirects",
+            "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "environment-dependent"
+          },
+          "image-aspect-ratio": {
+            "title": "Displays images with correct aspect ratio",
+            "description": "Image display dimensions should match natural aspect ratio. [Learn more about image aspect ratio](https://developer.chrome.com/docs/lighthouse/best-practices/image-aspect-ratio/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "image-size-responsive": {
+            "title": "Serves images with appropriate resolution",
+            "description": "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "deprecations": {
+            "title": "Avoids deprecated APIs",
+            "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "third-party-cookies": {
+            "title": "Avoids third-party cookies",
+            "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "mainthread-work-breakdown": {
+            "title": "Minimizes main-thread work",
+            "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+            "score": 1,
+            "numericValue": 177.67999999999998,
+            "numericUnit": "millisecond",
+            "displayValue": "0.2 s",
+            "measurementClass": "relatively stable"
+          },
+          "bootup-time": {
+            "title": "JavaScript execution time",
+            "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+            "score": 1,
+            "numericValue": 10.123999999999999,
+            "numericUnit": "millisecond",
+            "displayValue": "0.0 s",
+            "measurementClass": "relatively stable"
+          },
+          "diagnostics": {
+            "title": "Diagnostics",
+            "description": "Collection of useful page vitals.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "network-requests": {
+            "title": "Network Requests",
+            "description": "Lists the network requests that were made during page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "network-rtt": {
+            "title": "Network Round Trip Times",
+            "description": "Network round trip times (RTT) have a large impact on performance. If the RTT to an origin is high, it's an indication that servers closer to the user could improve performance. [Learn more about the Round Trip Time](https://hpbn.co/primer-on-latency-and-bandwidth/).",
+            "score": 1,
+            "numericValue": 0.20535,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "network-server-latency": {
+            "title": "Server Backend Latencies",
+            "description": "Server latencies can impact web performance. If the server latency of an origin is high, it's an indication the server is overloaded or has poor backend performance. [Learn more about server response time](https://hpbn.co/primer-on-web-performance/#analyzing-the-resource-waterfall).",
+            "score": 1,
+            "numericValue": 0.74515,
+            "numericUnit": "millisecond",
+            "displayValue": "0 ms",
+            "measurementClass": "environment-dependent"
+          },
+          "main-thread-tasks": {
+            "title": "Tasks",
+            "description": "Lists the toplevel main thread tasks that executed during page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "metrics": {
+            "title": "Metrics",
+            "description": "Collects all available metrics.",
+            "score": 1,
+            "numericValue": 751,
+            "numericUnit": "millisecond",
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "resource-summary": {
+            "title": "Resources Summary",
+            "description": "Aggregates all network requests and groups them by type",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "long-tasks": {
+            "title": "Avoid long main-thread tasks",
+            "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn how to avoid long main-thread tasks](https://web.dev/articles/optimize-long-tasks)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": "1 long task found",
+            "measurementClass": "relatively stable"
+          },
+          "unsized-images": {
+            "title": "Image elements have explicit `width` and `height`",
+            "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "valid-source-maps": {
+            "title": "Page has valid source maps",
+            "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "csp-xss": {
+            "title": "Ensure CSP is effective against XSS attacks",
+            "description": "A strong Content Security Policy (CSP) significantly reduces the risk of cross-site scripting (XSS) attacks. [Learn how to use a CSP to prevent XSS](https://developer.chrome.com/docs/lighthouse/best-practices/csp-xss/)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "has-hsts": {
+            "title": "Use a strong HSTS policy",
+            "description": "Deployment of the HSTS header significantly reduces the risk of downgrading HTTP connections and eavesdropping attacks. A rollout in stages, starting with a low max-age is recommended. [Learn more about using a strong HSTS policy.](https://developer.chrome.com/docs/lighthouse/best-practices/has-hsts)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "origin-isolation": {
+            "title": "Ensure proper origin isolation with COOP",
+            "description": "The Cross-Origin-Opener-Policy (COOP) can be used to isolate the top-level window from other documents such as pop-ups. [Learn more about deploying the COOP header.](https://web.dev/articles/why-coop-coep#coop)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "clickjacking-mitigation": {
+            "title": "Mitigate clickjacking with XFO or CSP",
+            "description": "The `X-Frame-Options` (XFO) header or the `frame-ancestors` directive in the `Content-Security-Policy` (CSP) header control where a page can be embedded. These can mitigate clickjacking attacks by blocking some or all sites from embedding the page. [Learn more about mitigating clickjacking](https://developer.chrome.com/docs/lighthouse/best-practices/clickjacking-mitigation).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "trusted-types-xss": {
+            "title": "Mitigate DOM-based XSS with Trusted Types",
+            "description": "The `require-trusted-types-for` directive in the `Content-Security-Policy` (CSP) header instructs user agents to control the data passed to DOM XSS sink functions. [Learn more about mitigating DOM-based XSS with Trusted Types](https://developer.chrome.com/docs/lighthouse/best-practices/trusted-types-xss).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "script-treemap-data": {
+            "title": "Script Treemap Data",
+            "description": "Used for treemap app",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "aria-hidden-body": {
+            "title": "`[aria-hidden=\"true\"]` is not present on the document `<body>`",
+            "description": "Assistive technologies, like screen readers, work inconsistently when `aria-hidden=\"true\"` is set on the document `<body>`. [Learn how `aria-hidden` affects the document body](https://dequeuniversity.com/rules/axe/4.12/aria-hidden-body).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "color-contrast": {
+            "title": "Background and foreground colors have a sufficient contrast ratio",
+            "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.12/color-contrast).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "document-title": {
+            "title": "Document has a `<title>` element",
+            "description": "The title gives screen reader users an overview of the page, and search engine users rely on it heavily to determine if a page is relevant to their search. [Learn more about document titles](https://dequeuniversity.com/rules/axe/4.12/document-title).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "heading-order": {
+            "title": "Heading elements appear in a sequentially-descending order",
+            "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.12/heading-order).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "html-has-lang": {
+            "title": "`<html>` element has a `[lang]` attribute",
+            "description": "If a page doesn't specify a `lang` attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. [Learn more about the `lang` attribute](https://dequeuniversity.com/rules/axe/4.12/html-has-lang).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "html-lang-valid": {
+            "title": "`<html>` element has a valid value for its `[lang]` attribute",
+            "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) helps screen readers announce text properly. [Learn how to use the `lang` attribute](https://dequeuniversity.com/rules/axe/4.12/html-lang-valid).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "landmark-one-main": {
+            "title": "Document has a main landmark.",
+            "description": "One main landmark helps screen reader users navigate a web page. [Learn more about landmarks](https://dequeuniversity.com/rules/axe/4.12/landmark-one-main).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "link-name": {
+            "title": "Links have a discernible name",
+            "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn how to make links accessible](https://dequeuniversity.com/rules/axe/4.12/link-name).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "list": {
+            "title": "Lists contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+            "description": "Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. [Learn more about proper list structure](https://dequeuniversity.com/rules/axe/4.12/list).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "listitem": {
+            "title": "List items (`<li>`) are contained within `<ul>`, `<ol>` or `<menu>` parent elements",
+            "description": "Screen readers require list items (`<li>`) to be contained within a parent `<ul>`, `<ol>` or `<menu>` to be announced properly. [Learn more about proper list structure](https://dequeuniversity.com/rules/axe/4.12/listitem).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "meta-viewport": {
+            "title": "`[user-scalable=\"no\"]` is not used in the `<meta name=\"viewport\">` element and the `[maximum-scale]` attribute is not less than 5.",
+            "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more about the viewport meta tag](https://dequeuniversity.com/rules/axe/4.12/meta-viewport).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "target-size": {
+            "title": "Touch targets do not have sufficient size or spacing.",
+            "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.12/target-size).",
+            "score": 0,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "total-byte-weight": {
+            "title": "Avoids enormous network payloads",
+            "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+            "score": 1,
+            "numericValue": 1477,
+            "numericUnit": "byte",
+            "displayValue": "Total size was 1 KiB",
+            "measurementClass": "relatively stable"
+          },
+          "unminified-css": {
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unminified-javascript": {
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unused-css-rules": {
+            "title": "Reduce unused CSS",
+            "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "unused-javascript": {
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 1,
+            "numericValue": 0,
+            "numericUnit": "millisecond",
+            "displayValue": "",
+            "measurementClass": "relatively stable"
+          },
+          "doctype": {
+            "title": "Page has the HTML doctype",
+            "description": "Specifying a doctype prevents the browser from switching to quirks-mode. [Learn more about the doctype declaration](https://developer.chrome.com/docs/lighthouse/best-practices/doctype/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "charset": {
+            "title": "Properly defines charset",
+            "description": "A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "geolocation-on-start": {
+            "title": "Avoids requesting the geolocation permission on page load",
+            "description": "Users are mistrustful of or confused by sites that request their location without context. Consider tying the request to a user action instead. [Learn more about the geolocation permission](https://developer.chrome.com/docs/lighthouse/best-practices/geolocation-on-start/). Also consider using the [`<geolocation>` element](https://developer.chrome.com/blog/geolocation-html-element).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "inspector-issues": {
+            "title": "No issues in the `Issues` panel in Chrome Devtools",
+            "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "notification-on-start": {
+            "title": "Avoids requesting the notification permission on page load",
+            "description": "Users are mistrustful of or confused by sites that request to send notifications without context. Consider tying the request to user gestures instead. [Learn more about responsibly getting permission for notifications](https://developer.chrome.com/docs/lighthouse/best-practices/notification-on-start/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "paste-preventing-inputs": {
+            "title": "Allows users to paste into input fields",
+            "description": "Preventing input pasting is a bad practice for the UX, and weakens security by blocking password managers.[Learn more about user-friendly input fields](https://developer.chrome.com/docs/lighthouse/best-practices/paste-preventing-inputs/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "baseline": {
+            "title": "Baseline Features",
+            "description": "Lists web features used on the page and their Baseline status as of 2026-07-15. [Learn more about Baseline](https://webstatus.dev/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "meta-description": {
+            "title": "Document has a meta description",
+            "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "http-status-code": {
+            "title": "Page has successful HTTP status code",
+            "description": "Pages with unsuccessful HTTP status codes may not be indexed properly. [Learn more about HTTP status codes](https://developer.chrome.com/docs/lighthouse/seo/http-status-code/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "link-text": {
+            "title": "Links have descriptive text",
+            "description": "Descriptive link text helps search engines understand your content. [Learn how to make links more accessible](https://developer.chrome.com/docs/lighthouse/seo/link-text/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "crawlable-anchors": {
+            "title": "Links are crawlable",
+            "description": "Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "is-crawlable": {
+            "title": "Page isn’t blocked from indexing",
+            "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "robots-txt": {
+            "title": "robots.txt is valid",
+            "description": "If your robots.txt file is malformed, crawlers may not be able to understand how you want your website to be crawled or indexed. [Learn more about robots.txt](https://developer.chrome.com/docs/lighthouse/seo/invalid-robots-txt/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "hreflang": {
+            "title": "Document has a valid `hreflang`",
+            "description": "hreflang links tell search engines what version of a page they should list in search results for a given language or region. [Learn more about `hreflang`](https://developer.chrome.com/docs/lighthouse/seo/hreflang/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "canonical": {
+            "title": "Document has a valid `rel=canonical`",
+            "description": "Canonical links suggest which URL to show in search results. [Learn more about canonical links](https://developer.chrome.com/docs/lighthouse/seo/canonical/).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          },
+          "bf-cache": {
+            "title": "Page didn't prevent back/forward cache restoration",
+            "description": "Many navigations are performed by going back to a previous page, or forwards again. The back/forward cache (bfcache) can speed up these return navigations. [Learn more about the bfcache](https://developer.chrome.com/docs/lighthouse/performance/bf-cache/)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "cache-insight": {
+            "title": "Use efficient cache lifetimes",
+            "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "cls-culprits-insight": {
+            "title": "Layout shift culprits",
+            "description": "Layout shifts occur when elements move absent any user interaction. [Investigate the causes of layout shifts](https://developer.chrome.com/docs/performance/insights/cls-culprit), such as elements being added, removed, or their fonts changing as the page loads.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "document-latency-insight": {
+            "title": "Document request latency",
+            "description": "Your first network request is the most important. [Reduce its latency](https://developer.chrome.com/docs/performance/insights/document-latency) by avoiding redirects, ensuring a fast server response, and enabling text compression.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "dom-size-insight": {
+            "title": "Optimize DOM size",
+            "description": "A large DOM can increase the duration of style calculations and layout reflows, impacting page responsiveness. A large DOM will also increase memory usage. [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/performance/insights/dom-size).",
+            "score": 1,
+            "numericValue": 19,
+            "numericUnit": "element",
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "duplicated-javascript-insight": {
+            "title": "Duplicated JavaScript",
+            "description": "Remove large, [duplicate JavaScript modules](https://developer.chrome.com/docs/performance/insights/duplicated-javascript) from bundles to reduce unnecessary bytes consumed by network activity.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "font-display-insight": {
+            "title": "Font display",
+            "description": "Consider setting [font-display](https://developer.chrome.com/docs/performance/insights/font-display) to swap or optional to ensure text is consistently visible. swap can be further optimized to mitigate layout shifts with [font metric overrides](https://developer.chrome.com/blog/font-fallbacks).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "forced-reflow-insight": {
+            "title": "Forced reflow",
+            "description": "A forced reflow occurs when JavaScript queries geometric properties (such as offsetWidth) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "image-delivery-insight": {
+            "title": "Improve image delivery",
+            "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "lcp-breakdown-insight": {
+            "title": "LCP breakdown",
+            "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "legacy-javascript-insight": {
+            "title": "Legacy JavaScript",
+            "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript)",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "modern-http-insight": {
+            "title": "Modern HTTP",
+            "description": "HTTP/2 and HTTP/3 offer many benefits over HTTP/1.1, such as multiplexing. [Learn more about using modern HTTP](https://developer.chrome.com/docs/performance/insights/modern-http).",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "network-dependency-tree-insight": {
+            "title": "Network dependency tree",
+            "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "environment-dependent"
+          },
+          "render-blocking-insight": {
+            "title": "Render-blocking requests",
+            "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "third-parties-insight": {
+            "title": "3rd parties",
+            "description": "3rd party code can significantly impact load performance. [Reduce and defer loading of 3rd party code](https://developer.chrome.com/docs/performance/insights/third-parties) to prioritize your page's content.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "relatively stable"
+          },
+          "viewport-insight": {
+            "title": "Optimize viewport for mobile",
+            "description": "Tap interactions may be [delayed by up to 300 ms](https://developer.chrome.com/docs/performance/insights/viewport) if the viewport is not optimized for mobile.",
+            "score": 1,
+            "numericValue": null,
+            "numericUnit": null,
+            "displayValue": null,
+            "measurementClass": "deterministic"
+          }
+        },
+        "runtime": {
+          "lighthouseVersion": "13.4.1",
+          "chromeVersion": "150.0.0.0",
+          "nodeVersion": "24.14.0",
+          "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+          "benchmarkIndexMedian": 1877.5
+        },
+        "configuration": {
+          "formFactor": "mobile",
+          "throttlingMethod": "simulate",
+          "screenEmulation": {
+            "mobile": true,
+            "width": 412,
+            "height": 823,
+            "deviceScaleFactor": 1.75,
+            "disabled": false
+          },
+          "throttling": {
+            "rttMs": 150,
+            "throughputKbps": 1638.4,
+            "requestLatencyMs": 150,
+            "downloadThroughputKbps": 1638.4,
+            "uploadThroughputKbps": 750,
+            "cpuSlowdownMultiplier": 4
+          },
+          "categories": [
+            "performance",
+            "accessibility",
+            "best-practices",
+            "seo"
+          ],
+          "cacheState": "cold; storage reset enabled"
+        },
+        "rawResultPaths": [
+          "raw/127-0-0-1-services-run-01.json",
+          "raw/127-0-0-1-services-run-02.json",
+          "raw/127-0-0-1-services-run-03.json"
+        ],
+        "variabilityNote": "Standardized simulated throttling improves comparability but does not make performance measurements deterministic. Use field data for real-user Core Web Vitals.",
+        "runtimeWarnings": [
+          "Run 1 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98389978 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98389978'",
+          "Run 2 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.30379508 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.30379508'",
+          "Run 3 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98943804 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98943804'"
+        ]
+      },
+      "medianPath": "raw/127-0-0-1-services-median.json",
+      "rawResultPaths": [
+        "raw/127-0-0-1-services-run-01.json",
+        "raw/127-0-0-1-services-run-02.json",
+        "raw/127-0-0-1-services-run-03.json"
+      ]
+    }
+  ],
+  "seoKnowledge": {
+    "lastVerified": "2026-07-22",
+    "lastUpdated": "2026-07-22",
+    "knowledgeVersion": "2026.07.22",
+    "ageDays": 0,
+    "status": "fresh",
+    "warning": null
+  },
+  "limitations": [
+    "Lighthouse runtime warning for http://127.0.0.1:65502/: Run 1 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.47528574 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.47528574'",
+    "Lighthouse runtime warning for http://127.0.0.1:65502/: Run 2 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.86271195 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.86271195'",
+    "Lighthouse runtime warning for http://127.0.0.1:65502/: Run 3 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.31290321 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.31290321'",
+    "Lighthouse runtime warning for http://127.0.0.1:65502/contact: Run 1 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98202603 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98202603'",
+    "Lighthouse runtime warning for http://127.0.0.1:65502/contact: Run 2 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.23714454 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.23714454'",
+    "Lighthouse runtime warning for http://127.0.0.1:65502/services: Run 1 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98389978 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98389978'",
+    "Lighthouse runtime warning for http://127.0.0.1:65502/services: Run 2 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.30379508 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.30379508'",
+    "Lighthouse runtime warning for http://127.0.0.1:65502/services: Run 3 produced a valid LHR but Chrome temporary-profile cleanup reported: Lighthouse exited 1: Runtime error encountered: EPERM, Permission denied: \\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98943804 '\\\\?\\C:\\workspace\\website-analysis-skill\\examples\\local-repository-audit\\audit-results\\.lighthouse-tmp\\lighthouse.98943804'",
+    "Automated accessibility checks do not replace keyboard, screen-reader, zoom, contrast-context, and cognitive usability testing.",
+    "Analytics, Search Console, server logs, conversion data, and field Core Web Vitals were not available unless the user supplied them.",
+    "Copy heuristics require human editorial judgment and never authorize invented claims, results, testimonials, certifications, statistics, or capabilities."
+  ],
+  "reproducibility": {
+    "auditDate": "2026-07-22T03:25:30.111Z",
+    "modules": [
+      "technical",
+      "copy and messaging",
+      "combined synthesis",
+      "seo knowledge metadata",
+      "lighthouse"
+    ],
+    "buildMode": "fictional static fixture served by the example runner",
+    "repositoryCommit": "0000000000000000000000000000000000000000",
+    "nodeVersion": "24.14.0",
+    "lighthouseVersions": [
+      "13.4.1"
+    ],
+    "chromeVersions": [
+      "150.0.0.0"
+    ],
+    "lighthouseBaseline": {
+      "configurationVersion": "1.0.0",
+      "lighthouseVersion": "13.4.1",
+      "chromeVersion": "150.0.7871.129",
+      "chromeVersionPolicy": "Record the exact runtime version and warn when its major version differs from 150.",
+      "deviceProfile": "standard-mobile",
+      "formFactor": "mobile",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "mobile": true
+      },
+      "throttlingMethod": "simulate",
+      "cpuSlowdownMultiplier": 4,
+      "network": {
+        "rttMs": 150,
+        "requestLatencyMs": 150,
+        "downloadThroughputKbps": 1638.4,
+        "uploadThroughputKbps": 750,
+        "throughputKbps": 1638.4
+      },
+      "cacheState": "cold; Lighthouse storage reset enabled before every run",
+      "numberOfRuns": 3,
+      "categories": [
+        "performance",
+        "accessibility",
+        "best-practices",
+        "seo"
+      ],
+      "aggregation": "median per category, audit score, and numeric metric",
+      "notes": "Simulated throttling improves run-to-run comparability but does not make performance measurements deterministic. Compare only runs with matching configuration and compatible runtime versions."
+    },
+    "pageSelection": "user-selected/approved explicit pages",
+    "medianRule": "Median per category score, audit score, and numeric metric across three cold-cache runs.",
+    "rawResultPaths": [
+      "raw/127-0-0-1-homepage-run-01.json",
+      "raw/127-0-0-1-homepage-run-02.json",
+      "raw/127-0-0-1-homepage-run-03.json",
+      "raw/127-0-0-1-homepage-median.json",
+      "raw/127-0-0-1-contact-run-01.json",
+      "raw/127-0-0-1-contact-run-02.json",
+      "raw/127-0-0-1-contact-run-03.json",
+      "raw/127-0-0-1-contact-median.json",
+      "raw/127-0-0-1-services-run-01.json",
+      "raw/127-0-0-1-services-run-02.json",
+      "raw/127-0-0-1-services-run-03.json",
+      "raw/127-0-0-1-services-median.json"
+    ],
+    "capabilities": {
+      "checkedAt": "2026-07-22T03:23:50.048Z",
+      "node": {
+        "available": true,
+        "version": "24.14.0",
+        "required": ">=22.19.0"
+      },
+      "lighthouse": {
+        "available": true,
+        "path": "C:\\workspace\\website-analysis-skill\\node_modules\\lighthouse\\cli\\index.js",
+        "version": "13.4.1",
+        "required": "13.4.1"
+      },
+      "chrome": {
+        "available": true,
+        "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "version": "150.0.7871.129",
+        "baseline": "150.0.7871.129"
+      },
+      "playwright": {
+        "available": false,
+        "required": false
+      },
+      "network": {
+        "available": null,
+        "note": "Target reachability is checked during public audits."
+      },
+      "sandboxWarnings": [
+        "Package installation may require network permission.",
+        "Chrome launch and local server processes may require sandbox approval.",
+        "Outbound access to the audited URL may be restricted."
+      ]
+    }
+  }
+}

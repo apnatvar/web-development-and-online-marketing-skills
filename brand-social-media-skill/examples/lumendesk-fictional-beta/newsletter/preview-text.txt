@@ -1,0 +1,2 @@
+A reusable decision-record method, its maintenance tradeoff, and a clearly fictional LumenDesk beta update.
+

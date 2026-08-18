@@ -1,0 +1,63 @@
+{
+  "campaign": "lumendesk-fictional-beta",
+  "mode": "briefs",
+  "approval_status": "not_requested",
+  "generation_status": "not_generated",
+  "assets": [
+    {
+      "id": "decision-record-linkedin",
+      "platform": "linkedin",
+      "purpose": "Document outline teaching the four-field method",
+      "brief": "linkedin/image-brief.md",
+      "associated_content": "linkedin/post.txt",
+      "filename": "lumendesk-four-field-decision-record.pdf",
+      "status": "brief_ready"
+    },
+    {
+      "id": "decision-record-facebook",
+      "platform": "facebook",
+      "purpose": "Accessible diagram for community discussion",
+      "brief": "facebook/image-brief.md",
+      "associated_content": "facebook/post.txt",
+      "filename": "facebook-decision-record-diagram.png",
+      "status": "brief_ready"
+    },
+    {
+      "id": "decision-record-instagram",
+      "platform": "instagram",
+      "purpose": "Five-slide educational carousel",
+      "brief": "instagram/image-brief.md",
+      "associated_content": "instagram/carousel.md",
+      "filename": "instagram-decision-record-carousel-01.png",
+      "status": "brief_ready"
+    },
+    {
+      "id": "decision-record-x",
+      "platform": "x",
+      "purpose": "Compact explanatory diagram",
+      "brief": "x/image-brief.md",
+      "associated_content": "x/posts.txt",
+      "filename": "x-four-field-decision-record.png",
+      "status": "brief_ready"
+    },
+    {
+      "id": "decision-record-threads",
+      "platform": "threads",
+      "purpose": "Conversational workflow sketch",
+      "brief": "threads/image-brief.md",
+      "associated_content": "threads/posts.txt",
+      "filename": "threads-decision-record-sketch.png",
+      "status": "brief_ready"
+    },
+    {
+      "id": "decision-record-medium",
+      "platform": "medium",
+      "purpose": "Article diagram showing the record and review loop",
+      "brief": "medium/image-brief.md",
+      "associated_content": "medium/article.md",
+      "filename": "medium-anatomy-of-decision-record.png",
+      "status": "brief_ready"
+    }
+  ]
+}
+

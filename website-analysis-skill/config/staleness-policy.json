@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "warningAfterDays": 90,
+  "criticalAfterDays": 180,
+  "behavior": {
+    "fresh": "Show the last-verified date.",
+    "warning": "Warn in the report and recommend refresh SEO knowledge.",
+    "critical": "Warn before relying on volatile recommendations and run the update workflow when current guidance matters."
+  }
+}

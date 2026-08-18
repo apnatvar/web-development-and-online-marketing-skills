@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website SEO Guardrails"
+  short_description: "Prevent SEO risks with Trends and Lighthouse audits"
+  default_prompt: "Use $website-seo-guardrails to audit this site with standardized Lighthouse and SEO guardrails, then prepare a prioritized improvement plan."

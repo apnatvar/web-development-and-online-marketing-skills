@@ -1,0 +1,18 @@
+# Threads sequence
+
+## Thought 1
+
+A decision can be perfectly visible while the reasons behind it fade.
+
+## Thought 2
+
+The smallest record we have found useful has four parts: the source, the open question, the conclusion, and an owner.
+
+## Thought 3
+
+There is a tradeoff: keeping every decision would create more process than clarity. The team still has to choose what deserves a trail.
+
+## Thought 4
+
+We built the fictional LumenDesk beta around this idea. No customer result is hiding behind the example; we are sharing the method first. How does your team decide what reasoning is worth preserving?
+

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/website-tech-content-analysis/audit-config.schema.json",
+  "title": "Website audit configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mode", "inputType", "input", "outputFormat", "pages"],
+  "properties": {
+    "mode": {"enum": ["technical", "copy", "combined"]},
+    "inputType": {"enum": ["local", "public-url"]},
+    "input": {"type": "string", "minLength": 1},
+    "outputFormat": {"enum": ["markdown", "html"]},
+    "intentPath": {"type": "string"},
+    "pages": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 50},
+    "baseUrl": {"type": "string", "format": "uri"},
+    "outputDirectory": {"type": "string"},
+    "lighthouse": {"type": "boolean"},
+    "compareWith": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"mode": {"enum": ["copy", "combined"]}}},
+      "then": {"required": ["intentPath"]}
+    }
+  ]
+}

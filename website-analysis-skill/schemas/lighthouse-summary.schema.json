@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/website-tech-content-analysis/lighthouse-summary.schema.json",
+  "type": "object",
+  "required": ["url", "runs", "aggregation", "categories", "audits", "runtime", "configuration"],
+  "properties": {
+    "url": {"type": "string"},
+    "runs": {"type": "integer", "minimum": 2},
+    "aggregation": {"const": "median"},
+    "categories": {"type": "object"},
+    "audits": {"type": "object"},
+    "runtime": {"type": "object"},
+    "configuration": {"type": "object"},
+    "rawResultPaths": {"type": "array", "items": {"type": "string"}}
+  }
+}

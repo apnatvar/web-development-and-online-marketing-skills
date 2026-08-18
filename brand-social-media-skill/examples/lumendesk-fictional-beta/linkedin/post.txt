@@ -1,0 +1,19 @@
+A research decision rarely disappears all at once.
+
+The source link moves to one document. The open question stays in chat. The conclusion enters a roadmap. Six months later, the decision remains—but its reasoning is hard to reconstruct.
+
+Our fictional team now uses a four-field record:
+
+1. Source
+2. Open question
+3. Conclusion
+4. Owner
+
+We built the fictional LumenDesk beta around that same unit of work: the decision, not the folder where a document happens to live.
+
+There are no customer results behind this example. The useful part is the method, which a small team can test in tools it already uses.
+
+Read the fictional field guide, then decide whether the beta fits your workflow: https://example.com/lumendesk-guide
+
+Primary CTA: Join the fictional beta.
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Application Tailor"
+  short_description: "Truthful, role-specific application materials"
+  default_prompt: "Use $job-application-tailor to tailor my CV and application materials truthfully for this role."

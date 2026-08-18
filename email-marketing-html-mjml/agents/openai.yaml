@@ -1,0 +1,4 @@
+interface:
+  display_name: "Email Marketing HTML & MJML"
+  short_description: "Branded, reusable, deliverability-safe email"
+  default_prompt: "Use $email-marketing-html-mjml to create a branded, reusable, compliant email campaign and its production-ready MJML."

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "brand-context.schema.json",
+  "title": "Brand context",
+  "type": "object",
+  "required": ["name", "positioning", "voice", "narrative_person"],
+  "properties": {
+    "name": {"type": "string", "minLength": 1},
+    "positioning": {"type": "string", "minLength": 1},
+    "voice": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "prefer": {"type": "array", "items": {"type": "string"}},
+    "avoid": {"type": "array", "items": {"type": "string"}},
+    "formatting_preferences": {"type": "array", "items": {"type": "string"}},
+    "claim_restrictions": {"type": "array", "items": {"type": "string"}},
+    "competitor_policy": {"type": "string"},
+    "narrative_person": {"enum": ["first_singular", "first_plural", "third_person", "mixed"]}
+  },
+  "additionalProperties": false
+}
+

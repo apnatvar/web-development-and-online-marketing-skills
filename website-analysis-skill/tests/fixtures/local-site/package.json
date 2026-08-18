@@ -1,0 +1,8 @@
+{
+  "name": "fictional-lantern-studio-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"console.log('fictional static fixture: no build required')\""
+  }
+}

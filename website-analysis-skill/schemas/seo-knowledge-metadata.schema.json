@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/website-tech-content-analysis/seo-knowledge-metadata.schema.json",
+  "type": "object",
+  "required": [
+    "lastUpdated", "lastVerified", "skillVersion", "knowledgeVersion", "sourceUrls",
+    "standards", "volatileRecommendations"
+  ],
+  "properties": {
+    "lastUpdated": {"type": "string", "format": "date"},
+    "lastVerified": {"type": "string", "format": "date"},
+    "skillVersion": {"type": "string"},
+    "knowledgeVersion": {"type": "string"},
+    "sourceUrls": {"type": "array", "minItems": 1, "items": {"type": "string", "format": "uri"}},
+    "standards": {"type": "array", "items": {"type": "object"}},
+    "volatileRecommendations": {"type": "array", "items": {"type": "string"}},
+    "lastReview": {"type": "object"}
+  }
+}

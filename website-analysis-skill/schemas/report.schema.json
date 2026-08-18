@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/website-tech-content-analysis/report.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion", "reportVersion", "auditDate", "mode", "input", "pages",
+    "findings", "priorities", "reproducibility", "seoKnowledge", "limitations"
+  ],
+  "properties": {
+    "schemaVersion": {"type": "string"},
+    "reportVersion": {"type": "string"},
+    "auditDate": {"type": "string", "format": "date-time"},
+    "mode": {"enum": ["technical", "copy", "combined"]},
+    "input": {"type": "object"},
+    "intent": {"type": ["object", "null"]},
+    "pages": {"type": "array", "minItems": 1},
+    "findings": {"type": "array"},
+    "supersededFindings": {"type": "array"},
+    "priorities": {"type": "object"},
+    "lighthouse": {"type": "array"},
+    "reproducibility": {"type": "object"},
+    "seoKnowledge": {"type": "object"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

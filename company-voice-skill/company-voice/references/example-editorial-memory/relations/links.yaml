@@ -1,0 +1,21 @@
+links:
+  - id: link.positioning-voice
+    from: positioning.primary
+    to: voice.primary
+    relation: shapes
+    note: Practical positioning requires a calm, implementation-minded voice.
+  - id: link.audience-technical-depth
+    from: audience.founders
+    to: rules.technical-depth
+    relation: influences
+    note: Founder readers need implementation constraints without unexplained engineering jargon.
+  - id: link.search-pillar
+    from: strategy.search.visibility
+    to: content.pillar.practical-ai
+    relation: prioritizes
+    note: Search visibility increases priority for evergreen implementation topics.
+  - id: link-goal-cta
+    from: strategy.editorial-goals
+    to: rules.promotion.ctas
+    relation: constrains
+    note: Trust-building goal keeps CTAs light and practical.

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "offer-context.schema.json",
+  "title": "Offer context",
+  "type": "object",
+  "required": ["value_proposition", "primary_cta", "cta_destination"],
+  "properties": {
+    "value_proposition": {"type": "string", "minLength": 1},
+    "promise": {"type": "string"},
+    "primary_cta": {"type": "string", "minLength": 1},
+    "secondary_cta": {"type": ["string", "null"]},
+    "cta_destination": {"type": "string", "format": "uri"},
+    "pricing": {"type": ["string", "null"]},
+    "incentive": {"type": ["string", "null"]},
+    "urgency": {"type": ["string", "null"]},
+    "eligibility": {"type": ["string", "null"]},
+    "terms": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
+

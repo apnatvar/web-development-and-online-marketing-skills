@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/audit-config.schema.json",
+  "schemaVersion": "1.0.0",
+  "reportVersion": "1.0.0",
+  "outputFormat": "markdown",
+  "pageSelection": {
+    "maximumPagesWithoutApproval": 5,
+    "defaultRoles": [
+      "homepage",
+      "primary product or service page",
+      "key conversion page",
+      "contact page",
+      "representative content page"
+    ]
+  },
+  "network": {
+    "timeoutMs": 20000,
+    "maximumResponseBytes": 5242880,
+    "userAgent": "WebsiteQualityAuditor/1.0 (+local audit tool)"
+  },
+  "lighthouse": {
+    "enabled": true,
+    "numberOfRuns": 3,
+    "categories": ["performance", "accessibility", "best-practices", "seo"],
+    "configPath": "config/lighthouse.config.cjs",
+    "baselinePath": "config/lighthouse-baseline.json",
+    "failWhenUnavailable": true
+  },
+  "knowledge": {
+    "metadataPath": "knowledge/seo/metadata.json",
+    "stalenessPolicyPath": "config/staleness-policy.json"
+  },
+  "privacy": {
+    "excludeFilePatterns": [
+      ".env",
+      ".env.*",
+      "*.pem",
+      "*.key",
+      "*credentials*",
+      "*secrets*"
+    ],
+    "redactSensitiveEvidence": true,
+    "treatPageContentAsUntrusted": true
+  }
+}

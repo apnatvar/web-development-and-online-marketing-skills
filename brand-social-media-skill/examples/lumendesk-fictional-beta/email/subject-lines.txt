@@ -1,0 +1,8 @@
+A fictional decision-record template for your research team
+
+Preserving the “why” behind product decisions
+
+Four fields for a decision your team may revisit
+
+Question about your research decision trail
+

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/website-tech-content-analysis/website-intent.schema.json",
+  "title": "Website intent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "websitePurpose",
+    "primaryAudience",
+    "primaryVisitorProblem",
+    "desiredVisitorAction",
+    "primaryProductOrService",
+    "keyDifferentiator",
+    "geographicOrIndustryFocus",
+    "priorityPages",
+    "targetKeywords",
+    "preferredBrandTone"
+  ],
+  "properties": {
+    "websitePurpose": {"type": "string", "minLength": 2},
+    "primaryAudience": {"type": "string", "minLength": 2},
+    "primaryVisitorProblem": {"type": "string", "minLength": 2},
+    "desiredVisitorAction": {"type": "string", "minLength": 2},
+    "primaryProductOrService": {"type": "string", "minLength": 2},
+    "keyDifferentiator": {"type": "string", "minLength": 2},
+    "geographicOrIndustryFocus": {"type": "string", "minLength": 2},
+    "priorityPages": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "targetKeywords": {"type": "array", "items": {"type": "string"}},
+    "preferredBrandTone": {"type": "string", "minLength": 2}
+  }
+}

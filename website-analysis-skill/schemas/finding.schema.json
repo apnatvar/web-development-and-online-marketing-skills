@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/website-tech-content-analysis/finding.schema.json",
+  "title": "Audit finding",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id", "title", "category", "affectedPage", "evidence", "evidenceSource",
+    "severity", "confidence", "userImpact", "seoImpact", "technicalExplanation",
+    "plainLanguageExplanation", "recommendedFix", "implementationGuidance",
+    "expectedResult", "verificationMethod", "repositoryAccessRequired",
+    "effort", "priorityGroup", "changeType", "measurementClass"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string", "minLength": 3},
+    "category": {"type": "string", "minLength": 2},
+    "affectedPage": {"type": "string", "minLength": 1},
+    "evidence": {"type": "string", "minLength": 1},
+    "evidenceSource": {"type": "string", "minLength": 2},
+    "severity": {"enum": ["critical", "high", "medium", "low", "informational"]},
+    "confidence": {"enum": ["confirmed", "likely", "possible"]},
+    "userImpact": {"type": "string", "minLength": 2},
+    "seoImpact": {"type": "string", "minLength": 2},
+    "technicalExplanation": {"type": "string", "minLength": 2},
+    "plainLanguageExplanation": {"type": "string", "minLength": 2},
+    "recommendedFix": {"type": "string", "minLength": 2},
+    "implementationGuidance": {"type": "string", "minLength": 2},
+    "expectedResult": {"type": "string", "minLength": 2},
+    "verificationMethod": {"type": "string", "minLength": 2},
+    "repositoryAccessRequired": {"type": "boolean"},
+    "effort": {"enum": ["small", "medium", "large", "unknown"]},
+    "affectedPageCount": {"type": "integer", "minimum": 1},
+    "dependencyOrder": {"type": "integer", "minimum": 0},
+    "priorityGroup": {"enum": ["fix first", "fix next", "improve later", "monitor"]},
+    "changeType": {"enum": ["quick win", "structural fix", "content rewrite", "code change", "configuration change", "external service", "monitoring"]},
+    "measurementClass": {"enum": ["deterministic", "relatively stable", "variable performance", "environment-dependent"]},
+    "relatedFindingIds": {"type": "array", "items": {"type": "string"}}
+  }
+}

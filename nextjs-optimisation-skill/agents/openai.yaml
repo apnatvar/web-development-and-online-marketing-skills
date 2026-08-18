@@ -1,0 +1,4 @@
+interface:
+  display_name: "Next.js Optimisation"
+  short_description: "Audit and optimise Next.js discovery and speed"
+  default_prompt: "Use $nextjs-optimisation-skill to audit and improve this Next.js route without introducing speculative optimisations."

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "campaign-context.schema.json",
+  "title": "Campaign context bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["campaign", "brand", "product", "audiences", "offer", "sources"],
+  "properties": {
+    "campaign": {
+      "type": "object",
+      "required": ["title", "objective", "primary_conversion_action", "priority_platforms"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "objective": {"type": "string", "minLength": 1},
+        "primary_conversion_action": {"type": "string", "minLength": 1},
+        "secondary_conversion_action": {"type": ["string", "null"]},
+        "duration": {"type": ["string", "null"]},
+        "priority_platforms": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["linkedin", "facebook", "reddit", "instagram", "x", "threads", "medium", "dm", "email", "newsletter"]
+          }
+        },
+        "publishing_frequency": {"type": ["string", "null"]},
+        "distribution": {"enum": ["organic", "paid", "mixed", "unknown"]},
+        "publisher_identity": {"enum": ["personal", "company", "mixed", "unknown"]},
+        "deadline": {"type": ["string", "null"], "format": "date"},
+        "visual_mode": {"enum": ["none", "briefs", "prompts", "generate"]}
+      },
+      "additionalProperties": true
+    },
+    "brand": {"$ref": "brand-context.schema.json"},
+    "product": {"$ref": "product-context.schema.json"},
+    "audiences": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "audience-context.schema.json"}
+    },
+    "offer": {"$ref": "offer-context.schema.json"},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "url", "purpose"],
+        "properties": {
+          "label": {"type": "string"},
+          "url": {"type": "string", "format": "uri"},
+          "purpose": {"type": "string"},
+          "verified_at": {"type": ["string", "null"], "format": "date-time"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "classification", "source"],
+        "properties": {
+          "claim": {"type": "string"},
+          "classification": {
+            "enum": ["verified_fact", "supported_interpretation", "stated_positioning", "opinion", "assumption", "placeholder"]
+          },
+          "source": {"type": "string"},
+          "public_safe": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "severity", "question"],
+        "properties": {
+          "field": {"type": "string"},
+          "severity": {"enum": ["blocking", "important", "optional"]},
+          "question": {"type": "string"},
+          "placeholder": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
+

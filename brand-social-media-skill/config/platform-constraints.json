@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "stale_after_days": 120,
+    "instruction": "Verify volatile constraints against the cited official source and the publishing account's composer before publication. Treat null limits as unknown, not unlimited."
+  },
+  "platforms": {
+    "linkedin": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "post_characters": 3000,
+        "article_characters": 125000
+      },
+      "sources": [
+        "https://www.linkedin.com/help/linkedin/answer/a528176/",
+        "https://www.linkedin.com/help/linkedin/answer/a522483/differences-between-posting-updates-and-publishing"
+      ],
+      "notes": "Composer behavior and account features can vary. Recheck before publishing."
+    },
+    "facebook": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "post_characters": null,
+        "group_rules_must_be_checked": true
+      },
+      "sources": [
+        "https://www.facebook.com/help/462230500886400/",
+        "https://www.facebook.com/help/158630788063039"
+      ],
+      "notes": "No universal permission to promote in groups. Record the current group rules and approval posture."
+    },
+    "reddit": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "post_characters": null,
+        "community_rules_must_be_checked": true,
+        "affiliation_disclosure_required_by_skill": true
+      },
+      "sources": [
+        "https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam",
+        "https://support.reddithelp.com/hc/en-us/articles/205926439-Reddiquette"
+      ],
+      "notes": "Reddit prohibits repeated or unsolicited mass engagement. Community-specific rules control title, flair, karma, account-age, participation, and promotion requirements."
+    },
+    "instagram": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "caption_characters": null,
+        "custom_alt_text_supported": true,
+        "hashtags": null
+      },
+      "sources": [
+        "https://www.facebook.com/help/instagram/503708446705527/"
+      ],
+      "notes": "Verify caption and hashtag behavior in the current composer. Provide custom alt text for each relevant visual."
+    },
+    "x": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "standard_post_characters": 280,
+        "premium_long_post_characters": 25000,
+        "url_counted_characters": 23
+      },
+      "sources": [
+        "https://help.x.com/en/using-x/how-to-post",
+        "https://help.x.com/en/using-x/types-of-posts",
+        "https://help.x.com/en/using-x/how-to-post-a-link"
+      ],
+      "notes": "Generate a 280-character version unless extended-post eligibility is explicitly confirmed. X counts every URL as 23 characters through t.co."
+    },
+    "threads": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "post_characters": 500,
+        "text_attachment_characters": 10000
+      },
+      "sources": [
+        "https://about.fb.com/news/2023/07/introducing-threads-new-app-text-sharing/",
+        "https://about.fb.com/news/2025/09/attach-text-threads-posts-share-longer-perspectives/"
+      ],
+      "notes": "The text attachment is separate from the conversational post. Confirm feature availability on the publishing account."
+    },
+    "medium": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "article_characters": null,
+        "duplicate_medium_story_allowed": false,
+        "canonical_for_owned_cross_post": true
+      },
+      "sources": [
+        "https://help.medium.com/hc/en-us/articles/360033930293-Set-a-canonical-link",
+        "https://help.medium.com/hc/en-us/articles/360039513913-About-the-No-Duplicate-Content-rule",
+        "https://help.medium.com/hc/en-us/articles/213477928-Medium-Rules"
+      ],
+      "notes": "Cross-post owned work with a canonical link; do not create duplicate copies on Medium or a clipped traffic-only story."
+    },
+    "dm": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "linkedin_inmail_subject_characters": 200,
+        "linkedin_inmail_body_characters": 1900,
+        "other_channel_limits": null
+      },
+      "sources": [
+        "https://www.linkedin.com/help/linkedin/answer/a411986/inmail-character-limits"
+      ],
+      "notes": "Confirm the exact DM product, relationship, account eligibility, and local rules before sending."
+    },
+    "email": {
+      "last_verified": "2026-07-22",
+      "official_constraints": true,
+      "limits": {
+        "body_characters": null,
+        "jurisdiction_review_required": true,
+        "opt_out_placeholder_required": true,
+        "sender_identity_placeholder_required": true
+      },
+      "sources": [
+        "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+      ],
+      "notes": "This registry is not legal advice. Consent, identification, recordkeeping, address, and opt-out rules differ by jurisdiction and audience."
+    },
+    "newsletter": {
+      "last_verified": "2026-07-22",
+      "official_constraints": false,
+      "limits": {
+        "body_characters": null,
+        "permission_based_audience_required": true,
+        "opt_out_placeholder_required": true
+      },
+      "sources": [
+        "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+      ],
+      "notes": "Treat recipients as warm or permission-based only when the user confirms it. Verify applicable law and sending-platform requirements."
+    }
+  }
+}
+

@@ -1,0 +1,28 @@
+{
+  "configurationVersion": "1.0.0",
+  "lighthouseVersion": "13.4.1",
+  "chromeVersion": "150.0.7871.129",
+  "chromeVersionPolicy": "Record the exact runtime version and warn when its major version differs from 150.",
+  "deviceProfile": "standard-mobile",
+  "formFactor": "mobile",
+  "viewport": {
+    "width": 412,
+    "height": 823,
+    "deviceScaleFactor": 1.75,
+    "mobile": true
+  },
+  "throttlingMethod": "simulate",
+  "cpuSlowdownMultiplier": 4,
+  "network": {
+    "rttMs": 150,
+    "requestLatencyMs": 150,
+    "downloadThroughputKbps": 1638.4,
+    "uploadThroughputKbps": 750,
+    "throughputKbps": 1638.4
+  },
+  "cacheState": "cold; Lighthouse storage reset enabled before every run",
+  "numberOfRuns": 3,
+  "categories": ["performance", "accessibility", "best-practices", "seo"],
+  "aggregation": "median per category, audit score, and numeric metric",
+  "notes": "Simulated throttling improves run-to-run comparability but does not make performance measurements deterministic. Compare only runs with matching configuration and compatible runtime versions."
+}

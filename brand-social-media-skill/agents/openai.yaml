@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Social Skill"
+  short_description: "Plan and generate native multichannel campaigns"
+  default_prompt: "Use $brand-social-skill to plan a verified, platform-native campaign for my product."

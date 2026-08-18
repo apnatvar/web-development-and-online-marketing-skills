@@ -1,0 +1,80 @@
+{
+  "campaign": {
+    "primary_conversion_action": "Join the fictional beta",
+    "secondary_conversion_action": "Read the fictional field guide",
+    "duration": "Four fictional weeks",
+    "publishing_frequency": "Three posts per fictional week",
+    "distribution": "organic",
+    "publisher_identity": "company",
+    "visual_mode": "briefs",
+    "deadline": "2030-06-30"
+  },
+  "brand": {
+    "name": "LumenDesk Labs",
+    "positioning": "A fictional learning workspace for tiny research teams",
+    "voice": ["clear", "curious", "grounded"],
+    "prefer": ["research notes", "shared understanding"],
+    "avoid": ["revolutionary", "guaranteed"],
+    "formatting_preferences": ["short paragraphs", "descriptive links"],
+    "claim_restrictions": ["No performance claims without a public source"],
+    "competitor_policy": "Discuss categories, not named competitors",
+    "narrative_person": "first_plural"
+  },
+  "product": {
+    "name": "LumenDesk",
+    "category": "Fictional collaborative research software",
+    "description": "LumenDesk is a fictional workspace that groups notes, questions, and source links around a research decision.",
+    "problem": "Small teams lose the reasoning behind decisions across scattered documents.",
+    "how_it_works": "A team creates a decision space, attaches sources, and writes a shared conclusion.",
+    "features": ["Decision spaces", "Source cards", "Shared conclusions"],
+    "benefits": ["Keeps a fictional decision trail together"],
+    "differentiators": ["Organises work around decisions rather than document folders"],
+    "maturity": "beta",
+    "commercial_model": "Fictional free beta",
+    "availability": ["Fictional global beta"],
+    "restrictions": ["Fictional data only"],
+    "prerequisites": ["A modern browser"]
+  },
+  "audience": {
+    "primary": "Research leads at small product teams",
+    "secondary": "Product managers who coordinate research",
+    "buyer_or_user": "both",
+    "industry": ["Software"],
+    "organisation_size": ["2–20 person teams"],
+    "technical_sophistication": "moderate",
+    "alternatives": ["Documents", "wikis", "spreadsheets"],
+    "pain_points": ["Lost source context", "unclear decision history"],
+    "objections": ["Another workspace may add process"],
+    "desired_outcome": "Understand why a research-backed decision was made",
+    "awareness_level": "problem_aware",
+    "geographies": ["Fictional global market"]
+  },
+  "offer": {
+    "value_proposition": "Keep sources, questions, and conclusions together for each fictional decision.",
+    "promise": "Make a fictional decision trail easier to revisit.",
+    "primary_cta": "Join the fictional beta",
+    "secondary_cta": "Read the fictional field guide",
+    "cta_destination": "https://example.com/lumendesk-beta",
+    "pricing": "Free fictional beta",
+    "incentive": null,
+    "urgency": null,
+    "eligibility": "Fictional teams only",
+    "terms": "Example data; no real offer"
+  },
+  "sources": [
+    {
+      "label": "Fictional beta page",
+      "url": "https://example.com/lumendesk-beta",
+      "purpose": "CTA destination"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "LumenDesk has decision spaces, source cards, and shared conclusions.",
+      "classification": "stated_positioning",
+      "source": "Fictional product brief",
+      "public_safe": true
+    }
+  ]
+}
+

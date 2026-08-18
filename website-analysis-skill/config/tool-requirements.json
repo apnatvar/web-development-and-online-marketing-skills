@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "required": {
+    "allModes": ["Node.js 22.19 or newer (required by Lighthouse 13.4.1; copy-only scripts also use the same supported baseline)"],
+    "technicalWithLighthouse": ["Lighthouse 13.4.1", "Chrome or Chromium"],
+    "publicUrl": ["Network access to the target"]
+  },
+  "optional": [
+    {"tool": "Playwright or Playwright MCP", "role": "Rendered DOM, interaction, responsive-state, and browser-console inspection"},
+    {"tool": "Axe", "role": "Additional automated accessibility rules; Lighthouse already includes an Axe-based subset"},
+    {"tool": "Chrome DevTools Protocol", "role": "Trace, network waterfall, and runtime diagnostics beyond Lighthouse"},
+    {"tool": "Rich Results Test or schema validator", "role": "Validate eligibility rules that local JSON-LD parsing cannot confirm"},
+    {"tool": "Search Console and analytics", "role": "Confirm indexing, query demand, field performance, and conversion behavior"}
+  ],
+  "sandboxNote": "Browser launch, local build servers, package installation, and outbound requests may be blocked in a sandbox. Run preflight first; request approval for the blocked capability or report the exact limitation. Never silently replace a missing Lighthouse run with a score estimate."
+}

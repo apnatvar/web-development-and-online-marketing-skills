@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "platform-output.schema.json",
+  "title": "Platform output record",
+  "type": "object",
+  "required": ["platform", "format", "path", "status", "message_pillars", "claim_ids"],
+  "properties": {
+    "platform": {"enum": ["linkedin", "facebook", "reddit", "instagram", "x", "threads", "medium", "dm", "email", "newsletter"]},
+    "format": {"type": "string", "minLength": 1},
+    "path": {"type": "string", "minLength": 1},
+    "status": {"enum": ["planned", "generated", "revised", "skipped", "stale", "error"]},
+    "message_pillars": {"type": "array", "items": {"type": "string"}},
+    "claim_ids": {"type": "array", "items": {"type": "string"}},
+    "cta": {"type": ["string", "null"]},
+    "revision": {"type": "integer", "minimum": 1},
+    "generated_at": {"type": ["string", "null"], "format": "date-time"},
+    "validation": {"enum": ["not_run", "passed", "warnings", "failed", "skipped"]},
+    "reason_skipped": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
+
