@@ -18,13 +18,13 @@ Ask for:
 - constraints
 - claims to avoid
 
-For each answer, store the information as structured profile data.
+For each answer used in the task, maintain a working evidence record. Do not require a database, application profile, or persistent storage.
 
-Every stored item must include:
-- value
-- source: user_intake
-- evidenceStatus: user_claimed
-- userApproved: false unless the user confirms it
-- notes if uncertain
+Each record should include:
+- claim or value
+- source, such as user intake or source CV
+- evidence status: user_claimed unless the user confirms it
+- approval status
+- uncertainty notes when needed
 
-If the user says a claim is final and approved, mark it as user_approved.
+If the user confirms a claim for use, mark it as user_approved. Keep the record only as long as needed for the requested work unless the user asks for a reusable profile artifact.

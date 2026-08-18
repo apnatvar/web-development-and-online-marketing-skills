@@ -1,6 +1,6 @@
 ---
 name: job-application-tailor
-description: Create truth-preserving, role-specific job application packages from a CV, professional profile, and job description. Use for resume or CV parsing and tailoring, requirement and fit analysis, ATS keyword alignment, evidence checks, cover letters and cover notes, recruiter outreach, screening-question drafts, application checklists, and manual job-search tracking. Do not use it to fabricate qualifications, impersonate a candidate, or submit applications automatically.
+description: Create truth-preserving, role-specific job application packages from a CV, professional profile, and job description. Use for resume or CV parsing and tailoring, requirement and fit analysis, ATS keyword alignment, evidence checks, cover letters and cover notes, recruiter outreach, screening-question drafts, and application checklists. Do not use it to fabricate qualifications, impersonate a candidate, track applications in an app, or submit applications automatically.
 ---
 
 # Job Application Tailor
@@ -16,7 +16,6 @@ Allowed:
 - CV tailoring
 - ATS keyword extraction
 - application package generation
-- kanban workflow recommendations
 - cover note generation
 - recruiter message drafting
 - gap analysis
@@ -76,10 +75,8 @@ If the user supplies only a CV or only a job description, complete the useful pa
 - `07-output-formats.md` for final answer shapes.
 - `08-safety-guardrails.md` for blocked behavior.
 - `09-review-checklists.md` for final reviews.
-- `10-kanban-workflow.md` for application tracking.
-- `11-example-prompts.md` for reusable prompts.
-- `12-application-writing.md` for cover letters, outreach, and screening answers.
-- `13-quality-and-accessibility.md` for document quality, privacy, bias, and final QA.
+- `10-application-writing.md` for cover letters, outreach, and screening answers.
+- `11-quality-and-accessibility.md` for document quality, privacy, bias, and final QA.
 
 ## Creator
 

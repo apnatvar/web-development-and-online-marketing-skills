@@ -23,7 +23,7 @@ Before finalising a job application package:
 - CV generated
 - Cover note generated
 - Keyword coverage reviewed
-- Fit score reviewed
+- Fit recommendation and rationale reviewed
 - Missing requirements reviewed
 - User has manually chosen whether to apply
 - Screening answers use only explicit user information
