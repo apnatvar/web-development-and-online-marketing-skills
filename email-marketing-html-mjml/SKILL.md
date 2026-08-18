@@ -1,6 +1,6 @@
 ---
 name: email-marketing-html-mjml
-description: Design, write, personalize, compile, and quality-assure visually distinctive, brand-aligned HTML email systems using MJML and reusable HTML templates. Use for mailing-list campaigns, newsletters, product and blog promotion, discounts, launches, cold outreach, follow-ups, lifecycle sequences, announcements, transactional order/shipping/account updates, subject lines, preview text, Gmail Promotions annotations, Gmail Actions/Highlights markup, deliverability reviews, spam prevention, list hygiene, email compliance, testing, and campaign measurement. Also use to edit or troubleshoot `.mjml` and compiled email HTML across Gmail, Outlook, Apple Mail, and mobile clients.
+description: Design, write, personalize, compile, and quality-assure visually distinctive, brand-aligned HTML email systems using MJML, reusable HTML templates, and optional Emailcn registry components for React Email, MJML React, or JSX Email. Use for mailing-list campaigns, newsletters, product and blog promotion, discounts, launches, cold outreach, follow-ups, lifecycle sequences, announcements, transactional order/shipping/account updates, subject lines, preview text, Gmail Promotions annotations, Gmail Actions/Highlights markup, deliverability reviews, spam prevention, list hygiene, email compliance, testing, and campaign measurement. Also use to select or integrate Emailcn, edit email component source, or troubleshoot `.mjml` and compiled email HTML across Gmail, Outlook, Apple Mail, and mobile clients.
 ---
 
 # Email Marketing HTML and MJML
@@ -41,9 +41,11 @@ Create design tokens for palette, typography/fallbacks, spacing, radii, dividers
 
 Use `{{first_name}}`, `{{unsubscribe_url}}`, and other documented placeholders only when data and fallback rules exist. Separate reusable layout, campaign content, and recipient data. Read [references/03-personalization-and-automation.md](references/03-personalization-and-automation.md).
 
-### 6. Generate and compile MJML
+Consider [Emailcn](https://github.com/shadcn-labs/emailcn) when the target project uses React Email, `@faire/mjml-react`, or JSX Email and would benefit from locally owned registry components, blocks, themes, or font helpers. Read [references/10-emailcn.md](references/10-emailcn.md) before recommending or installing it. Keep Emailcn optional: do not introduce a React renderer into a raw-MJML project merely to use its components, and do not run installation commands without user authorization.
 
-Before using an MJML component, read its file in the Component Index. Create a complete `<mjml lang="...">` document with `mj-title`, `mj-preview`, attributes, accessibility metadata, and robust fallbacks. Follow the existing [compilation.md](compilation.md) exactly and deliver both editable `.mjml` and minified compiled `.html`.
+### 6. Generate and compile the selected source
+
+For raw MJML, read the required files in the Component Index, create a complete `<mjml lang="...">` document with `mj-title`, `mj-preview`, attributes, accessibility metadata, and robust fallbacks, then follow [compilation.md](compilation.md). For Emailcn, select exactly one renderer namespace, inspect every registry item before accepting it, adapt its local source to the approved brand system, and use that renderer's documented build process. In either path, deliver editable source and the final minified HTML; never assume a component preview proves inbox compatibility.
 
 ### 7. Add platform enhancements only when eligible
 
@@ -75,7 +77,7 @@ For campaign work, provide as applicable:
 1. campaign/message brief;
 2. 3–5 truthful subject/preheader pairs with distinct hypotheses;
 3. final copy and plain-text alternative;
-4. editable MJML and compiled HTML;
+4. editable source—raw MJML, React Email, MJML React, or JSX Email—and compiled HTML;
 5. placeholder dictionary with type, example, required/optional state, escaping, and fallback;
 6. sending-layer requirements: headers, authentication, unsubscribe, segmentation, suppression, and tracking;
 7. QA results, known client limitations, and launch checklist;
@@ -83,7 +85,7 @@ For campaign work, provide as applicable:
 
 ## Engineering rules
 
-Retain the upstream MJML rules: Section → Column → Content hierarchy; strict validation; component attributes for critical Gmail styles; font fallbacks; image alt text; heading roles via `mj-html-attributes`; VML-capable hero/section backgrounds; `mj-group` when columns must not stack; explicit include allowlists; minified HTML below Gmail clipping risk; and no JavaScript.
+For raw MJML, retain the upstream rules: Section → Column → Content hierarchy; strict validation; component attributes for critical Gmail styles; font fallbacks; image alt text; heading roles via `mj-html-attributes`; VML-capable hero/section backgrounds; `mj-group` when columns must not stack; explicit include allowlists; minified HTML below Gmail clipping risk; and no JavaScript. For component renderers, apply the same output-level requirements after rendering. Registry components never waive accessibility, size, security, deliverability, compliance, or client-testing gates.
 
 ## Component Index
 

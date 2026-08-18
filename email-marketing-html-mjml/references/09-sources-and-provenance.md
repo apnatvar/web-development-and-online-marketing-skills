@@ -1,10 +1,20 @@
 # Sources and Provenance
 
-Last reviewed: 2026-08-11. Re-check current sender, legal, ESP, and Gmail markup requirements before consequential campaigns.
+Last reviewed: 2026-08-18. Re-check current sender, legal, ESP, Gmail markup, and optional component-tool requirements before consequential campaigns.
 
 ## Upstream
 
 Derived from [`framix-team/skill-email-html-mjml`](https://github.com/framix-team/skill-email-html-mjml) at commit `c756db33010abf1d3e19153c56f78ece7f79cda4`, copyright 2026 Framix, under the included MIT License. Original MJML component references, compilation guidance, and examples are retained and extended.
+
+## Optional component tooling
+
+- [Emailcn repository and MIT license](https://github.com/shadcn-labs/emailcn)
+- [Emailcn installation source](https://github.com/shadcn-labs/emailcn/blob/main/content/docs/%28root%29/installation.mdx)
+- [Emailcn registry source](https://github.com/shadcn-labs/emailcn/blob/main/content/docs/%28root%29/registry.mdx)
+- [Emailcn theming source](https://github.com/shadcn-labs/emailcn/blob/main/content/docs/%28root%29/theming.mdx)
+- [Emailcn registry inventory](https://github.com/shadcn-labs/emailcn/blob/main/registry.json)
+
+Emailcn is an optional upstream tool, not code vendored into this skill. Verify its current registry schema, renderer prerequisites, commands, dependencies, and license before use.
 
 ## Gmail sender and subscription guidance
 
