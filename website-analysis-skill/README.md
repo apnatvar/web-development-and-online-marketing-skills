@@ -187,3 +187,9 @@ The tests cover intake rules, mode isolation, both input types, route/sitemap di
 - Schema feature validators.
 - Page-role samplers for ecommerce, editorial, SaaS, and local-business sites.
 - Before/after trend dashboards using retained raw results.
+
+## Project and updates
+
+This skill is part of the [Apnatva](https://apnatva.dev) skill collection and is maintained with support from [Brownsmith Dynamics](https://brownsmithdynamics.com).
+
+For updates, corrections, or maintenance enquiries, contact [rawat@apnatva.dev](mailto:rawat@apnatva.dev).

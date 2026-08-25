@@ -117,3 +117,9 @@ Backlogs remain separate from permanent editorial rules. Published content does 
 ## Adaptation
 
 The system works for founders, companies, consultancies, agencies, product businesses, creators, and organizations. It can be adapted to social posts, blogs, newsletters, product announcements, tutorials, case studies, reviews, comparisons, founder commentary, and news analysis.
+
+## Project and updates
+
+This skill is part of the [Apnatva](https://apnatva.dev) skill collection and is maintained with support from [Brownsmith Dynamics](https://brownsmithdynamics.com).
+
+For updates, corrections, or maintenance enquiries, contact [rawat@apnatva.dev](mailto:rawat@apnatva.dev).

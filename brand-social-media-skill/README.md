@@ -323,3 +323,9 @@ To add a platform:
 7. Link the module directly from `SKILL.md` and update UI metadata if the scope changed.
 
 To add a validator, prefer a narrow deterministic check with a clear error/warning boundary and a regression fixture. Do not encode subjective editorial preferences as hard failures.
+
+## Project and updates
+
+This skill is part of the [Apnatva](https://apnatva.dev) skill collection and is maintained with support from [Brownsmith Dynamics](https://brownsmithdynamics.com).
+
+For updates, corrections, or maintenance enquiries, contact [rawat@apnatva.dev](mailto:rawat@apnatva.dev).
