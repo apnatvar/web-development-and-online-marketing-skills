@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mcpify/mcp-manifest.schema.json",
+  "title": "MCPify capability manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "application", "transport", "standards", "defaults", "tools"],
+  "properties": {
+    "version": { "const": 1 },
+    "application": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "framework", "language", "package_manager", "root"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "framework": { "type": "string", "minLength": 1 },
+        "language": { "type": "string", "minLength": 1 },
+        "package_manager": { "type": "string", "minLength": 1 },
+        "root": { "type": "string", "minLength": 1 },
+        "workspace": { "type": "string", "minLength": 1 }
+      }
+    },
+    "transport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "audience"],
+      "properties": {
+        "type": { "enum": ["stdio", "streamable_http"] },
+        "audience": { "enum": ["local_user", "single_tenant", "multi_tenant", "internal_service"] },
+        "endpoint": { "type": "string", "minLength": 1 }
+      }
+    },
+    "standards": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mcp_spec", "sdk", "last_verified", "sources"],
+      "properties": {
+        "mcp_spec": { "type": "string", "minLength": 1 },
+        "sdk": { "type": "string", "minLength": 1 },
+        "last_verified": { "type": "string", "format": "date" },
+        "sources": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "format": "uri" } }
+      }
+    },
+    "defaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_request_bytes", "timeout_ms", "max_concurrency", "safe_errors"],
+      "properties": {
+        "max_request_bytes": { "type": "integer", "minimum": 1 },
+        "timeout_ms": { "type": "integer", "minimum": 1 },
+        "max_concurrency": { "type": "integer", "minimum": 1 },
+        "safe_errors": { "const": true }
+      }
+    },
+    "tools": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/tool" }
+    },
+    "resources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/resource" }
+    },
+    "prompts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/prompt" }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": { "type": "string", "minLength": 1 },
+    "resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description", "status", "uri_template", "source", "access", "sensitivity", "max_bytes", "tests"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[A-Za-z0-9_.-]{1,128}$" },
+        "description": { "$ref": "#/$defs/nonEmptyString" },
+        "status": { "enum": ["proposed", "approved", "disabled_pending_review", "excluded"] },
+        "uri_template": { "$ref": "#/$defs/nonEmptyString" },
+        "source": { "$ref": "#/$defs/nonEmptyString" },
+        "access": { "$ref": "#/$defs/nonEmptyString" },
+        "sensitivity": { "enum": ["public", "internal", "personal", "sensitive_personal", "financial", "health", "credential", "secret"] },
+        "max_bytes": { "type": "integer", "minimum": 1 },
+        "tests": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/nonEmptyString" } }
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description", "status", "source", "arguments", "access", "expected_surfaces", "tests"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[A-Za-z0-9_.-]{1,128}$" },
+        "description": { "$ref": "#/$defs/nonEmptyString" },
+        "status": { "enum": ["proposed", "approved", "disabled_pending_review", "excluded"] },
+        "source": { "$ref": "#/$defs/nonEmptyString" },
+        "arguments": { "type": "object" },
+        "access": { "$ref": "#/$defs/nonEmptyString" },
+        "expected_surfaces": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmptyString" } },
+        "tests": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/nonEmptyString" } }
+      }
+    },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description", "status", "rationale", "source", "input_schema", "output", "access", "risk", "limits", "idempotency", "confirmation", "data", "side_effects", "mcp", "tests"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[A-Za-z0-9_.-]{1,128}$" },
+        "description": { "$ref": "#/$defs/nonEmptyString" },
+        "status": { "enum": ["proposed", "approved", "disabled_pending_review", "excluded"] },
+        "rationale": { "$ref": "#/$defs/nonEmptyString" },
+        "source": {
+          "type": "object", "additionalProperties": false,
+          "required": ["path", "operation", "evidence"],
+          "properties": { "path": { "$ref": "#/$defs/nonEmptyString" }, "operation": { "$ref": "#/$defs/nonEmptyString" }, "evidence": { "$ref": "#/$defs/nonEmptyString" } }
+        },
+        "input_schema": { "type": "object" },
+        "output": {
+          "type": "object", "additionalProperties": false,
+          "required": ["mode", "max_bytes"],
+          "properties": {
+            "mode": { "enum": ["structured", "text", "mixed"] },
+            "max_items": { "type": "integer", "minimum": 1 },
+            "max_bytes": { "type": "integer", "minimum": 1 },
+            "schema": { "type": "object" }
+          }
+        },
+        "access": {
+          "type": "object", "additionalProperties": false,
+          "required": ["authentication", "scopes", "authorization", "identity_mapping"],
+          "properties": {
+            "authentication": { "enum": ["none", "optional", "required"] },
+            "scopes": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmptyString" } },
+            "authorization": { "$ref": "#/$defs/nonEmptyString" },
+            "identity_mapping": { "$ref": "#/$defs/nonEmptyString" }
+          }
+        },
+        "risk": {
+          "type": "object", "additionalProperties": false,
+          "required": ["level", "mutation", "reasons"],
+          "properties": {
+            "level": { "enum": ["low", "medium", "high", "critical"] },
+            "mutation": { "type": "boolean" },
+            "reasons": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/nonEmptyString" } }
+          }
+        },
+        "limits": {
+          "type": "object", "additionalProperties": false,
+          "required": ["requests_per_minute", "timeout_ms", "max_concurrency", "max_request_bytes"],
+          "properties": {
+            "requests_per_minute": { "type": "integer", "minimum": 1 },
+            "timeout_ms": { "type": "integer", "minimum": 1 },
+            "max_concurrency": { "type": "integer", "minimum": 1 },
+            "max_request_bytes": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "idempotency": {
+          "type": "object", "additionalProperties": false,
+          "required": ["required", "strategy"],
+          "properties": { "required": { "type": "boolean" }, "strategy": { "$ref": "#/$defs/nonEmptyString" } }
+        },
+        "confirmation": {
+          "type": "object", "additionalProperties": false,
+          "required": ["required", "mechanism"],
+          "properties": { "required": { "type": "boolean" }, "mechanism": { "$ref": "#/$defs/nonEmptyString" } }
+        },
+        "data": {
+          "type": "object", "additionalProperties": false,
+          "required": ["sensitivity", "minimization", "output_filtering", "logging"],
+          "properties": {
+            "sensitivity": { "enum": ["public", "internal", "personal", "sensitive_personal", "financial", "health", "credential", "secret"] },
+            "minimization": { "$ref": "#/$defs/nonEmptyString" },
+            "output_filtering": { "$ref": "#/$defs/nonEmptyString" },
+            "logging": { "$ref": "#/$defs/nonEmptyString" }
+          }
+        },
+        "side_effects": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmptyString" } },
+        "mcp": {
+          "type": "object", "additionalProperties": false, "required": ["annotations"],
+          "properties": {
+            "annotations": {
+              "type": "object", "additionalProperties": false,
+              "required": ["readOnlyHint", "destructiveHint", "idempotentHint", "openWorldHint"],
+              "properties": {
+                "readOnlyHint": { "type": "boolean" }, "destructiveHint": { "type": "boolean" },
+                "idempotentHint": { "type": "boolean" }, "openWorldHint": { "type": "boolean" }
+              }
+            }
+          }
+        },
+        "tests": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/nonEmptyString" } }
+      }
+    }
+  }
+}

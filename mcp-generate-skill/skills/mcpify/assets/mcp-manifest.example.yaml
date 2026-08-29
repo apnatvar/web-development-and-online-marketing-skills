@@ -1,0 +1,125 @@
+version: 1
+application:
+  name: example-shop
+  framework: nextjs
+  language: typescript
+  package_manager: pnpm
+  root: .
+transport:
+  type: stdio
+  audience: local_user
+standards:
+  mcp_spec: "2026-07-28"
+  sdk: "@modelcontextprotocol/server@2"
+  last_verified: "2026-08-29"
+  sources:
+    - https://modelcontextprotocol.io/specification/2026-07-28/
+    - https://ts.sdk.modelcontextprotocol.io/v2/
+defaults:
+  max_request_bytes: 16384
+  timeout_ms: 10000
+  max_concurrency: 8
+  safe_errors: true
+tools:
+  - name: search_products
+    description: Search the public product catalog with bounded filters.
+    status: proposed
+    rationale: Supports product discovery without exposing internal query primitives.
+    source:
+      path: src/services/products.ts
+      operation: searchProducts
+      evidence: Used by the catalog UI and applies availability filters.
+    input_schema:
+      type: object
+      additionalProperties: false
+      properties:
+        query:
+          type: string
+          minLength: 1
+          maxLength: 120
+        limit:
+          type: integer
+          minimum: 1
+          maximum: 20
+      required: [query]
+    output:
+      mode: structured
+      max_items: 20
+      max_bytes: 32768
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          items:
+            type: array
+            maxItems: 20
+            items:
+              type: object
+        required: [items]
+    access:
+      authentication: none
+      scopes: []
+      authorization: Public catalog only; service excludes hidden products.
+      identity_mapping: No application identity.
+    risk:
+      level: low
+      mutation: false
+      reasons: [Public read-only catalog data]
+    limits:
+      requests_per_minute: 30
+      timeout_ms: 5000
+      max_concurrency: 4
+      max_request_bytes: 4096
+    idempotency:
+      required: false
+      strategy: none
+    confirmation:
+      required: false
+      mechanism: none
+    data:
+      sensitivity: public
+      minimization: Return only public catalog DTO fields.
+      output_filtering: Allowlist product id, title, price display, and availability.
+      logging: Log query length and result count, not raw query text.
+    side_effects: []
+    mcp:
+      annotations:
+        readOnlyHint: true
+        destructiveHint: false
+        idempotentHint: true
+        openWorldHint: false
+    tests:
+      - Reject unknown input fields and overlong queries.
+      - Enforce result limit and public-field allowlist.
+resources:
+  - name: catalog_help
+    description: Read public documentation for catalog search behavior.
+    status: proposed
+    uri_template: docs://catalog/{topic}
+    source: docs/catalog
+    access: Public topics from an explicit allowlist.
+    sensitivity: public
+    max_bytes: 16384
+    tests:
+      - Reject unknown topics and path traversal.
+      - Enforce the byte limit and public-document allowlist.
+prompts:
+  - name: compare_products
+    description: Guide a user through comparing products using approved catalog surfaces.
+    status: proposed
+    source: src/mcp/prompts/compare-products.ts
+    arguments:
+      type: object
+      additionalProperties: false
+      properties:
+        priorities:
+          type: array
+          maxItems: 5
+          items:
+            type: string
+            maxLength: 60
+    access: Public prompt; does not grant access or invoke mutations.
+    expected_surfaces: [search_products, catalog_help]
+    tests:
+      - Reject unknown arguments and excessive priority lists.
+      - Confirm the prompt does not claim authority or embed secrets.

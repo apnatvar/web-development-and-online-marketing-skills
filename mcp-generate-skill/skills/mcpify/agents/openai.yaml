@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCPify"
+  short_description: "Build, publish, and operate secure MCP servers"
+  default_prompt: "Use $mcpify to take this application through the appropriate secure MCP lifecycle stage."

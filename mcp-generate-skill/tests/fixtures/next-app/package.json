@@ -1,0 +1,5 @@
+{
+  "name": "fixture-shop",
+  "dependencies": { "next": "16.0.0" },
+  "scripts": { "build": "next build" }
+}
