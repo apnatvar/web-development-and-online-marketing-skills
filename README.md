@@ -24,6 +24,7 @@ The skills were built from practical workflows, repository audits, real output f
 | [Job Application Tailor](job-application-tailor/SKILL.md) | Produce truthful, role-specific CVs, cover letters, outreach, and application materials. |
 | [Next.js Optimisation](nextjs-optimisation-skill/SKILL.md) | Improve Next.js SEO, rendering, performance, accessibility, analytics, and indexing. |
 | [Recreate Social Video Trends](recreate-social-video-trends/SKILL.md) | Turn short-form video patterns into original, reusable Remotion templates. |
+| [SEO + AEO Visibility Strategy](seo-aeo-visibility-strategy/SKILL.md) | Build prioritized, site-specific strategies for classic search and AI-search visibility. |
 | [Self-Update Skills](self-update-skills/SKILL.md) | Research and propose evidence-backed skill updates with explicit approval before editing. |
 | [Website Analysis](website-analysis-skill/SKILL.md) | Audit websites and local repositories for technical, SEO, accessibility, performance, and messaging issues. |
 | [Website SEO Guardrails](website-seo-guardrails/SKILL.md) | Prevent major SEO mistakes while guiding content, indexing, structured data, Lighthouse, Trends, analytics, and webmaster tooling. |

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO + AEO Visibility Strategy"
+  short_description: "Plan durable search and AI visibility"
+  default_prompt: "Use $seo-aeo-visibility-strategy to build a prioritized SEO and AEO visibility plan for this site."
