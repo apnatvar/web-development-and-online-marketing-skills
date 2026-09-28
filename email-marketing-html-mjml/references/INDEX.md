@@ -10,5 +10,6 @@
 8. [08-testing-and-measurement.md](08-testing-and-measurement.md) — preflight, client testing, experimentation, analytics, and reporting.
 9. [09-sources-and-provenance.md](09-sources-and-provenance.md) — upstream attribution and current primary sources.
 10. [10-emailcn.md](10-emailcn.md) — optional Emailcn selection, registry installation, theming, renderer boundaries, and QA.
+11. [11-message-frameworks.md](11-message-frameworks.md) — customer need, positioning, persuasion, copy-structure, and ethical choice-architecture frameworks.
 
 Keep this index and the root `SKILL.md` navigation synchronized.

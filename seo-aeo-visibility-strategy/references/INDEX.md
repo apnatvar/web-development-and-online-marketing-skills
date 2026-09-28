@@ -9,3 +9,4 @@ Read only the references needed for the current task.
 | [03-measurement-and-myths.md](03-measurement-and-myths.md) | Building KPIs, monitoring, or rejecting weak shortcuts. |
 | [04-sources.md](04-sources.md) | Verifying crawler, structured-data, search-feature, feed, or reporting claims. |
 | [05-training-curriculum.md](05-training-curriculum.md) | Designing a practical team or intern training program. |
+| [06-audience-positioning-and-content-frameworks.md](06-audience-positioning-and-content-frameworks.md) | Selecting audience, need, positioning, journey, content, and ethical conversion frameworks for an SEO/AEO strategy. |

@@ -18,17 +18,21 @@ Collect or infer:
 
 Ask only for information that materially changes the result. Never request credentials in chat.
 
+When the task includes message strategy, content planning, or script development, read [references/content-and-script-frameworks.md](references/content-and-script-frameworks.md). Use the minimum framework that improves the decision, distinguish research-grounded models from practitioner heuristics, and state unverified audience assumptions as hypotheses.
+
 ## Research relevant videos
 
 When asked to find trends or competitor examples, use an available browser/search connector to inspect public, accessible sources. Prefer recent posts from the brand, named competitors, adjacent category leaders, and platform trend pages. Record the URL, account, post date when visible, hook, duration, shot rhythm, text treatment, transitions, audio pattern, engagement signals, and why it fits the brief.
 
 Do not bypass logins, paywalls, bot protection, or platform download restrictions. If the link cannot be accessed, ask for an uploaded or otherwise authorized local copy. Treat engagement counts as directional and timestamp the observation.
 
-Shortlist three to five patterns by relevance and repeatability. Separate observations from inferences. Do not claim that a trend is current without live evidence.
+Shortlist three to five patterns by relevance and repeatability. Score whether each pattern serves the audience's job, positioning, content role, and desired response—not only its visual novelty. Separate observations from inferences. Do not claim that a trend is current without live evidence.
 
 ## Analyze the reference
 
 Read [references/analysis-and-rights.md](references/analysis-and-rights.md) before analyzing a linked or uploaded reference. Produce a beat sheet with timecodes for hook, shots, lyric or caption changes, motion, transitions, effects, audio cues, and outro. Describe the underlying technique rather than copying protected assets or distinctive branding.
+
+When writing or revising the script, name the chosen narrative structure and why it fits the audience need and available proof. Hooks must earn attention by delivering the promised value; do not withhold essential context, fabricate social proof, or reproduce false scarcity, shame, fear, or other manipulative elements from the reference.
 
 For lyric videos, preserve the supplied lyric text exactly unless asked to edit it. Convert the supplied timing source into deterministic cue data. If timings are absent, derive provisional cues from the authorized audio and label them for review.
 
@@ -52,6 +56,7 @@ Read [references/template-contract.md](references/template-contract.md), then:
 - Preview the composition. Render only when the user explicitly asks for an export.
 - Report the composition ID, dimensions, FPS, duration, editable props, asset locations, preview command, and export command.
 - Identify any approximation caused by unavailable source media, fonts, plugins, or unclear timing.
+- When strategy is in scope, report the audience and positioning hypothesis, content-system role, script structure, evidence used, ethical guardrail, and measurement plan.
 
 Do not upload, publish, or post the result unless the user explicitly asks and authorizes that external action.
 

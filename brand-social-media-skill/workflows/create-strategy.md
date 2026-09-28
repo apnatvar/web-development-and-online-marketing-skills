@@ -1,10 +1,10 @@
 # Create campaign strategy
 
 1. Load `context/campaign.md`, `product.md`, `audience.md`, `offer.md`, and only the necessary brand and source details.
-2. Read `knowledge/positioning-framework.md`, `messaging-principles.md`, `conversion-framework.md`, and `claims-and-evidence.md`.
+2. Read `knowledge/positioning-framework.md`, `messaging-principles.md`, `conversion-framework.md`, and `claims-and-evidence.md`. Load `knowledge/strategy-frameworks.md` when the brief requires an audience, customer-need, marketing-mix, motivation, persuasion, behavioural-choice, or content-portfolio decision.
 3. Verify that no blocking context remains.
 4. Draft `strategy/campaign-strategy.md` from `templates/campaign-strategy.md`.
-5. Write three to five non-overlapping pillars to `strategy/messaging-pillars.md`. Tie each to evidence or an explicit evidence limitation.
+5. Write three to five non-overlapping pillars to `strategy/messaging-pillars.md`. Tie each to evidence or an explicit evidence limitation. Record only frameworks that changed a decision, along with the evidence, limitation, and validation signal.
 6. Build `strategy/content-map.md` with platform, role, audience state, pillar, format, proof, CTA strength, link, and visual treatment.
 7. Define `strategy/publishing-sequence.md`: order, dependencies, timing assumptions, participation steps, and measurement suggestions.
 8. Record every material inference in `strategy/assumptions.md`.

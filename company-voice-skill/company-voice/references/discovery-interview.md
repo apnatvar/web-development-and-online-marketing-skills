@@ -88,6 +88,8 @@ Ask a follow-up when:
 
 Do not ask a follow-up when the missing detail can be safely left unresolved and does not affect the immediate foundation.
 
+When answers remain feature-led, generic, or contradictory, use [strategy framework selection](strategy-frameworks.md) to choose the next question. Ask for the evidence a framework needs—such as a recent situation, current workaround, real alternative, service process, proof, or switching barrier—rather than naming frameworks in the interview.
+
 ## Stop Criteria
 
 Stop discovery when you can draft:

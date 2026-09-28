@@ -58,6 +58,8 @@ Read [references/01-strategy-catalog.md](references/01-strategy-catalog.md) to s
 
 Avoid presenting all 25 tactics as a checklist. Explain why each selected tactic fits, what it depends on, and what should wait.
 
+When the strategy depends on audience choice, customer need, positioning, journey coverage, content structure, or conversion behaviour, read [references/06-audience-positioning-and-content-frameworks.md](references/06-audience-positioning-and-content-frameworks.md). Select only the model that answers the current decision and record its inputs, output, evidence, and misuse risk.
+
 ### 4. Adapt by site type and maturity
 
 Read [references/02-site-playbooks.md](references/02-site-playbooks.md) for ecommerce, agency/professional services, brochure sites, publishers, SaaS, and local businesses. Use the new-versus-established sequence rather than applying the same order to every domain.
@@ -94,6 +96,7 @@ Unless the user requests another format, provide:
 
 - [references/INDEX.md](references/INDEX.md) — reference router.
 - [references/05-training-curriculum.md](references/05-training-curriculum.md) — use only when the user asks for a team or intern training program.
+- [references/06-audience-positioning-and-content-frameworks.md](references/06-audience-positioning-and-content-frameworks.md) — use when audience, need, positioning, journey, content-system, or conversion choices need a substantive model.
 
 ## Creator
 

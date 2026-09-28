@@ -21,8 +21,8 @@ Default memory root: `.editorial-voice/` in the active workspace, unless the use
 
 ## Workflow Router
 
-1. **No editorial memory exists or the user asks to define voice/content strategy**: read `references/discovery-interview.md`, `references/storage-model.md`, and `references/foundation-workflow.md`. Interview first.
-2. **The user asks to generate content**: inspect `.editorial-voice/00-index.md`, read `references/content-workflow.md`, then load only the target audience, voice, claim, format, channel, CTA, product, search, or metric files required by the plan.
+1. **No editorial memory exists or the user asks to define voice/content strategy**: read `references/discovery-interview.md`, `references/storage-model.md`, and `references/foundation-workflow.md`. Read `references/strategy-frameworks.md` when audience, customer need, marketing mix, positioning, identity, motivation, persuasion, or content-program decisions remain weak. Interview first.
+2. **The user asks to generate content**: inspect `.editorial-voice/00-index.md`, read `references/content-workflow.md`, then load only the target audience, voice, claim, format, channel, CTA, product, search, or metric files required by the plan. Load `references/strategy-frameworks.md` only when a missing decision requires a defensible lens; do not stack frameworks onto settled rules.
 3. **The user asks to change the voice, audience, product, pillars, metrics, CTAs, channels, or constraints**: read `references/modification-workflow.md` and `.editorial-voice/00-index.md`, then inspect affected files and relationship links.
 4. **The user asks for search strategy, topic backlog, publishing sequence, or performance review**: read `references/content-workflow.md`, then load the relevant strategy, content, channel, publishing, and metrics files.
 5. **The user asks how the repository works or wants examples**: read the relevant files under `references/example-editorial-memory/` and `references/example-interactions.md`.
@@ -110,6 +110,7 @@ Do not rewrite the whole editorial memory for a small change.
 - `references/storage-model.md`: file structure, indexes, metadata, and semantic links.
 - `references/foundation-workflow.md`: converting interview answers into durable editorial foundation files.
 - `references/content-workflow.md`: planning, generation, review, search, backlog, publishing, and performance.
+- `references/strategy-frameworks.md`: selective market, customer, positioning, brand, motivation, persuasion, behavioural-choice, content-strategy, and writing frameworks with evidence and misuse guidance.
 - `references/modification-workflow.md`: safe updates, dependency handling, conflict resolution, and change history.
 - `references/example-editorial-memory/`: compact example memory with focused files and links.
 - `references/example-interactions.md`: example agent interactions for discovery, generation, and modification.

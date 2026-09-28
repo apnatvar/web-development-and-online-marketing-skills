@@ -35,7 +35,7 @@ Build one truthful, strategically focused argument, then express it in the form 
 1. **Interpret the mode.** Support `create`, `expand`, `shorten`, `rewrite`, `repurpose`, `critique`, `improve`, `platform-adapt`, `SEO-adapt`, `extract-central-idea`, `generate-variants`, `compare-positioning`, and `diagnose-message`.
 2. **Build or update context.** Use [templates/context-brief.md](templates/context-brief.md). Do not block on low-impact blanks.
 3. **Diagnose the message.** Follow [workflow/problem-diagnosis.md](workflow/problem-diagnosis.md); separate evidence from inference.
-4. **Select principles privately.** Use [workflow/principle-selection.md](workflow/principle-selection.md) and load only the relevant files from [references/index.md](references/index.md).
+4. **Select principles privately.** Use [workflow/principle-selection.md](workflow/principle-selection.md) and load only the relevant files from [references/index.md](references/index.md). Distinguish research-grounded models, professional methods, and practitioner heuristics when that changes confidence; use frameworks to alter a decision, not to decorate the brief.
 5. **Define the strategic core.** Complete [templates/positioning-brief.md](templates/positioning-brief.md), [templates/message-brief.md](templates/message-brief.md), and [workflow/central-idea.md](workflow/central-idea.md) as needed.
 6. **Draft.** Apply [workflow/drafting.md](workflow/drafting.md) plus the requested adapter from [platforms/index.md](platforms/index.md).
 7. **Edit and verify.** Apply [workflow/editing.md](workflow/editing.md) and [workflow/quality-control.md](workflow/quality-control.md). Run the reader-facing boundary test on every requested asset.

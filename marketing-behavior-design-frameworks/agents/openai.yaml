@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing, Behavior, and Design Frameworks"
+  short_description: "Choose and apply evidence-aware frameworks"
+  default_prompt: "Use $marketing-behavior-design-frameworks to select and apply appropriate marketing, behavior, writing, content, or design frameworks to this task."

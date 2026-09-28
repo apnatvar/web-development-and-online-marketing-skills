@@ -31,9 +31,9 @@ Keep context and runtime proportional to the requested audit.
 
 | Mode/task | Read and run | Do not load |
 |---|---|---|
-| Technical | `run-technical-audit.md`, `run-lighthouse.md`, `knowledge/technical/*`, `knowledge/seo/current-practices.md` | `knowledge/copy/*`, copy analyzer, intent questionnaire |
-| Copy | `gather-intent.md`, `run-copy-audit.md`, `knowledge/copy/*`; read only the SEO metadata date unless a search-intent point needs a specific SEO section | Lighthouse, technical knowledge, repository performance/build analysis |
-| Combined | Technical and copy resources plus `run-combined-audit.md` and `combine-findings.md` | Unrelated framework/tool modules |
+| Technical | `run-technical-audit.md`, `run-lighthouse.md`, `knowledge/technical/*`, `knowledge/seo/current-practices.md`; read `knowledge/frameworks/website-review-frameworks.md` only when navigation, interaction, accessibility, or visual comprehension is in scope | `knowledge/copy/*`, copy analyzer, intent questionnaire |
+| Copy | `gather-intent.md`, `run-copy-audit.md`, `knowledge/copy/*`, and the relevant sections of `knowledge/frameworks/website-review-frameworks.md`; read only the SEO metadata date unless a search-intent point needs a specific SEO section | Lighthouse, technical knowledge, repository performance/build analysis |
+| Combined | Technical and copy resources plus `run-combined-audit.md`, `combine-findings.md`, and the relevant sections of `knowledge/frameworks/website-review-frameworks.md` | Unrelated framework/tool modules |
 | SEO refresh | `update-seo-practices.md` and `knowledge/seo/*` | Audit, Lighthouse, and copy modules unless needed to verify a changed recommendation |
 
 ## Tool preflight and sandbox failures
@@ -79,6 +79,7 @@ Never invent business claims, results, testimonials, certifications, statistics,
 - Technical: follow [workflows/run-technical-audit.md](workflows/run-technical-audit.md).
 - Copy: follow [workflows/run-copy-audit.md](workflows/run-copy-audit.md).
 - Combined: follow [workflows/run-combined-audit.md](workflows/run-combined-audit.md) and synthesize interactions; do not concatenate two reports.
+- Framework-backed review: use [knowledge/frameworks/website-review-frameworks.md](knowledge/frameworks/website-review-frameworks.md) only for the question it diagnoses; state inputs, evidence, output, and limitations rather than listing model names.
 - Lighthouse: follow [workflows/run-lighthouse.md](workflows/run-lighthouse.md). Retain each raw run and compute medians.
 - Reports: follow [workflows/generate-report.md](workflows/generate-report.md).
 - SEO updates: follow [workflows/update-seo-practices.md](workflows/update-seo-practices.md). Do not change a verification date without reviewing sources.

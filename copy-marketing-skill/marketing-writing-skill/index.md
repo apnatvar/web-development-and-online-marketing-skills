@@ -19,7 +19,7 @@
 ## Select principles
 
 - [Reference index](references/index.md)
-- Topics: customer discovery, negotiation, positioning, differentiation, memorable ideas, narrative, structured communication, diagnostic selling, market awareness, and strategy.
+- Topics: customer discovery, market and customer fit, positioning, differentiation, motivation and choice, copy and content structures, negotiation, memorable ideas, narrative, structured communication, diagnostic selling, market awareness, and strategy.
 
 ## Adapt by channel
 

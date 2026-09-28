@@ -29,11 +29,11 @@ Never invent prices, discounts, expiry dates, inventory, delivery dates, reviews
 
 ### 3. Build a message brief
 
-Define one primary promise, one primary action, supporting evidence, objections, segmentation, subject/preheader angle, from/reply-to identity, fallback behavior, and success metric. Read [references/01-strategy-and-brand.md](references/01-strategy-and-brand.md) and the relevant playbook in [references/04-campaign-playbooks.md](references/04-campaign-playbooks.md).
+Define one primary promise, one primary action, supporting evidence, objections, segmentation, subject/preheader angle, from/reply-to identity, fallback behavior, and success metric. Read [references/01-strategy-and-brand.md](references/01-strategy-and-brand.md) and the relevant playbook in [references/04-campaign-playbooks.md](references/04-campaign-playbooks.md). For campaign strategy, positioning, persuasion, or offer presentation, also read [references/11-message-frameworks.md](references/11-message-frameworks.md); select only frameworks that change a decision and treat behavioural effects as testable hypotheses.
 
 ### 4. Write before decorating
 
-Draft the subject, preview text, opening, body, CTA, proof, and footer in the approved brand voice. Keep the message skimmable and specific. Use [references/02-copy-and-subject-lines.md](references/02-copy-and-subject-lines.md).
+Draft the subject, preview text, opening, body, CTA, proof, and footer in the approved brand voice. Keep the message skimmable and specific. Use [references/02-copy-and-subject-lines.md](references/02-copy-and-subject-lines.md). Choose a copy structure because it fits the customer's decision and available evidence, not because a mnemonic is popular.
 
 ### 5. Design the reusable system
 
@@ -69,6 +69,7 @@ Validate MJML strictly, confirm includes landed, inspect compiled size, verify p
 - Do not put secrets, sensitive personal data, or private attributes into URLs, tracking parameters, annotations, or templates.
 - Do not rely on open rate alone; privacy features and image proxying make it noisy.
 - Do not promise inbox placement, Promotions-tab annotations, actions, or revenue.
+- Do not use behavioural frameworks to rationalize coercive defaults, fabricated anchors or social proof, false scarcity, fear, guilt, or hidden material information.
 
 ## Reusable output contract
 

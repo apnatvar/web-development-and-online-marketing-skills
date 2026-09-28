@@ -18,5 +18,6 @@ Use only the files relevant to the task:
 14. [14-productive-vs-spam.md](14-productive-vs-spam.md) — actions that sound productive but create spam, noise, or domain risk.
 15. [15-google-trends-brand-keywords.md](15-google-trends-brand-keywords.md) — responsible Google Trends research for brand, product, regional, seasonal, and content keyword decisions.
 16. [16-lighthouse-report-improvement.md](16-lighthouse-report-improvement.md) — standardized Lighthouse runs, report interpretation, remediation planning, authorized implementation, and comparable retesting.
+17. [17-strategy-behaviour-and-content-frameworks.md](17-strategy-behaviour-and-content-frameworks.md) — select and apply audience, positioning, journey, behaviour, information-architecture, accessibility, and content models without manipulative SEO.
 
 The root [../SKILL.md](../SKILL.md) contains the mandatory workflow. Keep this index updated whenever a reference is added, renamed, or removed.

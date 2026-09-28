@@ -14,6 +14,9 @@ Load only the files that match the diagnosed constraint.
 | Premature pitching or shallow sales message | [Diagnostic selling](diagnostic-selling.md) | *SPIN Selling*, Neil Rackham |
 | Message mismatched to market sophistication | [Market awareness](market-awareness.md) | *Breakthrough Advertising*, Eugene M. Schwartz |
 | Scattered objectives or slogan-like strategy | [Strategy](strategy.md) | *Good Strategy Bad Strategy*, Richard Rumelt |
+| Audience, need, offer, or marketing mix is unresolved | [Market and customer fit](market-customer-fit.md) | STP, Jobs to Be Done, Value Proposition Canvas, 4Ps/7Ps, 4Cs, SAVE, Kano |
+| Motivation, persuasion, friction, or choice framing is risky | [Motivation and choice](motivation-and-choice.md) | SDT, expectancy, COM-B, ELM, behavioural economics, Cialdini; Maslow/Herzberg cautions |
+| Argument is sound but the asset lacks a fitting order | [Copy and content structures](copy-content-structures.md) | AIDA, ACCA, PAS, BAB, FAB, SCQA, Pyramid, social/script and content-programme heuristics |
 
 These files paraphrase and operationalize ideas; they do not substitute for or reproduce the books.
 

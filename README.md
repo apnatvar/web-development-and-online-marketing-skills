@@ -22,6 +22,7 @@ The skills were built from practical workflows, repository audits, real output f
 | [Marketing and Persuasive Writing](copy-marketing-skill/marketing-writing-skill/SKILL.md) | Diagnose, draft, critique, and adapt credible marketing and sales copy. |
 | [Email Marketing HTML and MJML](email-marketing-html-mjml/SKILL.md) | Create reusable email systems with MJML, HTML, personalization, deliverability safeguards, and optional Emailcn components. |
 | [Job Application Tailor](job-application-tailor/SKILL.md) | Produce truthful, role-specific CVs, cover letters, outreach, and application materials. |
+| [Marketing, Behavior, and Design Frameworks](marketing-behavior-design-frameworks/SKILL.md) | Select and apply evidence-aware frameworks for strategy, writing, content, persuasion, UX, websites, and apps. |
 | [Next.js Optimisation](nextjs-optimisation-skill/SKILL.md) | Improve Next.js SEO, rendering, performance, accessibility, analytics, and indexing. |
 | [Recreate Social Video Trends](recreate-social-video-trends/SKILL.md) | Turn short-form video patterns into original, reusable Remotion templates. |
 | [SEO + AEO Visibility Strategy](seo-aeo-visibility-strategy/SKILL.md) | Build prioritized, site-specific strategies for classic search and AI-search visibility. |

@@ -51,6 +51,8 @@ Require an explicit allowlist for large generated page families. Only substantiv
 
 Evaluate service/product pages, comparison pages, documentation, original tools/calculators, courses, glossaries, case studies, research, blogs, FAQs, datasets, directories, location pages, and media by user need and first-hand value. Do not create a format merely because it can target keywords. Read [references/02-content-architecture.md](references/02-content-architecture.md).
 
+When page purpose, audience, positioning, journey coverage, conversion friction, information architecture, or content format is uncertain, use the smallest applicable model from [references/17-strategy-behaviour-and-content-frameworks.md](references/17-strategy-behaviour-and-content-frameworks.md). Record the model's inputs, conclusion, evidence, and limitation; do not stack frameworks to manufacture certainty.
+
 For brand keyword, demand-direction, seasonality, regional-language, content-calendar, or product-naming research, use Google Trends as relative evidence rather than search volume. Read [references/15-google-trends-brand-keywords.md](references/15-google-trends-brand-keywords.md) before interpreting a 0-100 score, a zero, a spike, a regional map, or a Rising/Breakout query.
 
 ### 5. Write and optimize each approved page

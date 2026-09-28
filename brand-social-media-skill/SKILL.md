@@ -42,7 +42,7 @@ Ask focused questions in short stages. Store answers under `context/`, URLs in `
 
 ## Create strategy before copy
 
-Read [create strategy](workflows/create-strategy.md), [messaging principles](knowledge/messaging-principles.md), [positioning framework](knowledge/positioning-framework.md), and [conversion framework](knowledge/conversion-framework.md).
+Read [create strategy](workflows/create-strategy.md), [messaging principles](knowledge/messaging-principles.md), [positioning framework](knowledge/positioning-framework.md), and [conversion framework](knowledge/conversion-framework.md). When audience selection, customer need, marketing mix, motivation, persuasion, choice architecture, or content portfolio affects the campaign, load [campaign strategy frameworks](knowledge/strategy-frameworks.md) and apply only the lens that changes a decision.
 
 Create `strategy/campaign-strategy.md`, `messaging-pillars.md`, `content-map.md`, and `publishing-sequence.md` before platform outputs. Define a distinct job, audience state, pillar, proof boundary, CTA strength, link treatment, and visual treatment for each selected channel. Use [campaign strategy template](templates/campaign-strategy.md) and [campaign brief template](templates/campaign-brief.md) when useful.
 

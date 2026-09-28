@@ -46,6 +46,8 @@ Create a short plan with:
 
 Ask for clarification only when a missing decision materially affects quality, accuracy, or risk.
 
+If the plan exposes a real strategic gap, load [strategy framework selection](strategy-frameworks.md) and use one primary lens, with at most one supporting lens. A framework must change the audience, claim, proof, structure, CTA, channel role, or portfolio decision; otherwise omit it.
+
 ## Generation Rules
 
 - Follow stored editorial files over generic voice defaults.

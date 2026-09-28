@@ -32,6 +32,8 @@ The foundation should cover:
 - review criteria
 - unresolved decisions
 
+When these decisions are under-specified, use [strategy framework selection](strategy-frameworks.md). Record the resulting audience, positioning, value, voice, promotion, or content rule—not a decorative list of framework names. Preserve the input evidence, decision status, limitation, and review signal.
+
 ## Preserve Decision Status
 
 When writing files:

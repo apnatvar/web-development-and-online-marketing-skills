@@ -18,6 +18,14 @@
 3. {{proof_message}}
 4. {{action_message}}
 
+## Decision lenses
+
+| Decision | Framework selected | Evidence used | Decision changed | Limitation or rejected alternative | Validation signal |
+| --- | --- | --- | --- | --- | --- |
+| {{decision}} | {{framework}} | {{evidence}} | {{changed_decision}} | {{limitation}} | {{signal}} |
+
+Include only frameworks that changed the strategy. Framework names are internal planning notes, not audience-facing copy.
+
 ## Messaging pillars
 
 ### {{pillar_1}}
