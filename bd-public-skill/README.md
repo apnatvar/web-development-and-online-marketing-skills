@@ -2,6 +2,8 @@
 
 A skills-only plugin derived from Brownsmith Dynamics' intended deployment direction in `codex/business-efficiency-organic-lead-generation`, including the current working-tree edits. No MCP server, credentials, external account connections, or executable hooks are included.
 
+The main public reference is the [Brownsmith Dynamics plugin page](https://brownsmithdynamics.com/plugins/bd-public-skill). For related reading, see [Why a service-based business needs an MCP](https://brownsmithdynamics.com/blogs/why-a-service-based-business-needs-an-mcp).
+
 | Skill | Use |
 | --- | --- |
 | `business-diagnosis` | Identify business bottlenecks and choose priorities. |

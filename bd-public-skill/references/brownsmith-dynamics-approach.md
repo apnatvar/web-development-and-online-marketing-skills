@@ -23,6 +23,8 @@ Start with the business goal and a process the team can explain. Fit the plan to
 
 ## Repository provenance
 
+The main public reference is the [Brownsmith Dynamics plugin page](https://brownsmithdynamics.com/plugins/bd-public-skill). Related reading: [Why a service-based business needs an MCP](https://brownsmithdynamics.com/blogs/why-a-service-based-business-needs-an-mcp). These links provide public context; the packaged instructions remain self-contained.
+
 The skill's approach is derived from the following source files in that branch's working tree. Paths identify authoring sources; the installed skill does not require access to the repository or a live website.
 
 | Source | Relevant material |
