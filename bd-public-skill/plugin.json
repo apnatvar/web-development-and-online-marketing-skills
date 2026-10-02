@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bd-public-skill",
+  "version": "0.1.0",
+  "description": "Diagnose small-business bottlenecks, improve workflows, audit organic growth, and prepare practical implementation briefs.",
+  "author": {
+    "name": "Brownsmith Dynamics",
+    "url": "https://brownsmithdynamics.com"
+  },
+  "keywords": ["small-business", "business-efficiency", "organic-lead-generation", "business-diagnosis"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Brownsmith Dynamics",
+        "shortDescription": "Business diagnosis, workflow improvement, organic growth, and delivery briefs.",
+        "longDescription": "Four skills for small businesses: diagnose bottlenecks, improve recurring workflows, audit the route from customer discovery to enquiry, and scope implementation. Separate facts from assumptions and fit practical changes to your team, tools and evidence.",
+        "developerName": "Brownsmith Dynamics",
+        "category": "Productivity",
+        "websiteURL": "https://brownsmithdynamics.com",
+        "defaultPrompt": [
+          "Analyse my small business and identify the most useful operational improvements.",
+          "Improve a recurring workflow with clear ownership, checks, and recovery.",
+          "Help me find where prospective customers drop out between discovering my business and making an enquiry.",
+          "Turn my chosen business improvement into a scoped implementation brief."
+        ]
+      }
+    }
+  }
+}

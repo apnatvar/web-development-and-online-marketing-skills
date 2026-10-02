@@ -4,6 +4,9 @@
 
 - [ ] Review `git diff` and preserve unrelated work.
 - [ ] Run focused tests, typecheck, lint, and the production build.
+- [ ] Compare the production route table and prerender count with the intended publishing/indexing cohort; investigate accidental route explosions or new dynamic routes.
+- [ ] Verify cache/revalidation policy, middleware matchers, function regions, scheduled work, image-transformation scope, and provider-specific configuration against current documentation.
+- [ ] Confirm compute reductions preserve freshness, authorization, personalization, preview fidelity, and rollback behavior.
 - [ ] Run rendered SEO/schema validation and investigate expectation mismatches.
 - [ ] Spot-check representative static, dynamic, indexed, noindex, service, product, article, course, and directory routes.
 - [ ] Verify canonical host, redirect behavior, `robots.txt`, sitemap, and key/verification files.

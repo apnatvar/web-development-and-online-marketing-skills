@@ -14,6 +14,7 @@ This index routes work to focused guidance. Start with [SKILL.md](SKILL.md), the
 
 - [Page architecture](references/page-architecture.md) — route purpose, semantic structure, shared content, client boundaries.
 - [Rendering](references/rendering.md) — static/dynamic decisions, Server Components, Suspense, route handlers.
+- [Server build and deployment compute](references/server-build-deployment.md) — route-generation budgets, cache topology, function bundles, regions, transformations, background work, and cost trade-offs.
 - [Performance](references/performance.md) — measurement, Core Web Vitals, CSS containment, third-party cost.
 - [Bundles](references/bundles.md) — dependency and import discipline, code splitting, analysis.
 - [Prefetching](references/prefetching.md) — automatic, disabled, and intent-based policies.

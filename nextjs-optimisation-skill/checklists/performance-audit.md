@@ -15,4 +15,6 @@
 - [ ] Defer below-fold heavy UI and route-specific data without hiding meaningful HTML.
 - [ ] Load animations only where used; gate by viewport/reduced motion and clean up.
 - [ ] Inspect analytics, ads, CMP, embeds, and other third parties separately.
+- [ ] Inspect the production route table, prerender count, build duration, function bundles, cache behavior, image transformations, middleware matchers, regions, and request fan-out.
+- [ ] Separate savings in build minutes, function duration, invocations, cache reads/writes, transformations, and data transfer; one can rise while another falls.
 - [ ] Re-run the same measurement and report numbers, environment, tradeoffs, and uncertainty.

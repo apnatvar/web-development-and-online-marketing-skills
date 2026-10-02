@@ -1,6 +1,6 @@
 ---
 name: nextjs-optimisation-skill
-description: Audit or improve any Next.js site for technical SEO, AI-search visibility, crawlability, metadata, structured data, indexing, rendering, Core Web Vitals, bundles, prefetching, images, fonts, animation, accessibility, analytics, and release discovery. Use for route reviews, new pages, performance regressions, schema/entity work, sitemap or robots changes, IndexNow publishing, client-boundary reductions, and repository-wide optimisation audits across App Router or Pages Router projects.
+description: Audit or improve any Next.js site for technical SEO, AI-search visibility, crawlability, metadata, structured data, indexing, rendering, Core Web Vitals, bundles, prefetching, images, fonts, animation, accessibility, analytics, build cost, serverless compute, caching, and release discovery. Use for route reviews, new pages, performance regressions, schema/entity work, sitemap or robots changes, IndexNow publishing, client-boundary reductions, deployment-compute reductions, and repository-wide optimisation audits across App Router or Pages Router projects.
 ---
 
 # Next.js Optimisation
@@ -61,6 +61,17 @@ Run the narrowest useful checks first, then expand in proportion to risk:
 6. live canonical, redirects, robots, sitemap, verification file, analytics, or IndexNow checks after deployment.
 
 If a validator disagrees with intentional architecture, inspect both. Update stale expectations only after confirming the rendered result is correct.
+
+### 6. Minimise build and deployment compute
+
+- Treat build work, request work, transformations, cache churn, and observability as separate budgets. Reducing browser JavaScript does not prove that server-side compute fell.
+- Inspect route cardinality and the production build table. Do not prerender an entire database merely because records can have URLs; publish static detail pages for intentionally indexed or high-demand records and keep the remaining records discoverable in a directory, or generate them on demand when that trade-off is supported.
+- Keep stable pages, metadata, feeds, and public data endpoints static or cacheable. Prevent request-only APIs, uncached reads, or broad middleware from making unrelated routes dynamic.
+- Apply expensive platform services selectively. Optimise high-value responsive/LCP images, but consider direct delivery for already-sized editorial media, tiny files, vectors, and animations when transformation and cache-write cost exceeds transfer savings.
+- Keep function bundles narrow, place compute near its stateful data source, reuse concurrency-safe clients where the runtime permits it, and avoid per-request fan-out that could have been batched, queued, cached, or moved to publishing time.
+- Every compute reduction needs a failure mode: staleness, larger transfers, cold first requests, cache invalidation complexity, regional consistency, reduced preview fidelity, or operational burden may outweigh the saving.
+
+For a build-cost, serverless, ISR, caching, function, middleware, image-transformation, or deployment-efficiency task, read [references/server-build-deployment.md](references/server-build-deployment.md). Use its decision table instead of applying every tactic globally.
 
 ## Repository adaptation
 
