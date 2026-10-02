@@ -12,7 +12,7 @@
     "com.openai": {
       "interface": {
         "displayName": "Brownsmith Dynamics",
-        "shortDescription": "Business diagnosis, workflow improvement, organic growth, and delivery briefs.",
+        "shortDescription": "Business improvement toolkit",
         "longDescription": "Four skills for small businesses: diagnose bottlenecks, improve recurring workflows, audit the route from customer discovery to enquiry, and scope implementation. Separate facts from assumptions and fit practical changes to your team, tools and evidence.",
         "developerName": "Brownsmith Dynamics",
         "category": "Productivity",
@@ -20,8 +20,7 @@
         "defaultPrompt": [
           "Analyse my small business and identify the most useful operational improvements.",
           "Improve a recurring workflow with clear ownership, checks, and recovery.",
-          "Help me find where prospective customers drop out between discovering my business and making an enquiry.",
-          "Turn my chosen business improvement into a scoped implementation brief."
+          "Help me find where prospective customers drop out between discovering my business and making an enquiry."
         ]
       }
     }
