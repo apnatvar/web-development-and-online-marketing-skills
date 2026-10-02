@@ -17,6 +17,11 @@
         "developerName": "Brownsmith Dynamics",
         "category": "Productivity",
         "websiteURL": "https://brownsmithdynamics.com",
+        "supportURL": "https://brownsmithdynamics.com/plugins/bd-public-skill/support",
+        "privacyPolicyURL": "https://brownsmithdynamics.com/plugins/bd-public-skill/privacy-policy",
+        "termsOfServiceURL": "https://brownsmithdynamics.com/plugins/bd-public-skill/terms",
+        "logo": "./bd.png",
+        "composerIcon": "./bd.png",
         "defaultPrompt": [
           "Analyse my small business and identify the most useful operational improvements.",
           "Improve a recurring workflow with clear ownership, checks, and recovery.",
