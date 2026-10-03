@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brownsmith Beginner App Guide"
+  short_description: "Plan, build, test and deploy your first small app"
+  default_prompt: "Use $bd-guide-skills to help me build a small app from my idea, with a working preview, acceptance checks and a deployment plan I can understand."
