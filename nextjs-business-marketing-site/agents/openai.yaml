@@ -1,0 +1,4 @@
+interface:
+  display_name: "Next.js Business Marketing Site"
+  short_description: "Evidence-based website planning, delivery, and quality"
+  default_prompt: "Use $nextjs-business-marketing-site to plan or improve this marketing website, prioritize objective requirements, and distinguish measured improvements from optional design choices."
