@@ -14,6 +14,8 @@ The skills were built from practical workflows, repository audits, real output f
 
 ## Skills
 
+See the [full skill catalog](SKILL-CATALOG.md) for commercial names, examples, compatibility notes, permissions, and requirements.
+
 | Skill | Purpose |
 | --- | --- |
 | [Brand Social Media](brand-social-media-skill/SKILL.md) | Plan and produce evidence-grounded, platform-specific campaigns and outreach. |
@@ -43,6 +45,12 @@ Some skills include:
 - `agents/openai.yaml` for skill-list metadata.
 
 Follow the skill's own prerequisites and approval rules. A skill can guide analysis and content creation, but it does not replace required software, account access, professional advice, deployment checks, or human authorization.
+
+## Packaging and logos
+
+Run `python scripts/package-skills.py` to create one ZIP per top-level skill folder and nested implementation skill in `dist/`. Archives include supporting resources, while dependencies and caches are excluded. ZIP files are ignored by Git. The four standalone business-advice archives retain their shared reference directory layout; use `bd-public-skill.zip` for the complete plugin package.
+
+New skill logos are 512 × 512 PNGs with a `[BD]` monogram. The existing business toolkit logo is preserved. [Logo prompts](LOGO-PROMPTS.md) record the image-generation prompts.
 
 ## Portability and privacy
 
