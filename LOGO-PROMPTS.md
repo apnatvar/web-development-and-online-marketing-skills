@@ -2,6 +2,14 @@
 
 Generated with the built-in imagegen tool, then downscaled to 512 x 512 PNG using Lanczos resampling. The original `bd-public-skill/bd.png` was preserved. Routing aliases share their implementation logo.
 
+## chrome-plugin-skill
+
+Generated with the built-in imagegen tool. The original-resolution PNG is saved
+as `chrome-plugin-skill/logo.png`; this skill identity image is separate from the
+128×128 product logos the workflow creates.
+
+Create a polished square skill logo for the reusable skill "Chrome Plugin Launch Kit". Output a 512 by 512 pixel PNG if supported. Professional flat vector-like icon, deep navy background (#12253b), mint and pale ivory foreground, clean simple browser window containing a small puzzle-piece extension symbol and a compact checklist with a completed check mark. Convey preparing and shipping a browser extension. Include the exact legible monogram "[BD]" prominently near the lower area. No other text, no Chrome or Google trademark/logo. Full-bleed square, no frame, no perspective, no gradients or shadows, generous negative space, crisp geometry and readable at small size. Match a collection of minimal navy and mint BD skill icons.
+
 ## brand-social-media-skill
 
 Create a polished square 512x512 skill logo for "BD Social Studio", a brand social media campaign skill. Deep navy background, simple mint speech bubble and broadcast symbol, clean flat vector-like graphic. Include the exact highly legible monogram "[BD]" prominently. No other text. Full bleed square, crisp edges, readable small. Save as image asset.

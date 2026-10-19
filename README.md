@@ -19,6 +19,7 @@ See the [full skill catalog](SKILL-CATALOG.md) for commercial names, examples, c
 | Skill | Purpose |
 | --- | --- |
 | [Brand Social Media](brand-social-media-skill/SKILL.md) | Plan and produce evidence-grounded, platform-specific campaigns and outreach. |
+| [Chrome Plugin Launch Kit](chrome-plugin-skill/SKILL.md) | Build Chrome extensions and prepare runtime ZIPs, listing assets, and public product/support/privacy sites before store submission. |
 | [Company Voice](company-voice-skill/company-voice/SKILL.md) | Build and apply a reusable editorial voice and content strategy. |
 | [Concise Communication](concise-communication/SKILL.md) | Preserve meaning while reducing filler, repetition, and unnecessary tokens. |
 | [Marketing and Persuasive Writing](copy-marketing-skill/marketing-writing-skill/SKILL.md) | Diagnose, draft, critique, and adapt credible marketing and sales copy. |
@@ -50,7 +51,10 @@ Follow the skill's own prerequisites and approval rules. A skill can guide analy
 
 Run `python scripts/package-skills.py` to create one ZIP per top-level skill folder and nested implementation skill in `dist/`. Archives include supporting resources, while dependencies and caches are excluded. ZIP files are ignored by Git. The four standalone business-advice archives retain their shared reference directory layout; use `bd-public-skill.zip` for the complete plugin package.
 
-New skill logos are 512 × 512 PNGs with a `[BD]` monogram. The existing business toolkit logo is preserved. [Logo prompts](LOGO-PROMPTS.md) record the image-generation prompts.
+The requested `dist/chrome-plugin-skill.zip` is checked in as a downloadable
+release bundle; other generated ZIPs continue to follow the ignore rules.
+
+Skill logos are PNGs with a `[BD]` monogram, generally 512 × 512; Chrome Plugin Launch Kit retains its original generated resolution. The existing business toolkit logo is preserved. [Logo prompts](LOGO-PROMPTS.md) record the image-generation prompts.
 
 ## Portability and privacy
 

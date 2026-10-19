@@ -1,6 +1,6 @@
 # Apnatva Skill Catalog
 
-This catalog summarizes the 20 individual skills and one Brownsmith Dynamics package using their source entrypoints and directly relevant references. Commercial names and summaries describe the included materials; they do not certify runtime or framework compatibility. Compatibility versions appear only when declared by the source. All sample requests and outputs are illustrative and make no claim of real customer results.
+This catalog summarizes the 21 individual skills and one Brownsmith Dynamics package using their source entrypoints and directly relevant references. Commercial names and summaries describe the included materials; they do not certify runtime or framework compatibility. Compatibility versions appear only when declared by the source. All sample requests and outputs are illustrative and make no claim of real customer results.
 
 ## Contents
 
@@ -369,6 +369,20 @@ The folder-level `company-voice-skill/SKILL.md`, `copy-marketing-skill/SKILL.md`
 - **Logo:** [self-update-skills/logo.png](self-update-skills/logo.png)
 
 ## Web, SEO, video, and MCP skills
+
+## Chrome Plugin Launch Kit
+
+- **Commercial name:** Chrome Plugin Launch Kit
+- **One-line description:** Build a Chrome extension and prepare its complete store submission kit before opening the Developer Dashboard.
+- **Full description:** Covers Manifest V3 development, minimal permissions, a clean allowlisted runtime ZIP, listing copy within 16,000 characters, 2–5 user-selected screenshots, a 128px product icon, the small promotional tile, and a public product/support/privacy website. It distinguishes local data handling from developer collection, private hosting from public access, and domain activation from site visibility. Bundled Python helpers check packaging dependencies and asset dimensions without claiming to replace Chrome testing or store review.
+- **Sample request:** "Prepare my extension release, three screenshots, store copy, icons and a public documentation site. Do not upload it yet."
+- **Sample output:** A release ZIP and hash, listing copy and artwork, final homepage/support/privacy URLs, verification evidence, and unresolved publication facts clearly marked.
+- **Compatibility:** Manifest V3 projects; Python 3.10+ standard library for bundled helpers. Supports buildless and framework-built release directories.
+- **Tags:** Chrome extension, Manifest V3, Chrome Web Store, submission, privacy, screenshots, runtime ZIP, Sites
+- **Permissions:** Local preparation follows the user’s scope. Hosting publication, public access, DNS changes and store submission each follow existing user authorization and current tool checks; preparing the kit alone does not authorize submission.
+- **Required tools/software:** Python 3.10+; Chrome for installed-extension verification; screenshot/image tooling; the selected hosting service. GPT Sites uses the installed Sites skill when available.
+- **Source entrypoint:** [chrome-plugin-skill/SKILL.md](chrome-plugin-skill/SKILL.md)
+- **Logo:** [logo.png](chrome-plugin-skill/logo.png)
 
 Catalog inventory based on each skill's current `SKILL.md`, referenced prerequisites, manifests, and support files. Runtime/framework version statements are source requirements only; they do not imply this inventory was tested against those versions.
 

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Chrome Plugin Launch Kit"
+  short_description: "Build extensions and prepare a complete store submission"
+  icon_large: "./logo.png"
+  default_prompt: "Use $chrome-plugin-skill to build this Chrome extension and prepare its clean submission ZIP, listing copy, screenshots, logo, and public documentation site."
