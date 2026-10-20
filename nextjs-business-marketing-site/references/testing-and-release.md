@@ -2,6 +2,8 @@
 
 Choose checks that answer a concrete question at the layer where a failure can occur. Unit tests can prove a validator’s behavior; they cannot prove that a router, proxy, CDN, or external provider returns the expected response. Label evidence as source-level, local production build, deployed HTTP observation, or provider observation.
 
+For a requested PageSpeed/Lighthouse review, use [PageSpeed Insights and manual review](pagespeed-insights-checklist.md). Record automated findings separately from completed human checks, and preserve the distinction between lab metrics and field history. Documentation-only updates to that checklist do not warrant an application benchmark.
+
 ## Layered verification
 
 - **Unit and component tests:** cover input schemas, boundary values, rate-limit windows, consent transitions, storage fallbacks, accessible controls, and generated public data. Use controlled clocks and mocked providers. Assert important non-events, such as invalid input never triggering delivery.

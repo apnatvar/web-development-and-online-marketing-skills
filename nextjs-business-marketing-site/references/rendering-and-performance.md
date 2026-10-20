@@ -7,6 +7,8 @@ Classify guidance as:
 - **Evidence-dependent optimization:** rendering mode, code splitting, cache policy, prefetch, font/image priority, and third-party timing should address an observed cost and be measured under comparable conditions.
 - **Optional implementation direction:** animation, visual loading treatment, and vendor/tool choices are selected for the project’s needs; they do not have a universal winner.
 
+For a requested PSI audit or a performance-sensitive release, use [PageSpeed Insights and manual review](pagespeed-insights-checklist.md) to inspect chunks, metrics, request chains and manual audits. Reuse existing evidence for narrow work instead of rerunning a full audit by default.
+
 ## Start by locating the delay
 
 Performance is a chain, not one number. Record the route, device class, network/CPU conditions, cache state, consent state, and build/deployment version for every comparison. Separate measurements for a representative content page, a high-interaction page, and a large catalog. Do not compare a warm cache on one run with a fresh cache on another, or mix a localhost result with production field data.
@@ -19,7 +21,7 @@ For a slow route, determine whether the bottleneck is server response, render-bl
 | INP | 200 milliseconds or less at the 75th percentile | Responsiveness across qualifying interactions |
 | CLS | 0.1 or less at the 75th percentile | Visual stability |
 
-Segment field results by device class and evaluate the 75th percentile. See [web.dev Web Vitals](https://web.dev/articles/vitals) for definitions and current thresholds. FCP (First Contentful Paint) is a useful diagnostic for when the browser first paints text, images, canvas, or other non-white content, but it is not a Core Web Vital and the reference does not set an FCP pass threshold. A fast FCP does not mean that the main promise is readable or that the page is ready.
+Segment field results by device class and evaluate the 75th percentile. See [web.dev Web Vitals](https://web.dev/articles/vitals) for definitions and current thresholds. FCP (First Contentful Paint) records the first content paint, such as text or an image; a background alone does not count. Its good field threshold is 1.8 seconds or less at the 75th percentile, but it is not a Core Web Vital. A fast FCP does not mean that the main promise is readable or that the page is ready.
 
 LCP tracks when the largest visible text block or image is rendered. A headline can be the LCP element on a text-led hero; do not assume an image is always the target.
 

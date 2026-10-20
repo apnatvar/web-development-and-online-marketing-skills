@@ -38,6 +38,7 @@ For a missing-page audit, use [Audit gaps before adding pages](references/strate
 | Articles, guides, comparisons, hypothetical cases, sources, editorial/publishing states | [Editorial content](references/editorial-content.md) |
 | Headers/navigation, mobile layout, typography, spacing, accessibility, animation including GSAP/CSS view/sticky | [Design system and responsive layout](references/design-system-and-responsive-layout.md) |
 | Server/client boundaries, dynamic loading, fonts/images, FCP/LCP/CLS/INP, caching and compute | [Rendering and performance](references/rendering-and-performance.md) |
+| PageSpeed Insights review, chunk analysis and manual Lighthouse checks | [PageSpeed Insights and manual review](references/pagespeed-insights-checklist.md) |
 | Forms, Telegram, Google Forms alternatives, secrets, API abuse, consent, response security headers | [Security and privacy](references/security-and-privacy.md) |
 | 404/410/redirects, method/media handling, migration and actual HTTP verification | [HTTP errors and migrations](references/http-errors-and-migrations.md) |
 | Agent-readable HTML/Markdown, content negotiation, public APIs/OpenAPI, MCP boundaries | [Agent-facing interfaces](references/agent-facing-interfaces.md) |
