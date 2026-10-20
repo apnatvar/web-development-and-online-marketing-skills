@@ -34,6 +34,10 @@ If a feed exists, include actual published items with stable canonical links, ac
 
 For AI and agent discovery, provide direct human-readable descriptions, semantic HTML, explicit entity relationships, cited claims and useful source links. Keep machine-readable files synchronized with the public site and describe capabilities accurately. Do not claim that an AI-facing file, API or protocol guarantees visibility.
 
+## Separate repository and deployed evidence
+
+For an audit, identify whether each observation comes from the current checkout, a build, a direct deployed response or a search tool's cached extraction. A repository route establishes implemented content, not release status; a stale extraction does not establish that old navigation or retired offers are still live. If sources disagree, inspect deployment or response evidence when available and describe unresolved differences explicitly. Do not recommend restoring removed routes or diagnose a live regression solely from cached text. State the assessment's scope when production or performance evidence is unavailable.
+
 ## Verify and maintain
 
 Inspect rendered output as well as source. Confirm title, description, H1, canonical, social metadata, schema, robots directives, sitemap membership and internal links agree. Use established checks and current framework docs. A local build cannot prove external links, client-only behavior, CDN redirects, live indexing, citations or rankings; test those separately when needed and possible.

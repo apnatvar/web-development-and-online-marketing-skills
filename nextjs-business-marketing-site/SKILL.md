@@ -25,6 +25,8 @@ For a new site, establish audience, offer, verifiable evidence, intended markets
 
 For a concrete choice, find its question in [decision-guide.md](references/decision-guide.md), then read the relevant detailed reference. Load only the references needed for the current task.
 
+For a missing-page audit, use [Audit gaps before adding pages](references/strategy-and-information-architecture.md#audit-gaps-before-adding-pages). Distinguish an absent route from an incomplete answer or a hard-to-find page; a complete audit may recommend no new URLs.
+
 ## References by task
 
 | Task | Read |

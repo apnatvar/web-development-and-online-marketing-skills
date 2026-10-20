@@ -28,6 +28,16 @@ A useful prioritization map is commercial pages, proof pages, durable authority 
 
 For important pages, keep a compact intent record: intended reader, problem or query, page purpose, offer or next step, evidence, related pages and indexation state. Use query evidence where available; label inferred intent as a hypothesis. Keyword fields are planning labels, not proof of demand or a reason to force phrases into copy.
 
+## Audit gaps before adding pages
+
+Inspect route families, dynamic content registries, redirects, navigation and relevant page content before recommending additions. A missing literal route filename does not prove a page is absent. Check whether an existing company page, FAQ topic, offer section or proof collection already answers the question under another label.
+
+For each important buyer question, classify the answer as present and reachable, present but hard to find, incomplete on its owning page, or absent. Separate the resulting action: improve a contextual link, complete an existing section, or consider a distinct page. Record the current owner, supporting evidence and priority. Check audience fit, deliverables, proof, delivery responsibilities, costs, ownership, support and contact where they affect the actual purchase; these are questions to inspect, not mandatory standalone pages.
+
+Assess proof across the main offers. Several website examples do not establish delivery evidence for an automation service. Keep prototypes, internal implementations, client delivery and measured outcomes distinguishable. Recommend deeper project pages only when publishable evidence supports a useful independent account; otherwise strengthen the existing collection. A data-handling page can help buyers of document or customer-data integrations, but first inspect existing service explanations and the website privacy policy. Explain verified client-system practices without implying certifications or inventing uniform controls across providers.
+
+It is valid to find no essential page missing. Rank remaining gaps by the decision they obstruct, and state when analytics or enquiry evidence is unavailable. Avoid adding generic pricing, process, industry, location or testimonial pages simply to complete a checklist. The distinct-intent criteria below still apply.
+
 ## Decide whether a page earns a place
 
 Before proposing a new indexable page, ask whether its audience and intent are materially distinct, whether the business can answer credibly, whether it helps a visitor decide or complete a task, and whether merging it into an existing page would make that page worse. Also consider whether it can be maintained and linked from relevant contexts.
