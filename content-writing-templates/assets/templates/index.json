@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "templates": [
+    {
+      "id": "instagram.educational.howto",
+      "name": "Practical how-to",
+      "description": "Teach a small task through visible steps.",
+      "platforms": [
+        "instagram"
+      ],
+      "format": "caption",
+      "objectives": [
+        "educational"
+      ],
+      "tones": [
+        "practical",
+        "friendly"
+      ],
+      "use_cases": [
+        "Explain a repeatable task"
+      ],
+      "framework": "hook-steps-action",
+      "length": "short",
+      "audiences": [
+        "beginners"
+      ],
+      "path": "instagram.educational.howto.json"
+    },
+    {
+      "id": "instagram.educational.checklist",
+      "name": "Ready-to-use checklist",
+      "description": "Turn a process into a short self-check.",
+      "platforms": [
+        "instagram"
+      ],
+      "format": "checklist",
+      "objectives": [
+        "educational"
+      ],
+      "tones": [
+        "concise",
+        "practical"
+      ],
+      "use_cases": [
+        "Help readers inspect their own process"
+      ],
+      "framework": "checklist",
+      "length": "short",
+      "audiences": [
+        "practitioners"
+      ],
+      "path": "instagram.educational.checklist.json"
+    },
+    {
+      "id": "linkedin.analytical.insight",
+      "name": "Evidence-led insight",
+      "description": "Connect one supported observation to a practical implication.",
+      "platforms": [
+        "linkedin"
+      ],
+      "format": "post",
+      "objectives": [
+        "analytical",
+        "educational"
+      ],
+      "tones": [
+        "analytical",
+        "technical",
+        "concise"
+      ],
+      "use_cases": [
+        "Explain a useful professional finding"
+      ],
+      "framework": "claim-evidence-implication",
+      "length": "medium",
+      "audiences": [
+        "professionals",
+        "decision-makers"
+      ],
+      "path": "linkedin.analytical.insight.json"
+    },
+    {
+      "id": "linkedin.narrative.lesson",
+      "name": "Lesson from a process",
+      "description": "Explain a verified experience and the lesson readers can transfer.",
+      "platforms": [
+        "linkedin"
+      ],
+      "format": "post",
+      "objectives": [
+        "narrative",
+        "educational"
+      ],
+      "tones": [
+        "reflective",
+        "practical"
+      ],
+      "use_cases": [
+        "Share a process lesson without invented personal stories"
+      ],
+      "framework": "context-decision-lesson",
+      "length": "medium",
+      "audiences": [
+        "professionals"
+      ],
+      "path": "linkedin.narrative.lesson.json"
+    },
+    {
+      "id": "x.humorous.observation",
+      "name": "Subtle everyday observation",
+      "description": "Pair a familiar friction with a gentle, original twist.",
+      "platforms": [
+        "x"
+      ],
+      "format": "post",
+      "objectives": [
+        "humorous"
+      ],
+      "tones": [
+        "witty",
+        "subtle",
+        "dry"
+      ],
+      "use_cases": [
+        "Make a relatable process observation"
+      ],
+      "framework": "observation-twist",
+      "length": "short",
+      "audiences": [
+        "general",
+        "professionals"
+      ],
+      "path": "x.humorous.observation.json"
+    },
+    {
+      "id": "x.educational.thread",
+      "name": "Stepwise explanation thread",
+      "description": "Unpack one idea in a sequence of self-contained posts.",
+      "platforms": [
+        "x"
+      ],
+      "format": "thread",
+      "objectives": [
+        "educational"
+      ],
+      "tones": [
+        "concise",
+        "practical"
+      ],
+      "use_cases": [
+        "Repurpose a guide into a short learning sequence"
+      ],
+      "framework": "promise-context-steps-recap",
+      "length": "medium",
+      "audiences": [
+        "beginners",
+        "practitioners"
+      ],
+      "path": "x.educational.thread.json"
+    },
+    {
+      "id": "blog.educational.tutorial",
+      "name": "Task-focused tutorial",
+      "description": "Guide a reader from prerequisites to a checkable result.",
+      "platforms": [
+        "blog"
+      ],
+      "format": "tutorial",
+      "objectives": [
+        "educational"
+      ],
+      "tones": [
+        "practical",
+        "technical"
+      ],
+      "use_cases": [
+        "Document a process readers can complete"
+      ],
+      "framework": "outcome-prerequisites-steps-verification",
+      "length": "long",
+      "audiences": [
+        "beginners",
+        "practitioners"
+      ],
+      "path": "blog.educational.tutorial.json"
+    },
+    {
+      "id": "blog.analytical.comparison",
+      "name": "Criteria-led comparison",
+      "description": "Compare supplied options against reader-relevant criteria.",
+      "platforms": [
+        "blog"
+      ],
+      "format": "comparison",
+      "objectives": [
+        "analytical",
+        "educational"
+      ],
+      "tones": [
+        "analytical",
+        "neutral"
+      ],
+      "use_cases": [
+        "Help readers choose between options"
+      ],
+      "framework": "criteria-evidence-tradeoffs",
+      "length": "long",
+      "audiences": [
+        "decision-makers"
+      ],
+      "path": "blog.analytical.comparison.json"
+    },
+    {
+      "id": "email.promotional.aida",
+      "name": "Single-offer email",
+      "description": "Organize an offer around attention, relevance, benefit and action.",
+      "platforms": [
+        "email"
+      ],
+      "format": "promotional-email",
+      "objectives": [
+        "promotional"
+      ],
+      "tones": [
+        "direct",
+        "friendly",
+        "witty"
+      ],
+      "use_cases": [
+        "Present a supported offer to an appropriate audience"
+      ],
+      "framework": "aida",
+      "length": "short",
+      "audiences": [
+        "subscribers",
+        "prospects"
+      ],
+      "path": "email.promotional.aida.json"
+    },
+    {
+      "id": "email.educational.digest",
+      "name": "Useful learning digest",
+      "description": "Deliver one central lesson and an optional follow-up.",
+      "platforms": [
+        "email"
+      ],
+      "format": "newsletter",
+      "objectives": [
+        "educational"
+      ],
+      "tones": [
+        "friendly",
+        "concise"
+      ],
+      "use_cases": [
+        "Share an insight with an existing readership"
+      ],
+      "framework": "insight-explanation-action",
+      "length": "medium",
+      "audiences": [
+        "subscribers"
+      ],
+      "path": "email.educational.digest.json"
+    }
+  ]
+}

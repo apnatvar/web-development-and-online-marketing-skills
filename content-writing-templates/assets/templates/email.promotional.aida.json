@@ -1,0 +1,45 @@
+{
+  "id": "email.promotional.aida",
+  "name": "Single-offer email",
+  "description": "Organize an offer around attention, relevance, benefit and action.",
+  "platforms": [
+    "email"
+  ],
+  "format": "promotional-email",
+  "objectives": [
+    "promotional"
+  ],
+  "tones": [
+    "direct",
+    "friendly",
+    "witty"
+  ],
+  "use_cases": [
+    "Present a supported offer to an appropriate audience"
+  ],
+  "framework": "aida",
+  "length": "short",
+  "audiences": [
+    "subscribers",
+    "prospects"
+  ],
+  "required_inputs": {
+    "TOPIC": "Offer or subject",
+    "PROBLEM": "Relevant audience need",
+    "BENEFIT": "Supported benefit",
+    "DESIRED_ACTION": "One clear next action"
+  },
+  "optional_inputs": {
+    "SUPPORTING_EVIDENCE": "Optional proof",
+    "DESTINATION": "Confirmed link or contact route"
+  },
+  "structure": "Subject: [TOPIC]\nPreview: [BENEFIT]\n\n[PROBLEM]\n\n[BENEFIT]\nOptional proof: [SUPPORTING_EVIDENCE]\n\n[DESIRED_ACTION]\nOptional destination: [DESTINATION]",
+  "customization": [
+    "Use one primary action.",
+    "Keep claims specific to supplied evidence; tone can be witty without fake scarcity."
+  ],
+  "limitations": [
+    "AIDA is a composition heuristic, not evidence of conversion.",
+    "Sending, consent and required sender/unsubscribe details depend on the mailing context; this is a body-copy scaffold."
+  ]
+}

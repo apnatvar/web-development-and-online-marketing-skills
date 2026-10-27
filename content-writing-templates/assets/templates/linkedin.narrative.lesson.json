@@ -1,0 +1,42 @@
+{
+  "id": "linkedin.narrative.lesson",
+  "name": "Lesson from a process",
+  "description": "Explain a verified experience and the lesson readers can transfer.",
+  "platforms": [
+    "linkedin"
+  ],
+  "format": "post",
+  "objectives": [
+    "narrative",
+    "educational"
+  ],
+  "tones": [
+    "reflective",
+    "practical"
+  ],
+  "use_cases": [
+    "Share a process lesson without invented personal stories"
+  ],
+  "framework": "context-decision-lesson",
+  "length": "medium",
+  "audiences": [
+    "professionals"
+  ],
+  "required_inputs": {
+    "CONTEXT": "Verified situation",
+    "DECISION": "Action actually taken",
+    "OBSERVATION": "Observed outcome, including uncertainty",
+    "LESSON": "Transferable lesson"
+  },
+  "optional_inputs": {
+    "DESIRED_ACTION": "Optional question"
+  },
+  "structure": "[CONTEXT]\n\nThe decision: [DECISION]\n\nWhat happened: [OBSERVATION]\n\nThe lesson: [LESSON]\n\nOptional question: [DESIRED_ACTION]",
+  "customization": [
+    "Keep the story proportional to the lesson.",
+    "Use third person if the experience is not the author's."
+  ],
+  "limitations": [
+    "Never fabricate first-person experience, customers, or results."
+  ]
+}

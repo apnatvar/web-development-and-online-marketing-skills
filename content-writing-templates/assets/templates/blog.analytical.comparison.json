@@ -1,0 +1,44 @@
+{
+  "id": "blog.analytical.comparison",
+  "name": "Criteria-led comparison",
+  "description": "Compare supplied options against reader-relevant criteria.",
+  "platforms": [
+    "blog"
+  ],
+  "format": "comparison",
+  "objectives": [
+    "analytical",
+    "educational"
+  ],
+  "tones": [
+    "analytical",
+    "neutral"
+  ],
+  "use_cases": [
+    "Help readers choose between options"
+  ],
+  "framework": "criteria-evidence-tradeoffs",
+  "length": "long",
+  "audiences": [
+    "decision-makers"
+  ],
+  "required_inputs": {
+    "TOPIC": "Decision to make",
+    "OPTIONS": "Options supplied by the user",
+    "CRITERIA": "Reader-relevant criteria",
+    "SUPPORTING_EVIDENCE": "Evidence for each comparison",
+    "TRADEOFFS": "Conditions favouring each option"
+  },
+  "optional_inputs": {
+    "AUDIENCE": "Who is deciding"
+  },
+  "structure": "# [TOPIC]\n\nOptions: [OPTIONS]\n\n## Decision criteria\n[CRITERIA]\n\n## Comparison\n[SUPPORTING_EVIDENCE]\n\n## Which fits which situation\n[TRADEOFFS]",
+  "customization": [
+    "Present the same criteria for each option.",
+    "Make uncertainty and missing data visible."
+  ],
+  "limitations": [
+    "Do not rank unsupported features or manufacture prices.",
+    "Check current evidence for purchasing recommendations."
+  ]
+}

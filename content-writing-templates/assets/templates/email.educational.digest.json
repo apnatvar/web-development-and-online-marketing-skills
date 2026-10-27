@@ -1,0 +1,42 @@
+{
+  "id": "email.educational.digest",
+  "name": "Useful learning digest",
+  "description": "Deliver one central lesson and an optional follow-up.",
+  "platforms": [
+    "email"
+  ],
+  "format": "newsletter",
+  "objectives": [
+    "educational"
+  ],
+  "tones": [
+    "friendly",
+    "concise"
+  ],
+  "use_cases": [
+    "Share an insight with an existing readership"
+  ],
+  "framework": "insight-explanation-action",
+  "length": "medium",
+  "audiences": [
+    "subscribers"
+  ],
+  "required_inputs": {
+    "TOPIC": "Lesson topic",
+    "KEY_INSIGHT": "Central takeaway",
+    "EXPLANATION": "Useful explanation or steps"
+  },
+  "optional_inputs": {
+    "SUPPORTING_EVIDENCE": "Optional further reading",
+    "DESIRED_ACTION": "Optional reader action"
+  },
+  "structure": "Subject: [TOPIC]\nPreview: [KEY_INSIGHT]\n\n[KEY_INSIGHT]\n\n[EXPLANATION]\n\nOptional further reading: [SUPPORTING_EVIDENCE]\nOptional next step: [DESIRED_ACTION]",
+  "customization": [
+    "Deliver value in the body before asking readers to click.",
+    "Remove optional sections that add no value."
+  ],
+  "limitations": [
+    "Do not present unsourced claims as research findings.",
+    "This scaffold does not provide mailing-list or delivery infrastructure."
+  ]
+}

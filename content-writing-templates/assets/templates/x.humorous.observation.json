@@ -1,0 +1,42 @@
+{
+  "id": "x.humorous.observation",
+  "name": "Subtle everyday observation",
+  "description": "Pair a familiar friction with a gentle, original twist.",
+  "platforms": [
+    "x"
+  ],
+  "format": "post",
+  "objectives": [
+    "humorous"
+  ],
+  "tones": [
+    "witty",
+    "subtle",
+    "dry"
+  ],
+  "use_cases": [
+    "Make a relatable process observation"
+  ],
+  "framework": "observation-twist",
+  "length": "short",
+  "audiences": [
+    "general",
+    "professionals"
+  ],
+  "required_inputs": {
+    "OBSERVATION": "Generic recognizable situation",
+    "TWIST": "Original light contrast or reversal"
+  },
+  "optional_inputs": {
+    "TOPIC": "Subject context"
+  },
+  "structure": "[OBSERVATION]\n[TWIST]",
+  "customization": [
+    "Keep the joke understandable without insider context.",
+    "Make the twist smaller for subtle humour."
+  ],
+  "limitations": [
+    "Avoid targeting identifiable people or inventing quotations.",
+    "Brevity guidance is editorial; confirm current account limits if exact compliance matters."
+  ]
+}

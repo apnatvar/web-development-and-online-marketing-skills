@@ -21,6 +21,7 @@ See the [full skill catalog](SKILL-CATALOG.md) for commercial names, examples, c
 | [Brand Social Media](brand-social-media-skill/SKILL.md) | Plan and produce evidence-grounded, platform-specific campaigns and outreach. |
 | [Chrome Plugin Launch Kit](chrome-plugin-skill/SKILL.md) | Build Chrome extensions and prepare runtime ZIPs, listing assets, and public product/support/privacy sites before store submission. |
 | [Company Voice](company-voice-skill/company-voice/SKILL.md) | Build and apply a reusable editorial voice and content strategy. |
+| [Content Writing Templates](content-writing-templates/SKILL.md) | Discover templates by stable ID, draft from supplied facts, and repurpose across social, blog and email formats. |
 | [Concise Communication](concise-communication/SKILL.md) | Preserve meaning while reducing filler, repetition, and unnecessary tokens. |
 | [Marketing and Persuasive Writing](copy-marketing-skill/marketing-writing-skill/SKILL.md) | Diagnose, draft, critique, and adapt credible marketing and sales copy. |
 | [Email Marketing HTML and MJML](email-marketing-html-mjml/SKILL.md) | Create reusable email systems with MJML, HTML, personalization, deliverability safeguards, and optional Emailcn components. |

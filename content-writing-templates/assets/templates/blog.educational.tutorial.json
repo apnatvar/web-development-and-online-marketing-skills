@@ -1,0 +1,44 @@
+{
+  "id": "blog.educational.tutorial",
+  "name": "Task-focused tutorial",
+  "description": "Guide a reader from prerequisites to a checkable result.",
+  "platforms": [
+    "blog"
+  ],
+  "format": "tutorial",
+  "objectives": [
+    "educational"
+  ],
+  "tones": [
+    "practical",
+    "technical"
+  ],
+  "use_cases": [
+    "Document a process readers can complete"
+  ],
+  "framework": "outcome-prerequisites-steps-verification",
+  "length": "long",
+  "audiences": [
+    "beginners",
+    "practitioners"
+  ],
+  "required_inputs": {
+    "TOPIC": "Task and expected result",
+    "PREREQUISITES": "Required access, materials or prior knowledge",
+    "STEPS": "Ordered procedure",
+    "VERIFICATION": "How the reader checks success"
+  },
+  "optional_inputs": {
+    "TROUBLESHOOTING": "Common observed failures and fixes",
+    "SUPPORTING_EVIDENCE": "Optional sources"
+  },
+  "structure": "# [TOPIC]\n\n## Before you start\n[PREREQUISITES]\n\n## Procedure\n[STEPS]\n\n## Check your result\n[VERIFICATION]\n\nOptional troubleshooting: [TROUBLESHOOTING]\nOptional sources: [SUPPORTING_EVIDENCE]",
+  "customization": [
+    "State the reader outcome early.",
+    "Use headings matching the task, and put warnings beside the relevant step."
+  ],
+  "limitations": [
+    "Version-dependent instructions need current documentation.",
+    "Do not imply that an untested procedure was executed."
+  ]
+}

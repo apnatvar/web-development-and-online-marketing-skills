@@ -1,0 +1,39 @@
+{
+  "id": "instagram.educational.checklist",
+  "name": "Ready-to-use checklist",
+  "description": "Turn a process into a short self-check.",
+  "platforms": [
+    "instagram"
+  ],
+  "format": "checklist",
+  "objectives": [
+    "educational"
+  ],
+  "tones": [
+    "concise",
+    "practical"
+  ],
+  "use_cases": [
+    "Help readers inspect their own process"
+  ],
+  "framework": "checklist",
+  "length": "short",
+  "audiences": [
+    "practitioners"
+  ],
+  "required_inputs": {
+    "TOPIC": "Process being checked",
+    "CHECKS": "Observable checks, each with a clear pass condition"
+  },
+  "optional_inputs": {
+    "DESIRED_ACTION": "Optional next step"
+  },
+  "structure": "Before [TOPIC], check:\n\n[CHECKS]\n\nOptional next step: [DESIRED_ACTION]",
+  "customization": [
+    "Use checkable actions rather than vague advice.",
+    "Group long lists by stage."
+  ],
+  "limitations": [
+    "A checklist is not a substitute for qualified inspection of regulated work."
+  ]
+}

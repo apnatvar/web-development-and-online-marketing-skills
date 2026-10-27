@@ -1,0 +1,43 @@
+{
+  "id": "x.educational.thread",
+  "name": "Stepwise explanation thread",
+  "description": "Unpack one idea in a sequence of self-contained posts.",
+  "platforms": [
+    "x"
+  ],
+  "format": "thread",
+  "objectives": [
+    "educational"
+  ],
+  "tones": [
+    "concise",
+    "practical"
+  ],
+  "use_cases": [
+    "Repurpose a guide into a short learning sequence"
+  ],
+  "framework": "promise-context-steps-recap",
+  "length": "medium",
+  "audiences": [
+    "beginners",
+    "practitioners"
+  ],
+  "required_inputs": {
+    "TOPIC": "Subject of explanation",
+    "KEY_INSIGHT": "Useful takeaway",
+    "STEPS": "Ordered learning points or actions"
+  },
+  "optional_inputs": {
+    "SUPPORTING_EVIDENCE": "Optional supporting sources",
+    "DESIRED_ACTION": "Optional next action"
+  },
+  "structure": "1. [TOPIC]: [KEY_INSIGHT]\n\n2 onward. [STEPS]\n\nOptional evidence: [SUPPORTING_EVIDENCE]\n\nFinal post. Recap [KEY_INSIGHT]. Optional next action: [DESIRED_ACTION]",
+  "customization": [
+    "Split STEPS into numbered posts with one idea each.",
+    "Keep source qualifications beside the claims they qualify."
+  ],
+  "limitations": [
+    "Do not assume a fixed number of posts or current character cap.",
+    "Do not strip caveats solely to fit a post."
+  ]
+}

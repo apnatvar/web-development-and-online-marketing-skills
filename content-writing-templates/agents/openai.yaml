@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Writing Templates"
+  short_description: "Discover and apply reusable content structures"
+  default_prompt: "Use $content-writing-templates to find a suitable structure and draft from my notes."

@@ -1,0 +1,44 @@
+{
+  "id": "linkedin.analytical.insight",
+  "name": "Evidence-led insight",
+  "description": "Connect one supported observation to a practical implication.",
+  "platforms": [
+    "linkedin"
+  ],
+  "format": "post",
+  "objectives": [
+    "analytical",
+    "educational"
+  ],
+  "tones": [
+    "analytical",
+    "technical",
+    "concise"
+  ],
+  "use_cases": [
+    "Explain a useful professional finding"
+  ],
+  "framework": "claim-evidence-implication",
+  "length": "medium",
+  "audiences": [
+    "professionals",
+    "decision-makers"
+  ],
+  "required_inputs": {
+    "KEY_INSIGHT": "Specific defensible claim",
+    "SUPPORTING_EVIDENCE": "User-supplied observation or cited evidence",
+    "IMPLICATION": "What changes for the reader"
+  },
+  "optional_inputs": {
+    "TOPIC": "Context",
+    "DESIRED_ACTION": "Optional discussion question"
+  },
+  "structure": "[KEY_INSIGHT]\n\n[SUPPORTING_EVIDENCE]\n\nWhat this means in practice: [IMPLICATION]\n\nOptional close: [DESIRED_ACTION]",
+  "customization": [
+    "Lead with the finding, then explain its scope.",
+    "Separate observations from causal interpretations."
+  ],
+  "limitations": [
+    "Do not turn correlation or an anecdote into proof of a general result."
+  ]
+}

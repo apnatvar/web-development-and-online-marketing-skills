@@ -1,0 +1,40 @@
+{
+  "id": "instagram.educational.howto",
+  "name": "Practical how-to",
+  "description": "Teach a small task through visible steps.",
+  "platforms": [
+    "instagram"
+  ],
+  "format": "caption",
+  "objectives": [
+    "educational"
+  ],
+  "tones": [
+    "practical",
+    "friendly"
+  ],
+  "use_cases": [
+    "Explain a repeatable task"
+  ],
+  "framework": "hook-steps-action",
+  "length": "short",
+  "audiences": [
+    "beginners"
+  ],
+  "required_inputs": {
+    "TOPIC": "Task to teach",
+    "STEPS": "Ordered, accurate instructions"
+  },
+  "optional_inputs": {
+    "AUDIENCE": "Who needs the task",
+    "DESIRED_ACTION": "Optional save or practice invitation"
+  },
+  "structure": "[TOPIC]: a practical starting point.\n\n[STEPS]\n\nOptional close: [DESIRED_ACTION]",
+  "customization": [
+    "Keep each step to one action.",
+    "For a carousel, place the outcome first and one step on each following panel."
+  ],
+  "limitations": [
+    "Caption alone cannot demonstrate visual actions; request an image brief when needed."
+  ]
+}
