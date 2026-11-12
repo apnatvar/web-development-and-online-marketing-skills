@@ -18,4 +18,10 @@ Tests should encode policy near the data that owns it. Examples: all sitemap ent
 
 Avoid snapshotting entire generated pages when focused semantic assertions provide clearer failures. Never weaken a validator solely to make a build green.
 
+## Interpret live and search evidence
+
+Label source inspection, local build output, direct deployed responses, cached search extractions and Search Console observations separately. Passing local metadata checks does not establish deployment or indexing; a cached extraction does not prove the current release is serving old copy. For an important unindexed URL, inspect the last crawl, crawled HTML and Google-selected canonical as well as its live status, headers and content. State missing access rather than certifying the entire path from repository evidence.
+
+An intentional, relevant permanent redirect excluded as "Page with redirect" is expected; verify its final destination instead of trying to eliminate the report entry. "Crawled - currently not indexed" is a separate observation, not proof of a technical defect or spam. Diagnose access and canonical signals before attributing it to content; evaluate distinct usefulness and exposure if those signals are sound. Do not add noindex, robots blocks, removals or broad redirects solely to make report totals look clean. See [Google's report definitions](https://support.google.com/webmasters/answer/7440203).
+
 Related: [SEO](seo.md), [Performance](performance.md), [Sitemap and indexing](sitemap-indexing.md), and [Pre-deployment checklist](../checklists/pre-deployment.md).

@@ -36,6 +36,12 @@ A commercial page often works well in this order: outcome, audience fit, recogni
 
 Use diagrams, comparisons and tables when they explain a choice faster than prose. Keep text accessible, responsive and understandable without animation. Preserve the site’s design system and mobile hierarchy. Avoid visual components that compete with the main message or repeat it.
 
+## Refer to complementary services at the point of need
+
+When a page depends on another service, explain the immediate customer benefit briefly and link to the page that covers that work. For example, website pages need content planning and writing; point to the content service in the planning section instead of repeating its complete scope. Preserve important inclusions, prices and support terms, while keeping repeated organizational ownership explanations out of promotional copy. Service names in related cards and FAQ references should be actual crawlable links, not plain text or Markdown left inside a string.
+
+Keep an explicit service label near a benefit-led invitation so visitors understand both the work and what they can get next. Where it fits the actual service and operating model, offer a concrete, low-effort next step that provides value and helps scope the next engagement. For a business that already offers brief reviews, this might use one public link or short example and a delivery address. Choose the input and deliverable for the business rather than imposing an audit or email funnel on every site. State what will be returned, who prepares it and any real terms; do not invent a free assessment or imply automation the business has not implemented. Follow the forms/privacy guidance for the actual data and delivery flow.
+
 ## Use FAQs and proof where they help
 
 Add FAQs when visitors need direct answers about scope, fit, process or ownership that the main copy does not already provide. Put answers near the relevant decision where practical. Keep them visible, specific and consistent with the offer. Remove questions that repeat headings, exist only for keyword coverage or imply unsupported capabilities. Do not use a long FAQ section to avoid clarifying the service itself.

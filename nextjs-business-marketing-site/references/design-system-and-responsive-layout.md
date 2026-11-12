@@ -25,6 +25,8 @@ Do not prescribe a palette, font family, border shape, or card style from a prio
 
 A compact visual system is one option for supporting scanning: repeated spacing, a consistent heading treatment, or a recognizable action style. Compare it with other approaches against the product’s identity and content. Cards, serif display type, animation, and asymmetrical composition are optional.
 
+When modifying an established site, preserve its approved palette unless a color change is in scope. Reuse semantic tokens, but inspect their rendered combinations: opacity, color mixing, gradients and overlays can introduce a new tint even when each input is an existing token. Review affected surfaces in each supported theme and changed hover, focus and motion states. A layout or copy request does not independently authorize a new visual identity.
+
 ## Plan responsive behavior from content
 
 Start with the narrow layout and expand when content needs another column. Use breakpoints where the composition stops working, not because a device model is popular. Check narrow and wide phones, tablet portrait and landscape, a short laptop viewport, and a large desktop. Responsive design includes more than width: test orientation, height, pointer precision, text scale, zoom, and motion preference.
@@ -68,6 +70,8 @@ For GSAP or another imperative runtime, import it only for the route or componen
 Sticky positioning is a layout behavior, not a substitute for a scroll animation. Use it for a relevant control or index that helps the visitor orient within the section. Compute its top offset from the actual fixed header and breadcrumb stack. Constrain tall sticky content to the available viewport and allow it to scroll internally; otherwise it can become inaccessible on short screens or at zoom. Disable or simplify sticky behavior where it collides with the mobile header, keyboard focus, or section boundaries. If a sticky footer animation pauses on hover, limit hover-specific pause behavior to fine pointers and preserve equivalent keyboard access.
 
 If a footer word or identity animation is chosen, reserve enough width for the longest changing word so the line does not jump. Provide a readable text equivalent, hide duplicated fragments from assistive technology where appropriate, and stop or simplify motion for reduced motion. A static label, rotating word, or marquee are visual options; evaluate readability, motion, and layout stability for the audience.
+
+When changing mobile navigation, inspect the full touch sequence of open, close, reopen and navigate, alongside closing with Escape and focus restoration. Inspect settled open and closed states, not only a frame during transition. An opening screenshot cannot establish that the menu remains operable after dismissal. For a chosen repeating marquee, inspect the loop boundary and longest content at narrow widths; duplicated runs should not create duplicate accessible reading or page overflow. Reduced motion should leave a readable static equivalent. These are checks for existing interactions, not reasons to add a menu animation or marquee.
 
 ## Visual QA workflow
 

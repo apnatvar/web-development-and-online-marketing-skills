@@ -27,6 +27,14 @@ For a concrete choice, find its question in [decision-guide.md](references/decis
 
 For a missing-page audit, use [Audit gaps before adding pages](references/strategy-and-information-architecture.md#audit-gaps-before-adding-pages). Distinguish an absent route from an incomplete answer or a hard-to-find page; a complete audit may recommend no new URLs.
 
+For a commercially stagnant site without an established technical blocker, use [Review alignment before another rewrite](references/strategy-and-information-architecture.md#review-alignment-before-another-rewrite). Check buyer relevance, evidence and the path to an enquiry before recommending more pages or another site-wide copy iteration.
+
+## Establish the objective foundations early
+
+For a new site or substantial redesign, complete a compact page-and-intent map before polishing visual effects. Establish the real offers, distinct buyer questions, which page owns each question, evidence-backed or explicitly provisional keyword themes, useful next steps, and canonical publication rules. Reuse the project's authoritative facts and route sources where practical, keeping navigation, page copy, metadata, structured data and sitemaps consistent without requiring one data structure for every surface. This is a bounded first pass, not a requirement to delay delivery for exhaustive research.
+
+Use [Strategy and information architecture](references/strategy-and-information-architecture.md#build-a-page-and-ownership-map) for page segregation and ownership, and [SEO and discoverability](references/seo-and-discoverability.md#choose-keyword-targets-from-evidence) for keyword selection. Resolve objective correctness and structural gaps first; keep ranking predictions, conversion hypotheses and visual preferences distinct. For a narrow edit, reuse the existing map rather than reopening the whole strategy.
+
 ## References by task
 
 | Task | Read |

@@ -29,11 +29,19 @@ When external case studies inform a hypothetical scenario, attribute them accura
 
 Useful comparison articles apply the same decision to each option. Define the reader’s use case and compare meaningful dimensions such as fit, effort, ownership, maintenance, security, cost assumptions and constraints. Keep criteria stable. Separate verified specifications from editorial judgment, and explain missing information rather than filling gaps. Avoid shallow “best tools” lists without a credible evaluation basis.
 
+## Make a case study explain the work
+
+Build the account around the problem or brief, decisions, meaningful tradeoffs, implementation evidence, demonstrated result and remaining limitations. Treat this as a reasoning structure, not a mandatory set of headings. Explain a concrete choice the reader can learn from. A short feature list beside screenshots may be a useful project gallery, but it leaves the reasoning behind the work unexplained.
+
+Use original screenshots, demonstrations or other publishable artifacts where they support the account. Explain what the evidence shows and what it cannot establish. A responsive capture demonstrates a layout at that size, not successful usability testing. A synthetic-provider workflow demonstrates a prototype sequence, not a live integration or commercial result. Where outcomes have not been measured, report the implemented result and a useful next evaluation. Do not invent a deficient previous version, rejected alternatives, user research, client approval or metrics to complete the narrative. Keep useful screenshots when rewriting their explanation; changing prose does not require replacing the evidence or visual design.
+
 ## Prepare publication metadata and review
 
 Use the repository’s established content and metadata model. Keep visible title and main heading, description, canonical URL, social metadata, image and alt text, publication and modification dates, structured data and sitemap entry consistent. Inspect root-inherited title templates, canonical and Open Graph defaults alongside page-level overrides across representative routes, then verify the rendered head. Set dates truthfully; only update modification dates after substantive edits. Add relevant internal links where they help the reader move from a problem to an offer, proof, guide or tool. Do not link merely to manipulate rankings.
 
 Read the draft from beginning to end. Remove repetition, verify that the introduction makes a fair promise and each section delivers it, and preserve necessary qualifications. Apply any available editorial or humanization pass after the facts are sound, then review edits for precision, citations, terminology, voice and technical meaning. Editing for naturalness is not permission to invent personal experience or claims.
+
+Humanization is an editorial pass, not evidence of human authorship, originality, indexing eligibility or ranking improvement. Assess the reader's unanswered question before polishing the wording. Preserve concrete terminology and necessary disclosures, and avoid adding repeated defensive caveats or a forced personal voice. If asked whether an earlier pass occurred, distinguish a documented review from an inference about how the prose sounds.
 
 ## Separate publication states and channels
 

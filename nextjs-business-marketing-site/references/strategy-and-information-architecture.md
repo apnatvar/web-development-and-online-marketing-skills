@@ -28,6 +28,24 @@ A useful prioritization map is commercial pages, proof pages, durable authority 
 
 For important pages, keep a compact intent record: intended reader, problem or query, page purpose, offer or next step, evidence, related pages and indexation state. Use query evidence where available; label inferred intent as a hypothesis. Keyword fields are planning labels, not proof of demand or a reason to force phrases into copy.
 
+## Build a page and ownership map
+
+For a new site or substantial redesign, make one compact map from the available business facts before drafting every page. Start with the smallest set of credible offers and buyer decisions. Record enough to implement a coherent first version; keep uncertain demand or positioning assumptions visible instead of inventing facts or waiting for exhaustive research.
+
+| Page or route | Buyer question and role | Primary service or topic owner | Primary keyword theme and evidence | H1 and search title direction | Next step and connected pages | Canonical/publication state |
+| --- | --- | --- | --- | --- | --- | --- |
+| Existing or proposed URL | What this page helps this audience understand or decide; commercial, informational or utility | The offer and deliverables explained here; distinguish adjacent services | Observed query, public search evidence, or a labelled hypothesis | Clear subject and audience; service language alongside branding | A useful action plus contextual references where another service helps | Preferred URL, indexability and any migration dependency |
+
+Keep this as a small project record or derive it from an existing content registry. Do not maintain a competing spreadsheet and several manually duplicated route lists. Page ownership means a primary buying question, not exclusive ownership of every shared word or technology. Use one strong page per substantially shared intent; split when a different decision, deliverable or customer stage justifies substantial distinct content. A small site may satisfy several needs in sections on one page.
+
+Segregate complementary services by the work a client is buying. For example, website development can own planning, page structure, funnels, implementation, performance foundations and launch; technical SEO can own audits and continuing technical improvements on existing or completed sites; content marketing can own content planning and writing. These are illustrative boundaries, not a mandatory service catalogue. Confirm the actual business's offers and inclusions. A launch foundation does not automatically include an ongoing SEO programme, and an implementation price does not automatically include recurring operation.
+
+At each overlap, briefly explain the useful dependency and link to its owning service page. A website often needs substantial content planning and writing: explain why the pages need that material and refer to the content service in that section. Do not reproduce its full sales pitch or repeat ownership disclaimers throughout the site. Use descriptive links in relevant paragraphs, cards or FAQs; a footer-only related-links list is insufficient when the reader needs the connection earlier. Keep material pricing, support, access and delivery terms near the decision they qualify.
+
+Give commercial pages the buying question and informational pages the explanation or learning task. Articles can target related questions and link naturally to the appropriate offer. Shared vocabulary does not prove cannibalization; inspect query-by-page evidence before consolidating successful pages. Home and offer hubs should help visitors choose a path rather than competing with every specialist page for the same generic phrase.
+
+Once the map is usable, implement the first coherent pass. Escalate only missing facts that materially affect an offer, claim, publication decision or working visitor action; progress on independent work. Revisit boundaries when real query/page data or client feedback reveals a mismatch, rather than regenerating the architecture for each wording change.
+
 ## Audit gaps before adding pages
 
 Inspect route families, dynamic content registries, redirects, navigation and relevant page content before recommending additions. A missing literal route filename does not prove a page is absent. Check whether an existing company page, FAQ topic, offer section or proof collection already answers the question under another label.
@@ -51,6 +69,14 @@ Protect pages that already attract relevant visitors or support the business. Be
 Link useful information to commercial relevance, proof and contact. Connect an article or tool to an offer only where the link helps the reader. Give visitors a low-friction next action appropriate to readiness: compare an offer, request a scoped conversation or try a working tool. A CTA must describe something the business can deliver. Do not claim a free audit, guarantee, fixed price or assessment unless the experience supports it.
 
 A clear primary CTA may help when the page has one decision. Add secondary actions when they serve distinct needs. Place invitations where they help the visitor rather than following a fixed count. Keep price, exclusions, provider costs and scope near the choice they explain.
+
+## Review alignment before another rewrite
+
+For a bounded go-to-market review, use the latest approved audience and offer definitions, including deliberate revisions to older strategy notes. Trace a few recent articles or entry pages through their proof, relevant offer and contact action. Separate a clear mismatch from a legitimate expertise article, a niche proof example or a new page with too little exposure to assess. Judge each page by its intended role rather than expecting every article to generate direct enquiries. Technical subject matter can support an implementation business without being its main acquisition message.
+
+Inspect the content hub as well as individual articles. Curated links, featured subjects and prominent CTAs can emphasize developers, enthusiasts or contributors while the business is trying to reach buyers. Recommend a smaller navigation or CTA-priority change when the right material already exists. Contributor submissions, subscriptions and buyer enquiries can coexist, but their prominence should follow the page's primary audience and task. More promotional paragraphs do not resolve a weak connection between the reader's problem and the offer.
+
+When no material correctness or journey gap remains, a valid recommendation is to retain the site and evaluate distribution, real buyer conversations and enquiry follow-through. Do not repeatedly reopen stable positioning or expand technical SEO work solely because aggregate traffic feels stagnant. Agree on the observation window and evidence that would justify another revision; allow reliability fixes and materially misleading copy to be corrected sooner. Drafting a distribution plan does not authorize sending messages or publishing off-site.
 
 ## Lessons from iteration
 

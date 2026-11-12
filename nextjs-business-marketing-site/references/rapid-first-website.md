@@ -35,6 +35,12 @@ the stated publication and deployment permissions.
 
 Keep generation/review cycles bounded: one shared brief, a coherent first pass, then fix material correctness, mobile, contact and loading issues. Repeated whole-site regeneration can destroy working details, URLs and factual precision. Make later changes locally to the relevant component/content record.
 
+## Finish the objective foundations before optional polish
+
+For a first version, turn the supplied brief into the compact page-and-ownership map in [strategy-and-information-architecture.md](strategy-and-information-architecture.md#build-a-page-and-ownership-map). Use a short keyword evidence pass, not an open-ended research phase. Reuse existing routes and templates where they fit. Establish page purposes, truthful service boundaries, useful contact actions, headings/metadata, canonical routes and publication state in one coherent pass.
+
+Generate navigation and discovery surfaces from shared facts where practical. Check working contact delivery, crawlable contextual links, accessible page structure and consistent metadata/indexation signals with the project's proportionate verification budget. Distinguish completed implementation from measured performance or ranking gains. Keep visual exploration separate so choosing an animation or font does not repeatedly reopen the offers, routes and content hierarchy. Unknown noncritical facts can remain clearly documented assumptions; essential public facts or contact destinations need resolution before publication.
+
 ## Useful shortcuts with explicit limits
 
 ### Contact without a custom application

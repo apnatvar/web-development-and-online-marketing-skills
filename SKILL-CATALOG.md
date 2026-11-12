@@ -29,7 +29,6 @@ The folder-level `company-voice-skill/SKILL.md`, `copy-marketing-skill/SKILL.md`
   **Draft:** LumenDesk helps small teams see shared availability in one place. If you currently coordinate meetings across separate calendars, try the fictional beta and tell us where the handoff still feels slow.
   **CTA:** Request beta access.
   **Image brief:** A clearly labelled mock calendar view on a neutral desktop, with no real customer data.
-
   # Newsletter
   **Subject:** A clearer view of team availability
   **Preview:** Meet the fictional LumenDesk beta.

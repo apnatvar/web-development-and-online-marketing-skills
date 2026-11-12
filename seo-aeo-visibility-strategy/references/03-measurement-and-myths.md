@@ -14,6 +14,12 @@
 
 Define a baseline, change window, comparison cohort, and review date. Annotate releases and compare like-for-like page families. Do not infer causality from a single ranking movement, one manual prompt, or a third-party visibility score.
 
+## Interpret commercial relevance and article maturity
+
+Separate publication metadata, confirmed deployment and actual exposure. Evaluate a new article against its time available to readers and search engines; a recent date or small sample cannot establish failure. Use comparable complete periods and annotate important releases. Distinguish intended buyers from enthusiasts, peers and contributors where query, journey or enquiry evidence supports that distinction. Do not infer an audience's identity from a technical topic alone. Expertise content may support trust without directly acquiring customers.
+
+Keep GSC clicks, analytics sessions, engagement, AI citations and qualified enquiries as separate measures with their own filters and attribution limits. Low samples, consent, reporting delays, internal traffic and aggregated or placeholder landing paths can make apparent changes inconclusive. More clicks do not establish stronger commercial demand; fewer recorded sessions do not refute a differently scoped GSC increase. When a site has no evidenced technical blocker, consider distribution and buyer feedback before recommending further copy churn or page expansion. Choose a review window and a reason to change or retain the work rather than a universal waiting period.
+
 ## Initiative scorecard
 
 For every proposed initiative record:
